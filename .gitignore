@@ -1,0 +1,23 @@
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+
+# env (only .env.example is committed)
+.env
+.env.*
+!.env.example
+
+# generated
+apps/api/src/generated/
+
+# source assets & WordPress exports may contain PII / large files
+assets-source/
+wp-export/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
+npm-debug.log*

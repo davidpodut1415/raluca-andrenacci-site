@@ -1,0 +1,18 @@
+{
+  "bannerTitle": "Your privacy",
+  "bannerText": "We use necessary cookies to run the site and, with your consent, analytics and marketing cookies. You can decline or choose at any time.",
+  "learnMore": "Read the cookie policy",
+  "acceptAll": "Accept all",
+  "rejectAll": "Reject all",
+  "customize": "Customize",
+  "dialogTitle": "Cookie settings",
+  "dialogIntro": "Choose which types of cookies you allow. You can change these settings at any time from the site footer.",
+  "necessaryTitle": "Necessary",
+  "necessaryText": "Required for the basic operation of the site. They cannot be turned off.",
+  "analyticsTitle": "Analytics",
+  "analyticsText": "Help us understand how the site is used (Google Analytics).",
+  "marketingTitle": "Marketing",
+  "marketingText": "Measure the effectiveness of campaigns (Google Ads, Meta, LinkedIn).",
+  "save": "Save choices",
+  "close": "Close"
+}

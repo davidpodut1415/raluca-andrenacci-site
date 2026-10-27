@@ -1,0 +1,68 @@
+{
+  "brand": "Raluca Andrenacci",
+  "skipToContent": "Vai al contenuto",
+  "languages": { "ro": "Română", "en": "English", "it": "Italiano" },
+  "languageNav": "Lingua",
+  "cta": { "freeSession": "Prima sessione gratuita" },
+  "nav": {
+    "label": "Navigazione principale",
+    "home": "Home",
+    "about": "Chi sono",
+    "programs": "Programmi",
+    "blog": "Blog",
+    "contact": "Contatti",
+    "menuOpen": "Apri il menu",
+    "menuClose": "Chiudi il menu"
+  },
+  "programs": {
+    "names": {
+      "coLeadership": "Co-Leadership: Fondatore & NextGen",
+      "nextgenMentoring": "Mentoring per i Successori NextGen",
+      "successorIntegration": "Integrazione del Successore in Azienda",
+      "entrepreneurInResidence": "Entrepreneur-in-Residence",
+      "governanceBoard": "Advisory di Governance & Family Office Board",
+      "audit": "L'Audit del Tuo Presente"
+    }
+  },
+  "footer": {
+    "tagline": "Mentoring riservato per imprese familiari: successione, governance e continuità.",
+    "programsTitle": "Programmi",
+    "navTitle": "Sito",
+    "blurbs": {
+      "freeSession": {
+        "title": "Prima sessione gratuita",
+        "text": "Prenota una conversazione riservata sulla tua situazione."
+      },
+      "contact": {
+        "title": "Contatti",
+        "text": "Scrivimi e riceverai una risposta il prima possibile:"
+      }
+    },
+    "privacy": "Informativa sulla privacy",
+    "cookies": "Cookie policy",
+    "manageCookies": "Impostazioni cookie",
+    "rights": "© {{year}} Raluca Andrenacci. Tutti i diritti riservati.",
+    "location": "Milano · online",
+    "linkedin": "Raluca Andrenacci su LinkedIn",
+    "instagram": "Raluca Andrenacci su Instagram"
+  },
+  "images": {
+    "hero-portrait": "Raluca Andrenacci, mentore per imprese familiari, a un tavolo di lavoro",
+    "portrait-headshot": "Ritratto di Raluca Andrenacci",
+    "portrait-leaning": "Raluca Andrenacci con un blazer bianco, appoggiata a una sedia",
+    "portrait-armchair": "Raluca Andrenacci seduta in una poltrona di pelle",
+    "desk-notebook": "Raluca Andrenacci alla scrivania con un taccuino",
+    "working-laptop": "Raluca Andrenacci al lavoro al computer portatile",
+    "mentoring-session": "Raluca Andrenacci durante una sessione di mentoring",
+    "marble-table": "Raluca Andrenacci a un tavolo di marmo",
+    "certificate-emcc": "Certificato EMCC EIA Practitioner di Raluca Andrenacci"
+  },
+  "placeholder": {
+    "soon": "Questa pagina è in costruzione."
+  },
+  "notFound": {
+    "title": "Pagina non trovata",
+    "text": "L'indirizzo che hai aperto non esiste o è stato spostato.",
+    "back": "Torna alla home"
+  }
+}

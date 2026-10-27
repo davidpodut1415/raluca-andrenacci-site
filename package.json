@@ -1,0 +1,54 @@
+{
+  "name": "raluca-andrenacci",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Raluca Andrenacci website: React + TypeScript + Tailwind frontend, Express + PostgreSQL backend",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "scripts": {
+    "dev": "npm run build -w @raluca/shared && concurrently -k -n shared,api,web -c gray,blue,magenta \"npm run dev -w @raluca/shared\" \"npm run dev -w @raluca/api\" \"npm run dev -w @raluca/web\"",
+    "build": "npm run build -w @raluca/shared && npm run db:generate && npm run build -w @raluca/web && npm run build -w @raluca/api",
+    "start": "npm run start -w @raluca/api",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "npm run build -w @raluca/shared && npm run db:generate && npm run typecheck -ws --if-present",
+    "test": "npm run build -w @raluca/shared && npm run db:generate && npm run test -ws --if-present",
+    "db:generate": "npm run db:generate -w @raluca/api",
+    "db:migrate": "npm run db:migrate -w @raluca/api",
+    "db:migrate:dev": "npm run db:migrate:dev -w @raluca/api",
+    "db:studio": "npm run db:studio -w @raluca/api",
+    "prepare": "husky || true",
+    "images": "node scripts/optimize-images.mjs",
+    "video": "bash scripts/optimize-video.sh"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,mjs,cjs}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,css,md,yml,yaml,html}": "prettier --write"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.5",
+    "@types/node": "^22.20.5",
+    "concurrently": "^10.0.6",
+    "eslint": "^9.39.5",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "globals": "^17.13.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.6.0",
+    "prettier": "^3.9.10",
+    "sharp": "^0.35.5",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.72.1",
+    "vitest": "^5.0.5"
+  }
+}

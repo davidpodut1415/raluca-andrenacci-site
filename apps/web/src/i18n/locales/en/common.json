@@ -1,0 +1,68 @@
+{
+  "brand": "Raluca Andrenacci",
+  "skipToContent": "Skip to content",
+  "languages": { "ro": "Română", "en": "English", "it": "Italiano" },
+  "languageNav": "Language",
+  "cta": { "freeSession": "First session free" },
+  "nav": {
+    "label": "Main navigation",
+    "home": "Home",
+    "about": "About",
+    "programs": "Programs",
+    "blog": "Blog",
+    "contact": "Contact",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu"
+  },
+  "programs": {
+    "names": {
+      "coLeadership": "Co-Leadership: Founder & NextGen",
+      "nextgenMentoring": "Mentoring for NextGen Successors",
+      "successorIntegration": "Integrating the Successor into the Business",
+      "entrepreneurInResidence": "Entrepreneur-in-Residence",
+      "governanceBoard": "Governance Advisory & Family-Office Board",
+      "audit": "The Audit of Your Present"
+    }
+  },
+  "footer": {
+    "tagline": "Confidential mentoring for family businesses: succession, governance and continuity.",
+    "programsTitle": "Programs",
+    "navTitle": "Site",
+    "blurbs": {
+      "freeSession": {
+        "title": "First session free",
+        "text": "Book a confidential conversation about your situation."
+      },
+      "contact": {
+        "title": "Contact",
+        "text": "Write to me and you will get a reply as soon as possible:"
+      }
+    },
+    "privacy": "Privacy policy",
+    "cookies": "Cookie policy",
+    "manageCookies": "Cookie settings",
+    "rights": "© {{year}} Raluca Andrenacci. All rights reserved.",
+    "location": "Milan · online",
+    "linkedin": "Raluca Andrenacci on LinkedIn",
+    "instagram": "Raluca Andrenacci on Instagram"
+  },
+  "images": {
+    "hero-portrait": "Raluca Andrenacci, mentor for family businesses, at a work table",
+    "portrait-headshot": "Portrait of Raluca Andrenacci",
+    "portrait-leaning": "Raluca Andrenacci in a white blazer, leaning on a chair",
+    "portrait-armchair": "Raluca Andrenacci seated in a leather armchair",
+    "desk-notebook": "Raluca Andrenacci at her desk with a notebook",
+    "working-laptop": "Raluca Andrenacci working on a laptop",
+    "mentoring-session": "Raluca Andrenacci in a mentoring session",
+    "marble-table": "Raluca Andrenacci at a marble table",
+    "certificate-emcc": "EMCC EIA Practitioner certificate of Raluca Andrenacci"
+  },
+  "placeholder": {
+    "soon": "This page is under construction."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "text": "The address you opened does not exist or has been moved.",
+    "back": "Back to home"
+  }
+}

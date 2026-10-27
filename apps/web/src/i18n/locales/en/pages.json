@@ -1,0 +1,341 @@
+{
+  "home": {
+    "seoDescription": "Confidential mentoring for founders and successors in family businesses: succession, governance and continuity. The first session is free.",
+    "hero": {
+      "eyebrow": "Mentoring for family businesses",
+      "title": "Succession without conflict. Continuity with authority.",
+      "lead": "Confidential mentoring for founders and successors in family businesses.",
+      "ctaSecondary": "Explore the programs",
+      "trust": ["20+ years of entrepreneurship", "EMCC EIA Practitioner mentor", "ForbesLife cover"]
+    },
+    "credibility": {
+      "label": "Recognition and accreditations",
+      "logos": {
+        "forbes": "Forbes Romania (ForbesLife, Forbes CEE Forum, Forbes Power Breakfast)",
+        "zf": "Ziarul Financiar (ZF Live)",
+        "emcc": "EMCC Global",
+        "ffi": "Family Firm Institute (FFI)"
+      }
+    },
+    "challenge": {
+      "eyebrow": "The challenge",
+      "title": "Continuity is not just an ambition, it is a responsibility",
+      "lead": "I work with members of entrepreneurial families in a confidential setting. Families who want the values, reputation and capital built over time to be passed on with the same care with which they were created.",
+      "items": [
+        {
+          "title": "Unclear roles between generations",
+          "text": "Founder and successor pull in different directions, and decisions are postponed or contested."
+        },
+        {
+          "title": "The successor's legitimacy",
+          "text": "Real authority is earned through action, not through a name."
+        },
+        {
+          "title": "Governance and capital protection",
+          "text": "Without a clear decision-making framework, values, reputation and capital stay exposed."
+        },
+        {
+          "title": "Family and business in the same space",
+          "text": "Family dynamics and conflicts mix with business decisions."
+        }
+      ]
+    },
+    "programs": {
+      "eyebrow": "Programs",
+      "title": "Five programs for families who think in generations",
+      "lead": "Each program is personalized, confidential and built around a clear outcome.",
+      "learnMore": "Learn more",
+      "cta": "See all programs"
+    },
+    "process": {
+      "eyebrow": "How we work",
+      "title": "From the first conversation to a 90-day plan",
+      "steps": [
+        {
+          "title": "First session free",
+          "text": "A confidential conversation about your situation and what you want to change."
+        },
+        {
+          "title": "Diagnosis",
+          "text": "We clarify roles, goals and the real blockers."
+        },
+        {
+          "title": "Personalized plan",
+          "text": "We build a plan for the next 90 days."
+        },
+        {
+          "title": "1:1 sessions",
+          "text": "Weekly 60-minute sessions, with email support in between."
+        }
+      ]
+    },
+    "testimonials": {
+      "eyebrow": "Testimonials",
+      "title": "What the people I have worked with say"
+    },
+    "audit": {
+      "eyebrow": "For entrepreneurs and professionals",
+      "title": "The Audit of Your Present",
+      "text": "A personalized 1:1 mentoring program: clarity, resilience, money and balance in a constantly changing world.",
+      "cta": "Discover the program"
+    },
+    "about": {
+      "eyebrow": "About me",
+      "title": "Mentor, coach and entrepreneur",
+      "text": "I have over 20 years of entrepreneurial experience in real estate, construction and HoReCa, and I invest in real estate and start-ups. As a certified mentor and coach, FFI member and EMCC-accredited, I offer personalized programs for those who want to reach their full potential.",
+      "cta": "Read my story"
+    },
+    "cta": {
+      "title": "Let's talk about the continuity of your business",
+      "text": "The first session is free and confidential."
+    }
+  },
+  "programsPage": {
+    "seoDescription": "Mentoring programs for family businesses and successors, plus the individual program The Audit of Your Present.",
+    "eyebrow": "Mentoring programs",
+    "title": "Personalized mentoring for family businesses and successors",
+    "lead": "I work with members of entrepreneurial families in a confidential setting where continuity is not just an ambition but a responsibility. Families who want the values, reputation and capital built over time to be passed on with the same care with which they were created.",
+    "familyTitle": "Family businesses",
+    "individualEyebrow": "For entrepreneurs and professionals",
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "q": "What is the free first session?",
+          "a": "A confidential conversation where we explore your situation and see how I can help. It is free."
+        },
+        {
+          "q": "How do the programs work?",
+          "a": "The programs are personalized, one-on-one and remote. They usually include weekly 60-minute sessions, email support between sessions and a plan for the next 90 days."
+        },
+        {
+          "q": "Is it confidential?",
+          "a": "Yes. I work with members of entrepreneurial families in a confidential setting."
+        },
+        {
+          "q": "Who are the programs for?",
+          "a": "Founders and successors in family businesses, as well as entrepreneurs and professionals looking for clarity, resilience and balance."
+        }
+      ]
+    }
+  },
+  "program": {
+    "forLabel": "Program",
+    "outcomeLabel": "Outcome",
+    "formatTitle": "How we work",
+    "formatItems": [
+      "Weekly 1:1 mentoring sessions (60 min), focused on your goals",
+      "Access to resources and exercises for immediate implementation",
+      "Email support between sessions for quick clarifications",
+      "A personalized plan for the next 90 days"
+    ],
+    "othersTitle": "Other programs",
+    "ctaTitle": "Want to find out if this program is right for you?",
+    "ctaText": "The first session is free and confidential.",
+    "items": {
+      "coLeadership": {
+        "tagline": "Succession is not a moment. It is a strategic stage, handled with finesse and balance.",
+        "summary": "A natural transition, with two leaders rising together.",
+        "directionsTitle": "Directions",
+        "directions": [
+          "shared vision and natural alignment",
+          "gradual transfer of responsibility",
+          "clear roles, without overlaps and tension",
+          "decisions owned together, not merely tolerated"
+        ],
+        "outcome": "A natural transition, with two leaders who rise together — not one who leaves while the other tries to keep up."
+      },
+      "nextgenMentoring": {
+        "tagline": "An individual, confidential program. We build authentic leaders with presence, clarity and maturity.",
+        "summary": "A successor with real authority, respected and ready to lead.",
+        "directionsTitle": "Focus",
+        "directions": [
+          "strategic thinking, autonomy, judgment",
+          "a leadership identity anchored in values",
+          "inner strength, emotional balance, tact",
+          "grace in handling family dynamics and conflicts"
+        ],
+        "outcome": "A successor with real authority, respected and ready to lead."
+      },
+      "successorIntegration": {
+        "tagline": "An elegant entry, with consistency and without internal ruptures.",
+        "summary": "Legitimacy earned through action, not through a name.",
+        "directionsTitle": "Directions",
+        "directions": [
+          "gradual exposure to key areas of the business",
+          "pilot projects with real responsibility",
+          "a clear structure of objectives and KPIs",
+          "mentoring for validation and decision refinement"
+        ],
+        "outcome": "Legitimacy earned through action, not through a name."
+      },
+      "entrepreneurInResidence": {
+        "tagline": "For families who think in generations and cultivate internal innovation.",
+        "summary": "A generation that innovates, not just preserves.",
+        "directionsTitle": "Directions",
+        "directions": [
+          "launching a new business within the family ecosystem",
+          "strategic and operational autonomy",
+          "full responsibility for results"
+        ],
+        "outcome": "A generation that innovates, not just preserves."
+      },
+      "governanceBoard": {
+        "tagline": "Refined structures, adapted to the family's culture and the realities of the business.",
+        "summary": "Clarity, capital protection, objectivity, continuity.",
+        "directionsTitle": "Directions",
+        "directions": [
+          "design of an independent Advisory Board",
+          "careful selection of members",
+          "defining the decision-making framework and mandate",
+          "executive facilitation and periodic evaluation"
+        ],
+        "outcome": "Clarity, capital protection, objectivity, continuity. Without corporate rigidity, without entrepreneurial chaos."
+      },
+      "audit": {
+        "tagline": "A personalized mentoring program: clarity, resilience, money and balance in a constantly changing world.",
+        "summary": "For entrepreneurs and professionals who want clarity and resilience.",
+        "intro": "Economic crises and constant change cannot be avoided. But you can become the person who goes through them with confidence and adapts quickly.",
+        "directionsTitle": "Why is an audit of your present essential?",
+        "directions": [
+          "You learn to manage your emotions and actions in moments of crisis",
+          "You turn frustration into tangible progress",
+          "You build an antifragile mindset",
+          "You make smart, sustainable financial decisions"
+        ],
+        "outcome": "You will transform your life, in alignment with your values, goals and inner state.",
+        "perksTitle": "Why enroll now?",
+        "perks": [
+          {
+            "title": "Extremely limited places",
+            "text": "To ensure the quality of the mentoring, I accept a small number of participants in each edition."
+          },
+          {
+            "title": "Gift agenda",
+            "text": "The program agenda: an essential tool for reflection and strategic analysis."
+          },
+          {
+            "title": "Free MiniAudit included",
+            "text": "You receive the initial assessment at no extra cost, to see your growth potential."
+          }
+        ]
+      }
+    }
+  },
+  "testimonials": {
+    "items": [
+      {
+        "quote": "I understood what a successor needs in order to be clear about what interests me and what is expected of me.",
+        "name": "Ana D., 28",
+        "role": "Family business successor"
+      },
+      {
+        "quote": "The program was my reset moment. I restructured the team, dropped two projects that were holding me back and opened a new partnership that now generates steady cash flow.",
+        "name": "Mihai D., 38",
+        "role": "Real estate investor"
+      },
+      {
+        "quote": "I learned that turning frustration into progress is, in fact, a skill. I rebuilt a much more resilient mindset and repositioned myself both professionally and personally.",
+        "name": "Elena, 42",
+        "role": "C-Level Executive"
+      },
+      {
+        "quote": "I learned to implement a structured plan to organize the processes in my business as efficiently as possible.",
+        "name": "Ioana, 38",
+        "role": "Entrepreneur, interior designer"
+      }
+    ]
+  },
+  "about": {
+    "seoDescription": "Raluca Andrenacci: certified coach and practitioner mentor with over 20 years of entrepreneurial experience, based in Milan.",
+    "eyebrow": "About me",
+    "title": "Raluca Andrenacci",
+    "lead": "Certified coach and practitioner mentor, currently based in Milan.",
+    "bio": [
+      "With over 20 years of entrepreneurial experience, including in media and advertising, real estate and construction development, and HoReCa, Raluca has a wealth of expertise to offer her clients.",
+      "She offers customized one-on-one and remote mentoring programs to individuals who want to improve their performance, leverage their skills and reach their full potential. Her clients appreciate her practical expertise, her focus on strategy, motivation and action, and her ability to provide clarity, knowledge, guidance and new perspectives.",
+      "Whether you are an entrepreneur looking for direction, a leader seeking more fulfilment, or a visionary in need of rediscovery, Raluca invites you to challenge yourself by joining her on the journey towards success."
+    ],
+    "stats": [
+      {
+        "value": "20+",
+        "label": "years of entrepreneurial experience"
+      },
+      {
+        "value": "3",
+        "label": "industries: media and advertising, real estate and construction, HoReCa"
+      },
+      {
+        "value": "EMCC",
+        "label": "accredited Mentor EIA Practitioner"
+      }
+    ],
+    "credentialsTitle": "Certifications",
+    "credentials": [
+      "Mentor EIA Practitioner, EMCC Romania",
+      "Professional Coach, One2Coach Bucharest",
+      "Coach Trainer, National Authority for Qualifications, COR 242401, Romania"
+    ],
+    "pressTitle": "Public presence",
+    "pressText": "I have been on the cover of ForbesLife and spoken at Forbes CEE Forum, Forbes Power Breakfast and ZF Live, about entrepreneurship, family businesses and leadership.",
+    "pressItems": [
+      "ForbesLife cover",
+      "Speaker, Forbes CEE Forum",
+      "Speaker, Forbes Power Breakfast",
+      "Speaker, ZF Live"
+    ],
+    "ctaTitle": "Let's get to know each other",
+    "ctaText": "The first session is free and confidential."
+  },
+  "contact": {
+    "seoDescription": "Book your free first mentoring session or send me a message.",
+    "eyebrow": "Contact",
+    "title": "Book your free first session",
+    "lead": "Every transformation starts with a conversation. Sometimes we just need clarity to see the next step.",
+    "form": {
+      "title": "Send me a message",
+      "name": "Full name",
+      "email": "Email",
+      "phone": "Phone (optional)",
+      "audience": "I am a…",
+      "audiencePlaceholder": "Choose an option",
+      "audienceOptions": {
+        "founder": "Founder",
+        "successor": "Successor",
+        "executive": "Executive / professional",
+        "other": "Something else"
+      },
+      "program": "Program of interest",
+      "programPlaceholder": "I don't know yet",
+      "message": "Message",
+      "messageHint": "Tell me briefly what you want to change.",
+      "consent": "I agree to the processing of my data in order to receive a reply, according to the privacy policy.",
+      "submit": "Send message",
+      "pending": "The form will be enabled soon. In the meantime, write to me directly at the email address below."
+    },
+    "next": {
+      "title": "What happens next",
+      "steps": [
+        "You send me your message.",
+        "You receive a reply as soon as possible.",
+        "Together we schedule the free first session."
+      ]
+    },
+    "benefits": {
+      "title": "The benefits of personal and professional coaching",
+      "items": [
+        "more clarity in your personal life",
+        "confidence in your own decisions",
+        "overcoming inner blocks",
+        "a clearer direction in your career or business",
+        "balance between personal and professional life"
+      ]
+    },
+    "direct": {
+      "title": "Write to me directly"
+    }
+  },
+  "legal": {
+    "translationNotice": "This document is currently available in Romanian only."
+  }
+}

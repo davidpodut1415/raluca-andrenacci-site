@@ -1,0 +1,106 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum Locale {
+  ro
+  en
+  it
+}
+
+enum PostStatus {
+  draft
+  published
+}
+
+enum LeadType {
+  contact
+  free_session
+}
+
+enum LeadStatus {
+  new
+  handled
+  spam
+}
+
+model AdminUser {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  createdAt    DateTime @default(now())
+}
+
+model Category {
+  id           String                @id @default(cuid())
+  key          String                @unique
+  translations CategoryTranslation[]
+  posts        Post[]
+}
+
+model CategoryTranslation {
+  categoryId String
+  locale     Locale
+  name       String
+  slug       String
+  category   Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+
+  @@id([categoryId, locale])
+  @@unique([locale, slug])
+}
+
+model Post {
+  id            String            @id @default(cuid())
+  status        PostStatus        @default(draft)
+  publishedAt   DateTime?
+  coverImageUrl String?
+  categoryId    String?
+  category      Category?         @relation(fields: [categoryId], references: [id], onDelete: SetNull)
+  translations  PostTranslation[]
+  createdAt     DateTime          @default(now())
+  updatedAt     DateTime          @updatedAt
+
+  @@index([status, publishedAt])
+}
+
+model PostTranslation {
+  postId         String
+  locale         Locale
+  slug           String
+  title          String
+  excerpt        String
+  bodyMd         String
+  seoTitle       String?
+  seoDescription String?
+  coverAlt       String?
+  post           Post    @relation(fields: [postId], references: [id], onDelete: Cascade)
+
+  @@id([postId, locale])
+  @@unique([locale, slug])
+}
+
+model Lead {
+  id        String     @id @default(cuid())
+  type      LeadType
+  name      String
+  email     String
+  phone     String?
+  audience  String?
+  program   String?
+  message   String
+  locale    Locale
+  consentAt DateTime
+  /// SHA-256 of the client IP with a server-side salt; the raw IP is never stored.
+  ipHash    String?
+  userAgent String?
+  status    LeadStatus @default(new)
+  emailSent Boolean    @default(false)
+  createdAt DateTime   @default(now())
+
+  @@index([status, createdAt])
+}

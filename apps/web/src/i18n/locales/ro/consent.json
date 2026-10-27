@@ -1,0 +1,18 @@
+{
+  "bannerTitle": "Confidențialitatea ta",
+  "bannerText": "Folosim cookie-uri necesare pentru funcționarea site-ului și, cu acordul tău, cookie-uri de analiză și marketing. Poți refuza sau alege oricând.",
+  "learnMore": "Citește politica de cookie-uri",
+  "acceptAll": "Accept toate",
+  "rejectAll": "Refuz toate",
+  "customize": "Personalizează",
+  "dialogTitle": "Setări cookie-uri",
+  "dialogIntro": "Alege ce tipuri de cookie-uri permiți. Poți schimba aceste setări oricând din subsolul site-ului.",
+  "necessaryTitle": "Necesare",
+  "necessaryText": "Asigură funcționarea de bază a site-ului. Nu pot fi dezactivate.",
+  "analyticsTitle": "Analiză",
+  "analyticsText": "Ne ajută să înțelegem cum este folosit site-ul (Google Analytics).",
+  "marketingTitle": "Marketing",
+  "marketingText": "Măsoară eficiența campaniilor (Google Ads, Meta, LinkedIn).",
+  "save": "Salvează alegerile",
+  "close": "Închide"
+}

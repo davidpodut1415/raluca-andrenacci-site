@@ -1,0 +1,18 @@
+{
+  "bannerTitle": "La tua privacy",
+  "bannerText": "Usiamo cookie necessari al funzionamento del sito e, con il tuo consenso, cookie di analisi e di marketing. Puoi rifiutare o scegliere in qualsiasi momento.",
+  "learnMore": "Leggi la cookie policy",
+  "acceptAll": "Accetta tutti",
+  "rejectAll": "Rifiuta tutti",
+  "customize": "Personalizza",
+  "dialogTitle": "Impostazioni cookie",
+  "dialogIntro": "Scegli quali tipi di cookie consentire. Puoi modificare queste impostazioni in qualsiasi momento dal piè di pagina del sito.",
+  "necessaryTitle": "Necessari",
+  "necessaryText": "Indispensabili per il funzionamento di base del sito. Non possono essere disattivati.",
+  "analyticsTitle": "Analisi",
+  "analyticsText": "Ci aiutano a capire come viene utilizzato il sito (Google Analytics).",
+  "marketingTitle": "Marketing",
+  "marketingText": "Misurano l'efficacia delle campagne (Google Ads, Meta, LinkedIn).",
+  "save": "Salva le scelte",
+  "close": "Chiudi"
+}

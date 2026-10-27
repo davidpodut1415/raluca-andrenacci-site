@@ -1,0 +1,3 @@
+# Pre-launch: block all crawlers (staging). Replace with the production robots.txt in Phase 7/8.
+User-agent: *
+Disallow: /

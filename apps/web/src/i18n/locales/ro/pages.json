@@ -1,0 +1,345 @@
+{
+  "home": {
+    "seoDescription": "Mentorat confidențial pentru fondatori și succesori din afacerile de familie: succesiune, guvernanță și continuitate. Prima sesiune este gratuită.",
+    "hero": {
+      "eyebrow": "Mentorat pentru afaceri de familie",
+      "title": "Succesiune fără conflict. Continuitate cu autoritate.",
+      "lead": "Mentorat confidențial pentru fondatori și succesori din afacerile de familie.",
+      "ctaSecondary": "Descoperă programele",
+      "trust": [
+        "Peste 20 de ani de antreprenoriat",
+        "Mentor EMCC EIA Practitioner",
+        "Coperta ForbesLife"
+      ]
+    },
+    "credibility": {
+      "label": "Recunoaștere și acreditări",
+      "logos": {
+        "forbes": "Forbes România (ForbesLife, Forbes CEE Forum, Forbes Power Breakfast)",
+        "zf": "Ziarul Financiar (ZF Live)",
+        "emcc": "EMCC Global",
+        "ffi": "Family Firm Institute (FFI)"
+      }
+    },
+    "challenge": {
+      "eyebrow": "Provocarea",
+      "title": "Continuitatea nu este doar o ambiție, ci o responsabilitate",
+      "lead": "Lucrez cu membrii din familii antreprenoriale în cadru confidențial. Familii care își doresc ca valorile, reputația și capitalul construit în timp să fie transferate cu aceeași grijă cu care au fost create.",
+      "items": [
+        {
+          "title": "Roluri neclare între generații",
+          "text": "Fondatorul și succesorul trag în direcții diferite, iar deciziile se amână sau se contestă."
+        },
+        {
+          "title": "Legitimitatea succesorului",
+          "text": "Autoritatea reală se câștigă prin acțiune, nu prin nume."
+        },
+        {
+          "title": "Guvernanță și protecția capitalului",
+          "text": "Fără un cadru decizional clar, valorile, reputația și capitalul rămân expuse."
+        },
+        {
+          "title": "Familie și business în același spațiu",
+          "text": "Dinamicile de familie și conflictele se amestecă cu deciziile de business."
+        }
+      ]
+    },
+    "programs": {
+      "eyebrow": "Programe",
+      "title": "Cinci programe pentru familii care gândesc în generații",
+      "lead": "Fiecare program este personalizat, confidențial și construit în jurul unui rezultat clar.",
+      "learnMore": "Află mai mult",
+      "cta": "Vezi toate programele"
+    },
+    "process": {
+      "eyebrow": "Cum lucrăm",
+      "title": "De la prima conversație la un plan pe 90 de zile",
+      "steps": [
+        {
+          "title": "Prima sesiune gratuită",
+          "text": "O conversație confidențială despre situația ta și ce îți dorești să schimbi."
+        },
+        {
+          "title": "Diagnostic",
+          "text": "Clarificăm rolurile, obiectivele și blocajele reale."
+        },
+        {
+          "title": "Plan personalizat",
+          "text": "Construim un plan pentru următoarele 90 de zile."
+        },
+        {
+          "title": "Sesiuni 1:1",
+          "text": "Sesiuni săptămânale de 60 de minute, cu suport prin email între ele."
+        }
+      ]
+    },
+    "testimonials": {
+      "eyebrow": "Mărturii",
+      "title": "Ce spun cei cu care am lucrat"
+    },
+    "audit": {
+      "eyebrow": "Pentru antreprenori și profesioniști",
+      "title": "Auditul Prezentului Tău",
+      "text": "Program de mentorat personalizat 1:1: claritate, reziliență, bani și echilibru într-o lume în continuă schimbare.",
+      "cta": "Descoperă programul"
+    },
+    "about": {
+      "eyebrow": "Despre mine",
+      "title": "Mentor, coach și antreprenor",
+      "text": "Am peste 20 de ani de experiență antreprenorială în imobiliare, construcții și HoReCa și sunt investitor în piața imobiliară și start-upuri. Ca mentor și coach certificat, membră FFI și acreditată EMCC, ofer programe personalizate pentru cei care vor să-și atingă potențialul maxim.",
+      "cta": "Citește povestea mea"
+    },
+    "cta": {
+      "title": "Hai să discutăm despre continuitatea afacerii tale",
+      "text": "Prima sesiune este gratuită și confidențială."
+    }
+  },
+  "programsPage": {
+    "seoDescription": "Programe de mentorat pentru afaceri de familie și succesori, plus programul individual Auditul Prezentului Tău.",
+    "eyebrow": "Programe de mentorat",
+    "title": "Mentorat personalizat pentru afaceri de familie și succesori",
+    "lead": "Lucrez cu membrii din familii antreprenoriale în cadru confidențial pentru care continuitatea nu este doar o ambiție, ci o responsabilitate. Familii care își doresc ca valorile, reputația și capitalul construit în timp să fie transferate cu aceeași grijă cu care au fost create.",
+    "familyTitle": "Afaceri de familie",
+    "individualEyebrow": "Pentru antreprenori și profesioniști",
+    "faq": {
+      "title": "Întrebări frecvente",
+      "items": [
+        {
+          "q": "Ce este prima sesiune gratuită?",
+          "a": "O conversație confidențială în care explorăm situația ta și vedem cum te pot ajuta. Este gratuită."
+        },
+        {
+          "q": "Cum se desfășoară programele?",
+          "a": "Programele sunt personalizate, One-on-One și la distanță. De regulă, includ sesiuni săptămânale de 60 de minute, suport prin email între sesiuni și un plan pentru următoarele 90 de zile."
+        },
+        {
+          "q": "Este confidențial?",
+          "a": "Da. Lucrez cu membrii din familii antreprenoriale într-un cadru confidențial."
+        },
+        {
+          "q": "Pentru cine sunt programele?",
+          "a": "Pentru fondatori și succesori din afaceri de familie, precum și pentru antreprenori și profesioniști care caută claritate, reziliență și echilibru."
+        }
+      ]
+    }
+  },
+  "program": {
+    "forLabel": "Program",
+    "outcomeLabel": "Rezultat",
+    "formatTitle": "Cum lucrăm",
+    "formatItems": [
+      "Sesiuni de mentorat 1:1 săptămânale (60 min), focalizate pe obiectivele tale",
+      "Acces la resurse și exerciții pentru implementare imediată",
+      "Suport prin email între sesiuni pentru clarificări rapide",
+      "Plan personalizat pentru următoarele 90 de zile"
+    ],
+    "othersTitle": "Alte programe",
+    "ctaTitle": "Vrei să afli dacă acest program ți se potrivește?",
+    "ctaText": "Prima sesiune este gratuită și confidențială.",
+    "items": {
+      "coLeadership": {
+        "tagline": "Succesiunea nu este un moment. Este o etapă strategică, gestionată cu finețe și echilibru.",
+        "summary": "O tranziție firească, cu doi lideri care se ridică.",
+        "directionsTitle": "Direcții",
+        "directions": [
+          "viziune comună și aliniere naturală",
+          "transfer gradual de responsabilitate",
+          "roluri clare, fără suprapuneri și tensiuni",
+          "decizii asumate împreună, nu tolerate"
+        ],
+        "outcome": "O tranziție firească, cu doi lideri care se ridică — nu unul care pleacă și altul care încearcă să țină ritmul."
+      },
+      "nextgenMentoring": {
+        "tagline": "Program individual, confidențial. Construim lideri autentici, cu prezență, claritate și maturitate.",
+        "summary": "Un succesor cu autoritate reală, respectat, pregătit să conducă.",
+        "directionsTitle": "Focus",
+        "directions": [
+          "gândire strategică, autonomie, discernământ",
+          "identitate de leadership ancorată în valori",
+          "forță interioară, echilibru emoțional, tact",
+          "eleganță în gestionarea dinamicilor de familie și conflictelor"
+        ],
+        "outcome": "Un succesor cu autoritate reală, respectat, pregătit să conducă."
+      },
+      "successorIntegration": {
+        "tagline": "Intrare elegantă, cu consistență, fără rupturi interne.",
+        "summary": "Legitimitate câștigată prin acțiune, nu prin nume.",
+        "directionsTitle": "Direcții",
+        "directions": [
+          "expunere graduală la zone-cheie din business",
+          "proiecte pilot cu responsabilitate reală",
+          "structură clară de obiective și KPI",
+          "mentoring pentru validare și rafinare decizională"
+        ],
+        "outcome": "Legitimitate câștigată prin acțiune, nu prin nume."
+      },
+      "entrepreneurInResidence": {
+        "tagline": "Pentru familiile care gândesc în generații și cultivă inovația internă.",
+        "summary": "O generație care inovează, nu doar conservă.",
+        "directionsTitle": "Direcții",
+        "directions": [
+          "lansarea unui nou business în ecosistemul familiei",
+          "autonomie strategică și operațională",
+          "responsabilitate completă pe rezultate"
+        ],
+        "outcome": "O generație care inovează, nu doar conservă."
+      },
+      "governanceBoard": {
+        "tagline": "Structuri fine, adaptate culturii familiei și realităților afacerii.",
+        "summary": "Claritate, protecția capitalului, obiectivitate, continuitate.",
+        "directionsTitle": "Direcții",
+        "directions": [
+          "arhitectură de Advisory Board independent",
+          "selecție atentă a membrilor",
+          "definirea cadrului decizional și a mandatului",
+          "facilitare executivă și evaluare periodică"
+        ],
+        "outcome": "Claritate, protecția capitalului, obiectivitate, continuitate. Fără rigiditate corporate, fără haos antreprenorial."
+      },
+      "audit": {
+        "tagline": "Program de mentorat personalizat: claritate, reziliență, bani și echilibru într-o lume în continuă schimbare.",
+        "summary": "Pentru antreprenori și profesioniști care vor claritate și reziliență.",
+        "intro": "Crizele economice și schimbările constante nu pot fi evitate. Dar poți deveni persoana care le traversează cu încredere și se adaptează rapid.",
+        "directionsTitle": "De ce este esențial un audit al prezentului?",
+        "directions": [
+          "Înveți să-ți gestionezi emoțiile și acțiunile în momente de criză",
+          "Transformi frustrarea în progres tangibil",
+          "Construiești o mentalitate antifragilă",
+          "Iei decizii financiare inteligente și sustenabile"
+        ],
+        "outcome": "Îți vei transforma viața, în aliniere cu valorile, obiectivele și starea ta interioară.",
+        "perksTitle": "De ce să te înscrii acum?",
+        "perks": [
+          {
+            "title": "Locuri extrem de limitate",
+            "text": "Pentru a asigura calitatea mentoratului, accept un număr restrâns de participanți în fiecare ediție."
+          },
+          {
+            "title": "Agenda cadou",
+            "text": "Agenda programului: instrument esențial pentru reflecție și analiză strategică."
+          },
+          {
+            "title": "MiniAudit gratuit inclus",
+            "text": "Primești evaluarea inițială fără cost suplimentar, pentru a vedea potențialul de creștere."
+          }
+        ]
+      }
+    }
+  },
+  "testimonials": {
+    "items": [
+      {
+        "quote": "Am înțeles ce era nevoie, ca succesor, pentru a avea claritate asupra ceea ce mă interesează și asupra ceea ce se dorește de la mine.",
+        "name": "Ana D., 28 de ani",
+        "role": "Succesor afacere de familie"
+      },
+      {
+        "quote": "Programul a fost momentul meu de reset. Am restructurat echipa, am renunțat la două proiecte care mă blocau și am deschis un parteneriat nou, care astăzi generează cashflow constant.",
+        "name": "Mihai D., 38 de ani",
+        "role": "Investitor imobiliar"
+      },
+      {
+        "quote": "Am învățat că a transforma frustrarea în progres este, de fapt, o competență. Mi-am reconstruit o mentalitate mult mai rezilientă și m-am repoziționat atât profesional, cât și personal.",
+        "name": "Elena, 42 de ani",
+        "role": "C-Level Executive"
+      },
+      {
+        "quote": "Am învățat să implementez un plan structurat în organizarea cât mai eficientă a proceselor din afacerea mea.",
+        "name": "Ioana, 38 de ani",
+        "role": "Antreprenor, designer interior"
+      }
+    ]
+  },
+  "about": {
+    "seoDescription": "Raluca Andrenacci: coach certificat și mentor practicant, cu peste 20 de ani de experiență în antreprenoriat, stabilită în Milano.",
+    "eyebrow": "Despre mine",
+    "title": "Raluca Andrenacci",
+    "lead": "Coach certificat și mentor practicant, în prezent stabilită în Milano.",
+    "bio": [
+      "Cu peste 20 de ani de experiență în antreprenoriat, inclusiv în media și publicitate, dezvoltare imobiliară și construcții, HoReCa, Raluca are o bogată expertiză de oferit clienților săi.",
+      "Ea acordă programe personalizate de mentorat One-on-One și la distanță, persoanelor care caută să își îmbunătățească performanța, să își valorifice abilitățile și să își atingă potențialul maxim. Clienții ei îi apreciază expertiza practică, accentul pus pe strategie, motivație și acțiune, precum și capacitatea de a oferi claritate, cunoștințe, îndrumare și noi perspective.",
+      "Fie că ești un antreprenor în căutarea unei direcții, un lider care caută mai multă împlinire sau un vizionar care are nevoie de redescoperire, Raluca te invită să te provoci pe tine însuți, alăturându-te ei în călătoria spre succes."
+    ],
+    "stats": [
+      {
+        "value": "20+",
+        "label": "ani de experiență în antreprenoriat"
+      },
+      {
+        "value": "3",
+        "label": "industrii: media și publicitate, imobiliare și construcții, HoReCa"
+      },
+      {
+        "value": "EMCC",
+        "label": "acreditare Mentor EIA Practitioner"
+      }
+    ],
+    "credentialsTitle": "Certificări",
+    "credentials": [
+      "Mentor EIA Practitioner, EMCC România",
+      "Professional Coach, One2Coach București",
+      "Coach Formator, Autoritatea Națională pentru Calificări, COR 242401, România"
+    ],
+    "pressTitle": "Prezență publică",
+    "pressText": "Am apărut pe coperta ForbesLife și am participat ca speaker la Forbes CEE Forum, Forbes Power Breakfast și ZF Live, unde am vorbit despre antreprenoriat, afaceri de familie și leadership.",
+    "pressItems": [
+      "Copertă ForbesLife",
+      "Speaker, Forbes CEE Forum",
+      "Speaker, Forbes Power Breakfast",
+      "Speaker, ZF Live"
+    ],
+    "ctaTitle": "Să ne cunoaștem",
+    "ctaText": "Prima sesiune este gratuită și confidențială."
+  },
+  "contact": {
+    "seoDescription": "Programează prima sesiune gratuită de mentorat sau scrie-mi un mesaj.",
+    "eyebrow": "Contact",
+    "title": "Programează prima sesiune gratuită",
+    "lead": "Orice transformare începe cu o conversație. Uneori avem nevoie doar de claritate pentru a vedea următorul pas.",
+    "form": {
+      "title": "Trimite-mi un mesaj",
+      "name": "Nume și prenume",
+      "email": "Email",
+      "phone": "Telefon (opțional)",
+      "audience": "Sunt…",
+      "audiencePlaceholder": "Alege o opțiune",
+      "audienceOptions": {
+        "founder": "Fondator",
+        "successor": "Succesor",
+        "executive": "Executiv / profesionist",
+        "other": "Altceva"
+      },
+      "program": "Program de interes",
+      "programPlaceholder": "Nu știu încă",
+      "message": "Mesaj",
+      "messageHint": "Spune-mi pe scurt ce îți dorești să schimbi.",
+      "consent": "Sunt de acord cu prelucrarea datelor mele pentru a primi un răspuns, conform politicii de confidențialitate.",
+      "submit": "Trimite mesajul",
+      "pending": "Formularul va fi activat în curând. Între timp, scrie-mi direct la adresa de email de mai jos."
+    },
+    "next": {
+      "title": "Ce urmează",
+      "steps": [
+        "Îmi trimiți mesajul.",
+        "Primești un răspuns în cel mai scurt timp.",
+        "Stabilim împreună prima sesiune gratuită."
+      ]
+    },
+    "benefits": {
+      "title": "Beneficiile coachingului personal și profesional",
+      "items": [
+        "mai multă claritate în viața personală",
+        "încredere în propriile decizii",
+        "depășirea blocajelor interioare",
+        "direcție mai clară în carieră sau business",
+        "echilibru între viața personală și cea profesională"
+      ]
+    },
+    "direct": {
+      "title": "Scrie-mi direct"
+    }
+  },
+  "legal": {
+    "translationNotice": "Acest document este disponibil momentan doar în limba română."
+  }
+}

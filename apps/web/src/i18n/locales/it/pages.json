@@ -1,0 +1,345 @@
+{
+  "home": {
+    "seoDescription": "Mentoring riservato per fondatori e successori nelle imprese familiari: successione, governance e continuità. La prima sessione è gratuita.",
+    "hero": {
+      "eyebrow": "Mentoring per imprese familiari",
+      "title": "Successione senza conflitti. Continuità con autorevolezza.",
+      "lead": "Mentoring riservato per fondatori e successori nelle imprese familiari.",
+      "ctaSecondary": "Scopri i programmi",
+      "trust": [
+        "Oltre 20 anni di imprenditoria",
+        "Mentore EMCC EIA Practitioner",
+        "Copertina di ForbesLife"
+      ]
+    },
+    "credibility": {
+      "label": "Riconoscimenti e accreditamenti",
+      "logos": {
+        "forbes": "Forbes Romania (ForbesLife, Forbes CEE Forum, Forbes Power Breakfast)",
+        "zf": "Ziarul Financiar (ZF Live)",
+        "emcc": "EMCC Global",
+        "ffi": "Family Firm Institute (FFI)"
+      }
+    },
+    "challenge": {
+      "eyebrow": "La sfida",
+      "title": "La continuità non è solo un'ambizione, è una responsabilità",
+      "lead": "Lavoro con membri di famiglie imprenditoriali in un contesto riservato. Famiglie che desiderano che i valori, la reputazione e il capitale costruiti nel tempo vengano trasmessi con la stessa cura con cui sono stati creati.",
+      "items": [
+        {
+          "title": "Ruoli poco chiari tra le generazioni",
+          "text": "Fondatore e successore vanno in direzioni diverse, e le decisioni vengono rimandate o contestate."
+        },
+        {
+          "title": "La legittimità del successore",
+          "text": "La vera autorevolezza si conquista con l'azione, non con il nome."
+        },
+        {
+          "title": "Governance e tutela del capitale",
+          "text": "Senza un quadro decisionale chiaro, valori, reputazione e capitale restano esposti."
+        },
+        {
+          "title": "Famiglia e azienda nello stesso spazio",
+          "text": "Le dinamiche familiari e i conflitti si mescolano alle decisioni aziendali."
+        }
+      ]
+    },
+    "programs": {
+      "eyebrow": "Programmi",
+      "title": "Cinque programmi per famiglie che pensano per generazioni",
+      "lead": "Ogni programma è personalizzato, riservato e costruito attorno a un risultato chiaro.",
+      "learnMore": "Scopri di più",
+      "cta": "Vedi tutti i programmi"
+    },
+    "process": {
+      "eyebrow": "Come lavoriamo",
+      "title": "Dalla prima conversazione a un piano di 90 giorni",
+      "steps": [
+        {
+          "title": "Prima sessione gratuita",
+          "text": "Una conversazione riservata sulla tua situazione e su ciò che vuoi cambiare."
+        },
+        {
+          "title": "Diagnosi",
+          "text": "Chiariamo ruoli, obiettivi e i veri ostacoli."
+        },
+        {
+          "title": "Piano personalizzato",
+          "text": "Costruiamo un piano per i prossimi 90 giorni."
+        },
+        {
+          "title": "Sessioni 1:1",
+          "text": "Sessioni settimanali di 60 minuti, con supporto via email nel frattempo."
+        }
+      ]
+    },
+    "testimonials": {
+      "eyebrow": "Testimonianze",
+      "title": "Cosa dicono le persone con cui ho lavorato"
+    },
+    "audit": {
+      "eyebrow": "Per imprenditori e professionisti",
+      "title": "L'Audit del Tuo Presente",
+      "text": "Un programma di mentoring personalizzato 1:1: chiarezza, resilienza, denaro ed equilibrio in un mondo in continuo cambiamento.",
+      "cta": "Scopri il programma"
+    },
+    "about": {
+      "eyebrow": "Chi sono",
+      "title": "Mentore, coach e imprenditrice",
+      "text": "Ho oltre 20 anni di esperienza imprenditoriale nell'immobiliare, nelle costruzioni e nell'HoReCa, e investo nel settore immobiliare e nelle start-up. Come mentore e coach certificata, membro FFI e accreditata EMCC, offro programmi personalizzati a chi vuole raggiungere il proprio massimo potenziale.",
+      "cta": "Leggi la mia storia"
+    },
+    "cta": {
+      "title": "Parliamo della continuità della tua azienda",
+      "text": "La prima sessione è gratuita e riservata."
+    }
+  },
+  "programsPage": {
+    "seoDescription": "Programmi di mentoring per imprese familiari e successori, più il programma individuale L'Audit del Tuo Presente.",
+    "eyebrow": "Programmi di mentoring",
+    "title": "Mentoring personalizzato per imprese familiari e successori",
+    "lead": "Lavoro con membri di famiglie imprenditoriali in un contesto riservato in cui la continuità non è solo un'ambizione, ma una responsabilità. Famiglie che desiderano che i valori, la reputazione e il capitale costruiti nel tempo vengano trasmessi con la stessa cura con cui sono stati creati.",
+    "familyTitle": "Imprese familiari",
+    "individualEyebrow": "Per imprenditori e professionisti",
+    "faq": {
+      "title": "Domande frequenti",
+      "items": [
+        {
+          "q": "Che cos'è la prima sessione gratuita?",
+          "a": "Una conversazione riservata in cui esploriamo la tua situazione e vediamo come posso aiutarti. È gratuita."
+        },
+        {
+          "q": "Come si svolgono i programmi?",
+          "a": "I programmi sono personalizzati, one-to-one e a distanza. Di solito prevedono sessioni settimanali di 60 minuti, supporto via email tra una sessione e l'altra e un piano per i prossimi 90 giorni."
+        },
+        {
+          "q": "È riservato?",
+          "a": "Sì. Lavoro con membri di famiglie imprenditoriali in un contesto riservato."
+        },
+        {
+          "q": "A chi sono rivolti i programmi?",
+          "a": "A fondatori e successori di imprese familiari, e a imprenditori e professionisti che cercano chiarezza, resilienza ed equilibrio."
+        }
+      ]
+    }
+  },
+  "program": {
+    "forLabel": "Programma",
+    "outcomeLabel": "Risultato",
+    "formatTitle": "Come lavoriamo",
+    "formatItems": [
+      "Sessioni di mentoring 1:1 settimanali (60 min), focalizzate sui tuoi obiettivi",
+      "Accesso a risorse ed esercizi da applicare subito",
+      "Supporto via email tra le sessioni per chiarimenti rapidi",
+      "Un piano personalizzato per i prossimi 90 giorni"
+    ],
+    "othersTitle": "Altri programmi",
+    "ctaTitle": "Vuoi scoprire se questo programma fa per te?",
+    "ctaText": "La prima sessione è gratuita e riservata.",
+    "items": {
+      "coLeadership": {
+        "tagline": "La successione non è un momento. È una fase strategica, gestita con finezza ed equilibrio.",
+        "summary": "Una transizione naturale, con due leader che crescono insieme.",
+        "directionsTitle": "Direzioni",
+        "directions": [
+          "visione comune e allineamento naturale",
+          "trasferimento graduale di responsabilità",
+          "ruoli chiari, senza sovrapposizioni e tensioni",
+          "decisioni assunte insieme, non solo tollerate"
+        ],
+        "outcome": "Una transizione naturale, con due leader che crescono insieme — non uno che se ne va mentre l'altro cerca di stargli al passo."
+      },
+      "nextgenMentoring": {
+        "tagline": "Programma individuale e riservato. Costruiamo leader autentici, con presenza, chiarezza e maturità.",
+        "summary": "Un successore con vera autorevolezza, rispettato e pronto a guidare.",
+        "directionsTitle": "Focus",
+        "directions": [
+          "pensiero strategico, autonomia, discernimento",
+          "un'identità di leadership ancorata ai valori",
+          "forza interiore, equilibrio emotivo, tatto",
+          "eleganza nella gestione delle dinamiche familiari e dei conflitti"
+        ],
+        "outcome": "Un successore con vera autorevolezza, rispettato e pronto a guidare."
+      },
+      "successorIntegration": {
+        "tagline": "Un ingresso elegante, con coerenza e senza fratture interne.",
+        "summary": "Legittimità conquistata con l'azione, non con il nome.",
+        "directionsTitle": "Direzioni",
+        "directions": [
+          "esposizione graduale alle aree chiave dell'azienda",
+          "progetti pilota con responsabilità reale",
+          "una struttura chiara di obiettivi e KPI",
+          "mentoring per la validazione e l'affinamento decisionale"
+        ],
+        "outcome": "Legittimità conquistata con l'azione, non con il nome."
+      },
+      "entrepreneurInResidence": {
+        "tagline": "Per le famiglie che pensano per generazioni e coltivano l'innovazione interna.",
+        "summary": "Una generazione che innova, non si limita a conservare.",
+        "directionsTitle": "Direzioni",
+        "directions": [
+          "lancio di una nuova attività nell'ecosistema familiare",
+          "autonomia strategica e operativa",
+          "piena responsabilità sui risultati"
+        ],
+        "outcome": "Una generazione che innova, non si limita a conservare."
+      },
+      "governanceBoard": {
+        "tagline": "Strutture raffinate, adatte alla cultura della famiglia e alla realtà dell'azienda.",
+        "summary": "Chiarezza, tutela del capitale, obiettività, continuità.",
+        "directionsTitle": "Direzioni",
+        "directions": [
+          "progettazione di un Advisory Board indipendente",
+          "selezione attenta dei membri",
+          "definizione del quadro decisionale e del mandato",
+          "facilitazione esecutiva e valutazione periodica"
+        ],
+        "outcome": "Chiarezza, tutela del capitale, obiettività, continuità. Senza rigidità aziendale, senza caos imprenditoriale."
+      },
+      "audit": {
+        "tagline": "Un programma di mentoring personalizzato: chiarezza, resilienza, denaro ed equilibrio in un mondo in continuo cambiamento.",
+        "summary": "Per imprenditori e professionisti che vogliono chiarezza e resilienza.",
+        "intro": "Le crisi economiche e i cambiamenti costanti non si possono evitare. Ma puoi diventare la persona che li attraversa con fiducia e si adatta in fretta.",
+        "directionsTitle": "Perché è essenziale un audit del presente?",
+        "directions": [
+          "Impari a gestire le tue emozioni e le tue azioni nei momenti di crisi",
+          "Trasformi la frustrazione in progresso concreto",
+          "Costruisci una mentalità antifragile",
+          "Prendi decisioni finanziarie intelligenti e sostenibili"
+        ],
+        "outcome": "Trasformerai la tua vita, in linea con i tuoi valori, i tuoi obiettivi e il tuo stato interiore.",
+        "perksTitle": "Perché iscriversi adesso?",
+        "perks": [
+          {
+            "title": "Posti estremamente limitati",
+            "text": "Per garantire la qualità del mentoring, accetto un numero ristretto di partecipanti in ogni edizione."
+          },
+          {
+            "title": "Agenda in omaggio",
+            "text": "L'agenda del programma: uno strumento essenziale per la riflessione e l'analisi strategica."
+          },
+          {
+            "title": "MiniAudit gratuito incluso",
+            "text": "Ricevi la valutazione iniziale senza costi aggiuntivi, per vedere il tuo potenziale di crescita."
+          }
+        ]
+      }
+    }
+  },
+  "testimonials": {
+    "items": [
+      {
+        "quote": "Ho capito di che cosa ha bisogno un successore per avere chiarezza su ciò che mi interessa e su ciò che ci si aspetta da me.",
+        "name": "Ana D., 28 anni",
+        "role": "Successore in un'impresa familiare"
+      },
+      {
+        "quote": "Il programma è stato il mio momento di reset. Ho ristrutturato il team, ho rinunciato a due progetti che mi bloccavano e ho avviato una nuova partnership che oggi genera un flusso di cassa costante.",
+        "name": "Mihai D., 38 anni",
+        "role": "Investitore immobiliare"
+      },
+      {
+        "quote": "Ho imparato che trasformare la frustrazione in progresso è, in effetti, una competenza. Ho ricostruito una mentalità molto più resiliente e mi sono riposizionata sia professionalmente sia personalmente.",
+        "name": "Elena, 42 anni",
+        "role": "C-Level Executive"
+      },
+      {
+        "quote": "Ho imparato a mettere in pratica un piano strutturato per organizzare nel modo più efficiente i processi della mia attività.",
+        "name": "Ioana, 38 anni",
+        "role": "Imprenditrice, interior designer"
+      }
+    ]
+  },
+  "about": {
+    "seoDescription": "Raluca Andrenacci: coach certificata e mentore con oltre 20 anni di esperienza imprenditoriale, residente a Milano.",
+    "eyebrow": "Chi sono",
+    "title": "Raluca Andrenacci",
+    "lead": "Coach certificata e mentore, attualmente residente a Milano.",
+    "bio": [
+      "Con oltre 20 anni di esperienza imprenditoriale, anche nei settori dei media e della pubblicità, dello sviluppo immobiliare e delle costruzioni, dell'HoReCa, Raluca ha una grande esperienza da offrire ai suoi clienti.",
+      "Offre programmi personalizzati di mentoring one-to-one e a distanza a persone che cercano di migliorare le proprie prestazioni, valorizzare le proprie capacità e raggiungere il pieno potenziale. I suoi clienti apprezzano la sua esperienza pratica, l'attenzione alla strategia, alla motivazione e all'azione, e la capacità di offrire chiarezza, conoscenza, orientamento e nuove prospettive.",
+      "Che tu sia un imprenditore in cerca di una direzione, un leader in cerca di maggiore realizzazione o un visionario che ha bisogno di riscoprirsi, Raluca ti invita a metterti alla prova unendoti a lei nel viaggio verso il successo."
+    ],
+    "stats": [
+      {
+        "value": "20+",
+        "label": "anni di esperienza imprenditoriale"
+      },
+      {
+        "value": "3",
+        "label": "settori: media e pubblicità, immobiliare e costruzioni, HoReCa"
+      },
+      {
+        "value": "EMCC",
+        "label": "accreditata Mentor EIA Practitioner"
+      }
+    ],
+    "credentialsTitle": "Certificazioni",
+    "credentials": [
+      "Mentor EIA Practitioner, EMCC Romania",
+      "Coach Professionista, One2Coach Bucarest",
+      "Coach Formatore, Autorità Nazionale per le Qualifiche, COR 242401, Romania"
+    ],
+    "pressTitle": "Presenza pubblica",
+    "pressText": "Sono apparsa sulla copertina di ForbesLife e sono intervenuta come speaker al Forbes CEE Forum, al Forbes Power Breakfast e a ZF Live, parlando di imprenditoria, imprese familiari e leadership.",
+    "pressItems": [
+      "Copertina di ForbesLife",
+      "Speaker, Forbes CEE Forum",
+      "Speaker, Forbes Power Breakfast",
+      "Speaker, ZF Live"
+    ],
+    "ctaTitle": "Facciamo conoscenza",
+    "ctaText": "La prima sessione è gratuita e riservata."
+  },
+  "contact": {
+    "seoDescription": "Prenota la prima sessione gratuita di mentoring o scrivimi un messaggio.",
+    "eyebrow": "Contatti",
+    "title": "Prenota la prima sessione gratuita",
+    "lead": "Ogni trasformazione inizia da una conversazione. A volte serve solo un po' di chiarezza per vedere il passo successivo.",
+    "form": {
+      "title": "Scrivimi un messaggio",
+      "name": "Nome e cognome",
+      "email": "Email",
+      "phone": "Telefono (facoltativo)",
+      "audience": "Sono…",
+      "audiencePlaceholder": "Scegli un'opzione",
+      "audienceOptions": {
+        "founder": "Fondatore",
+        "successor": "Successore",
+        "executive": "Dirigente / professionista",
+        "other": "Altro"
+      },
+      "program": "Programma di interesse",
+      "programPlaceholder": "Non lo so ancora",
+      "message": "Messaggio",
+      "messageHint": "Raccontami in breve che cosa vuoi cambiare.",
+      "consent": "Acconsento al trattamento dei miei dati per ricevere una risposta, secondo l'informativa sulla privacy.",
+      "submit": "Invia il messaggio",
+      "pending": "Il modulo sarà attivato a breve. Nel frattempo, scrivimi direttamente all'indirizzo email qui sotto."
+    },
+    "next": {
+      "title": "Cosa succede dopo",
+      "steps": [
+        "Mi invii il tuo messaggio.",
+        "Ricevi una risposta il prima possibile.",
+        "Fissiamo insieme la prima sessione gratuita."
+      ]
+    },
+    "benefits": {
+      "title": "I benefici del coaching personale e professionale",
+      "items": [
+        "più chiarezza nella vita personale",
+        "fiducia nelle proprie decisioni",
+        "superamento dei blocchi interiori",
+        "una direzione più chiara nella carriera o nel business",
+        "equilibrio tra vita personale e professionale"
+      ]
+    },
+    "direct": {
+      "title": "Scrivimi direttamente"
+    }
+  },
+  "legal": {
+    "translationNotice": "Questo documento è attualmente disponibile solo in rumeno."
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "brand": "Raluca Andrenacci",
+  "skipToContent": "Treci la conținut",
+  "languages": { "ro": "Română", "en": "English", "it": "Italiano" },
+  "languageNav": "Limba",
+  "cta": { "freeSession": "Prima sesiune gratuită" },
+  "nav": {
+    "label": "Navigare principală",
+    "home": "Acasă",
+    "about": "Despre mine",
+    "programs": "Programe",
+    "blog": "Blog",
+    "contact": "Contact",
+    "menuOpen": "Deschide meniul",
+    "menuClose": "Închide meniul"
+  },
+  "programs": {
+    "names": {
+      "coLeadership": "Co-Leadership: Fondator & NextGen",
+      "nextgenMentoring": "Mentorat pentru Succesorii NextGen",
+      "successorIntegration": "Integrarea Succesorului în Business",
+      "entrepreneurInResidence": "Entrepreneur-in-Residence",
+      "governanceBoard": "Advisory de Guvernanță & Board Family-Office",
+      "audit": "Auditul Prezentului Tău"
+    }
+  },
+  "footer": {
+    "tagline": "Mentorat confidențial pentru afaceri de familie: succesiune, guvernanță și continuitate.",
+    "programsTitle": "Programe",
+    "navTitle": "Site",
+    "blurbs": {
+      "freeSession": {
+        "title": "Prima sesiune gratuită",
+        "text": "Programează o conversație confidențială despre situația ta."
+      },
+      "contact": {
+        "title": "Contact",
+        "text": "Scrie-mi și vei primi un răspuns în cel mai scurt timp:"
+      }
+    },
+    "privacy": "Politica de confidențialitate",
+    "cookies": "Politica de cookie-uri",
+    "manageCookies": "Setări cookie-uri",
+    "rights": "© {{year}} Raluca Andrenacci. Toate drepturile rezervate.",
+    "location": "Milano · online",
+    "linkedin": "Raluca Andrenacci pe LinkedIn",
+    "instagram": "Raluca Andrenacci pe Instagram"
+  },
+  "images": {
+    "hero-portrait": "Raluca Andrenacci, mentor pentru afaceri de familie, la o masă de lucru",
+    "portrait-headshot": "Portret Raluca Andrenacci",
+    "portrait-leaning": "Raluca Andrenacci într-un sacou alb, sprijinită de un scaun",
+    "portrait-armchair": "Raluca Andrenacci așezată într-un fotoliu de piele",
+    "desk-notebook": "Raluca Andrenacci la birou, cu un carnet de notițe",
+    "working-laptop": "Raluca Andrenacci lucrând la laptop",
+    "mentoring-session": "Raluca Andrenacci într-o sesiune de mentorat",
+    "marble-table": "Raluca Andrenacci la o masă din marmură",
+    "certificate-emcc": "Certificat EMCC EIA Practitioner al Ralucăi Andrenacci"
+  },
+  "placeholder": {
+    "soon": "Această pagină este în lucru."
+  },
+  "notFound": {
+    "title": "Pagina nu a fost găsită",
+    "text": "Adresa pe care ai accesat-o nu există sau a fost mutată.",
+    "back": "Înapoi acasă"
+  }
+}
