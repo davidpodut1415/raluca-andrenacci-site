@@ -18,12 +18,13 @@ interface Post {
  */
 export function BlogShowcase() {
   const { t, items } = usePages();
-  const [featured, ...latest] = items<Post>('home.blog.items');
+  const [featured, ...rest] = items<Post>('home.blog.items');
+  const latest = rest.slice(0, 3);
   if (!featured) return null;
 
   return (
     <Container>
-      <div className="mb-10 flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 md:mb-14">
+      <div className="mb-8 flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 md:mb-10">
         <h2 className="font-extrabold">{t('home.blog.title')}</h2>
         <LocalizedLink
           to={{ key: 'blog' }}
@@ -34,20 +35,20 @@ export function BlogShowcase() {
         </LocalizedLink>
       </div>
 
-      <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+      <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
         <article className="group relative flex flex-col items-center text-center">
-          <div className="w-full max-w-sm overflow-hidden rounded-2xl shadow-card">
+          <div className="w-full max-w-64 overflow-hidden rounded-2xl shadow-card">
             <Img
               name={featured.image}
               decorative
-              sizes="(min-width: 1024px) 24rem, 80vw"
+              sizes="16rem"
               className="aspect-square w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
             />
           </div>
-          <p className="mt-8 text-small tracking-wide text-ink-500 uppercase">
+          <p className="mt-6 text-small tracking-wide text-ink-500 uppercase">
             {featured.category} <span aria-hidden="true">·</span> {featured.date}
           </p>
-          <h3 className="mt-3 max-w-xl font-serif text-h2 leading-tight font-extrabold">
+          <h3 className="mt-3 max-w-lg font-serif text-h3 leading-tight font-extrabold">
             <LocalizedLink to={{ key: 'blog' }} className="after:absolute after:inset-0">
               {featured.title}
             </LocalizedLink>
@@ -57,12 +58,12 @@ export function BlogShowcase() {
         <ul className="divide-y divide-line border-y border-line">
           {latest.map((post) => (
             <li key={post.title}>
-              <article className="group relative flex items-center gap-5 py-6 md:gap-6">
-                <div className="size-24 shrink-0 overflow-hidden rounded-xl md:size-28">
+              <article className="group relative flex items-center gap-5 py-5 md:gap-6">
+                <div className="size-20 shrink-0 overflow-hidden rounded-xl md:size-24">
                   <Img
                     name={post.image}
                     decorative
-                    sizes="7rem"
+                    sizes="6rem"
                     className="size-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>

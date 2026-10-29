@@ -35,10 +35,10 @@ export function ProgramShowcase() {
     <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
       <div className="lg:col-span-7">
         <Eyebrow>{tp('home.programs.eyebrow')}</Eyebrow>
-        <h2 className="mt-4 max-w-2xl font-extrabold">{tp('home.programs.title')}</h2>
-        <p className="mt-4 max-w-xl text-ink-500">{tp('home.programs.lead')}</p>
+        <h2 className="mt-3 max-w-2xl font-extrabold">{tp('home.programs.title')}</h2>
+        <p className="mt-3 max-w-xl text-ink-500">{tp('home.programs.lead')}</p>
 
-        <ul className="mt-10 flex flex-col md:mt-12">
+        <ul className="mt-8 flex flex-col">
           {PROGRAMS.map((program) => {
             const isActive = program === active;
             return (
@@ -47,12 +47,12 @@ export function ProgramShowcase() {
                   to={{ key: 'program', program }}
                   onMouseEnter={() => setActive(program)}
                   onFocus={() => setActive(program)}
-                  className="group flex items-center justify-between gap-6 py-5 md:py-6"
+                  className="group flex items-center justify-between gap-6 py-4"
                 >
                   <span>
                     <span
                       className={cn(
-                        'block font-serif text-h2 leading-tight font-extrabold transition-colors duration-300',
+                        'block font-serif text-h3 leading-tight font-extrabold transition-colors duration-300',
                         isActive ? 'text-ink-900' : 'text-ink-900/35',
                       )}
                     >
@@ -74,7 +74,7 @@ export function ProgramShowcase() {
           })}
         </ul>
 
-        <div className="mt-10 md:mt-12">
+        <div className="mt-8">
           <ButtonLink to={{ key: 'programs' }} size="lg">
             {tp('home.programs.cta')}
           </ButtonLink>
@@ -83,7 +83,7 @@ export function ProgramShowcase() {
 
       <div className="hidden lg:col-span-5 lg:block">
         <div className="sticky top-28">
-          <div className="relative aspect-4/5 overflow-hidden rounded-2xl bg-ink-900 shadow-card">
+          <div className="relative h-[min(34rem,calc(100svh-13rem))] overflow-hidden rounded-2xl bg-ink-900 shadow-card">
             {PROGRAMS.map((program) => (
               <Img
                 key={program}
