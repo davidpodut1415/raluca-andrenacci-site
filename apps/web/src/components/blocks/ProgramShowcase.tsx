@@ -47,7 +47,7 @@ export function ProgramShowcase() {
                   to={{ key: 'program', program }}
                   onMouseEnter={() => setActive(program)}
                   onFocus={() => setActive(program)}
-                  className="group flex items-center justify-between gap-6 py-4"
+                  className="group flex items-center justify-between gap-6 py-4 [@media(max-height:820px)]:py-3"
                 >
                   <span>
                     <span
@@ -82,8 +82,8 @@ export function ProgramShowcase() {
       </div>
 
       <div className="hidden lg:col-span-5 lg:block">
-        <div className="sticky top-28">
-          <div className="relative h-[min(34rem,calc(100svh-13rem))] overflow-hidden rounded-2xl bg-ink-900 shadow-card">
+        <div>
+          <div className="relative h-[min(34rem,calc(100svh-12rem))] overflow-hidden rounded-2xl bg-ink-900 shadow-card">
             {PROGRAMS.map((program) => (
               <Img
                 key={program}

@@ -15,20 +15,15 @@ interface CTAPanelProps {
  */
 export function CTAPanel({ title, text, action }: CTAPanelProps) {
   return (
-    <section className="relative isolate flex min-h-[44rem] items-start justify-center overflow-hidden bg-black px-5 pt-20 text-center sm:px-8 md:min-h-[48rem] md:pt-24 lg:px-10">
-      {/* Photo sits in the lower ~86% so the face lands below the text block. */}
+    <section className="relative isolate flex min-h-[44rem] items-center justify-center overflow-hidden bg-wall px-5 text-center sm:px-8 md:min-h-[48rem] lg:px-10">
+      {/* The photo starts 20% down (face below the text); its top edge dissolves into the wall colour. */}
       <Img
         name="portrait-armchair"
         decorative
         sizes="100vw"
-        className="absolute inset-x-0 top-[14%] -z-30 h-[86%] w-full object-cover object-top"
+        className="absolute inset-x-0 top-[20%] -z-30 h-[80%] w-full object-cover object-top [mask-image:linear-gradient(to_bottom,transparent,black_20%)]"
       />
       <div aria-hidden="true" className="absolute inset-0 -z-20 bg-black/55" />
-      {/* Top: from black into the photo. */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-x-0 top-0 -z-10 h-1/3 bg-linear-to-b from-black via-black/60 to-transparent"
-      />
       {/* Bottom: from the photo into the footer colour, low in the panel. */}
       <div
         aria-hidden="true"

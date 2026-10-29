@@ -28,6 +28,7 @@
   --color-burgundy-700: #812816;
   --color-burgundy-800: #661e10;
   --color-espresso-900: #3e1d16; /* footer only */
+  --color-wall: #cccbc3; /* top-edge colour of the CTA photo, so its offset top blends in */
   --color-ink-900: #1a1a1a;
   --color-ink-700: #444444;
   --color-ink-500: #666666;
