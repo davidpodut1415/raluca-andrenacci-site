@@ -17,7 +17,7 @@ export function HomeHero() {
       <div className="relative isolate flex min-h-[calc(100svh-4.25rem)] items-center justify-center overflow-hidden rounded-2xl bg-black p-6 sm:min-h-[calc(100svh-4.5rem)] sm:p-10 lg:min-h-[calc(100svh-5rem)] lg:p-12">
         <HeroVideo />
         {/* Even black scrim behind the centered text. */}
-        <div aria-hidden="true" className="absolute inset-0 -z-10 bg-black/20 bg-black/45" />
+        <div aria-hidden="true" className="absolute inset-0 -z-10 bg-black/60" />
         <div className="flex w-full flex-col items-center gap-10 text-center">
           <div className="flex max-w-6xl flex-col items-center gap-5 md:gap-6">
             <Eyebrow className="text-white/85">{tp('home.hero.eyebrow')}</Eyebrow>

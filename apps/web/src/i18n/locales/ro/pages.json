@@ -13,12 +13,13 @@
       ]
     },
     "credibility": {
-      "label": "Recunoaștere și acreditări",
+      "label": "Featured in",
       "logos": {
         "forbes": "Forbes România (ForbesLife, Forbes CEE Forum, Forbes Power Breakfast)",
         "zf": "Ziarul Financiar (ZF Live)",
         "emcc": "EMCC Global",
-        "ffi": "Family Firm Institute (FFI)"
+        "ffi": "Family Firm Institute (FFI)",
+        "elian": "Elian Partners"
       }
     },
     "challenge": {
@@ -47,7 +48,7 @@
     "programs": {
       "eyebrow": "Programe",
       "title": "Cinci programe pentru familii care gândesc în generații",
-      "lead": "Fiecare program este personalizat, confidențial și construit în jurul unui rezultat clar.",
+      "lead": "Alege direcția: fiecare program este personalizat, confidențial și construit în jurul unui rezultat clar.",
       "learnMore": "Află mai mult",
       "cta": "Vezi toate programele"
     },
@@ -92,6 +93,98 @@
     "cta": {
       "title": "Hai să discutăm despre continuitatea afacerii tale",
       "text": "Prima sesiune este gratuită și confidențială."
+    },
+    "media": {
+      "title": "Despre mine",
+      "all": "Vezi toate",
+      "prev": "Anterior",
+      "next": "Următorul",
+      "goTo": "Mergi la grupul {{n}}",
+      "label": "Apariții în media",
+      "open": "Deschide",
+      "types": {
+        "press": "Presă",
+        "event": "Eveniment",
+        "video": "Video",
+        "interview": "Interviu",
+        "article": "Articol"
+      },
+      "items": [
+        {
+          "type": "press",
+          "source": "ForbesLife",
+          "title": "Raluca Andrenacci pe coperta ForbesLife",
+          "image": "portrait-leaning"
+        },
+        {
+          "type": "event",
+          "source": "Forbes CEE Forum",
+          "title": "Speaker despre antreprenoriat și afaceri de familie",
+          "image": "portrait-headshot"
+        },
+        {
+          "type": "video",
+          "source": "Forbes Power Breakfast",
+          "title": "Conversație despre leadership și succesiune",
+          "image": "desk-notebook"
+        },
+        {
+          "type": "video",
+          "source": "ZF Live",
+          "title": "Invitată la ZF Live",
+          "image": "portrait-armchair"
+        },
+        {
+          "type": "interview",
+          "source": "SMARK.RO",
+          "title": "Interviu SMARK.RO",
+          "image": "marble-table"
+        },
+        {
+          "type": "article",
+          "source": "Blog",
+          "title": "Cum pot cei mai bogați oameni din România să își protejeze averea și să asigure succesul generațiilor viitoare",
+          "image": "hero-portrait"
+        }
+      ]
+    },
+    "blog": {
+      "eyebrow": "Blog",
+      "title": "Din blog",
+      "all": "Toate articolele",
+      "read": "Citește",
+      "items": [
+        {
+          "category": "Bani & familie",
+          "date": "ianuarie 2026",
+          "title": "Cât este suficient?! Despre bani, viață, familie și moștenirea pe care o construim",
+          "image": "portrait-headshot"
+        },
+        {
+          "category": "Leadership",
+          "date": "octombrie 2025",
+          "title": "Cea mai grea lecție pe care o înveți după ce ai succes",
+          "image": "desk-notebook"
+        },
+        {
+          "category": "Leadership",
+          "date": "octombrie 2025",
+          "title": "Ce mai înseamnă AUTORITATE într-o lume cu TikTok, reclame plătite și validare instantă",
+          "image": "portrait-armchair"
+        },
+        {
+          "category": "Familie",
+          "date": "aprilie 2025",
+          "title": "Cum ne asumăm educația copiilor noștri în România?",
+          "image": "working-laptop"
+        },
+        {
+          "category": "Guvernanță",
+          "date": "aprilie 2025",
+          "title": "Cum poate ajuta guvernanța familială afacerea familiei tale?",
+          "image": "marble-table"
+        }
+      ]
     }
   },
   "programsPage": {

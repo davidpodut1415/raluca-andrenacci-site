@@ -28,12 +28,16 @@ describe('home', () => {
       'Entrepreneur-in-Residence',
       'Advisory de Guvernanță & Board Family-Office',
     ]) {
-      expect(within(main).getByRole('link', { name })).toBeInTheDocument();
+      expect(
+        within(main).getByRole('link', {
+          name: new RegExp(`^${name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`),
+        }),
+      ).toBeInTheDocument();
     }
-    // The individual Audit program is secondary: a teaser, not one of the five family cards.
+    // The individual Audit program is not promoted on the landing page (it lives on the Programs page).
     expect(
-      within(main).getByRole('heading', { level: 2, name: 'Auditul Prezentului Tău' }),
-    ).toBeInTheDocument();
+      within(main).queryByRole('heading', { name: 'Auditul Prezentului Tău' }),
+    ).not.toBeInTheDocument();
   });
 
   it('plays a silent looping background video without a pause control', async () => {
@@ -48,17 +52,18 @@ describe('home', () => {
     expect(screen.queryByRole('button', { name: /videoclip/i })).not.toBeInTheDocument();
   });
 
-  it('shows centered accreditation logos without a visible heading', async () => {
+  it('shows a centered "Featured in" label above the partner logos', async () => {
     renderApp('/');
     await screen.findByRole('heading', { level: 1 });
-    const bar = screen.getByRole('region', { name: 'Recunoaștere și acreditări' });
-    expect(within(bar).queryByText('Recunoaștere și acreditări')).not.toBeInTheDocument();
+    const bar = screen.getByRole('region', { name: 'Featured in' });
+    expect(within(bar).getByText('Featured in')).toBeVisible();
     const logos = within(bar).getAllByRole('img');
     expect(logos.map((l) => l.getAttribute('alt'))).toEqual([
       expect.stringMatching(/^Forbes România/),
       expect.stringMatching(/^Ziarul Financiar/),
       'EMCC Global',
       expect.stringMatching(/^Family Firm Institute/),
+      'Elian Partners',
     ]);
     for (const logo of logos) {
       expect(logo).toHaveAttribute('width');
@@ -83,6 +88,23 @@ describe('home', () => {
     await userEvent.keyboard('{ArrowRight}');
     expect(tabs[2]).toHaveAttribute('aria-selected', 'true');
     expect(tabs[2]).toHaveFocus();
+  });
+});
+
+describe('media carousel', () => {
+  it('lists the media features as links and has working controls', async () => {
+    renderApp('/');
+    await screen.findByRole('heading', { level: 1 });
+    const carousel = screen.getByRole('region', { name: 'Apariții în media' });
+    expect(within(carousel).getAllByRole('article')).toHaveLength(6);
+    const links = within(carousel).getAllByRole('link', { name: /^Deschide:/ });
+    expect(links).toHaveLength(6);
+    for (const link of links) expect(link).toHaveAttribute('href', '/blog');
+    expect(within(carousel).getByRole('button', { name: 'Următorul' })).toBeInTheDocument();
+    expect(within(carousel).getByRole('button', { name: 'Anterior' })).toBeInTheDocument();
+    expect(
+      within(carousel).getAllByRole('button', { name: /Mergi la grupul/ }).length,
+    ).toBeGreaterThan(0);
   });
 });
 

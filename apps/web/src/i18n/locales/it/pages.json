@@ -13,12 +13,13 @@
       ]
     },
     "credibility": {
-      "label": "Riconoscimenti e accreditamenti",
+      "label": "Featured in",
       "logos": {
         "forbes": "Forbes Romania (ForbesLife, Forbes CEE Forum, Forbes Power Breakfast)",
         "zf": "Ziarul Financiar (ZF Live)",
         "emcc": "EMCC Global",
-        "ffi": "Family Firm Institute (FFI)"
+        "ffi": "Family Firm Institute (FFI)",
+        "elian": "Elian Partners"
       }
     },
     "challenge": {
@@ -47,7 +48,7 @@
     "programs": {
       "eyebrow": "Programmi",
       "title": "Cinque programmi per famiglie che pensano per generazioni",
-      "lead": "Ogni programma è personalizzato, riservato e costruito attorno a un risultato chiaro.",
+      "lead": "Scegli la direzione: ogni programma è personalizzato, riservato e costruito attorno a un risultato chiaro.",
       "learnMore": "Scopri di più",
       "cta": "Vedi tutti i programmi"
     },
@@ -92,6 +93,98 @@
     "cta": {
       "title": "Parliamo della continuità della tua azienda",
       "text": "La prima sessione è gratuita e riservata."
+    },
+    "media": {
+      "title": "Chi sono",
+      "all": "Vedi tutto",
+      "prev": "Precedente",
+      "next": "Successivo",
+      "goTo": "Vai al gruppo {{n}}",
+      "label": "Apparizioni sui media",
+      "open": "Apri",
+      "types": {
+        "press": "Stampa",
+        "event": "Evento",
+        "video": "Video",
+        "interview": "Intervista",
+        "article": "Articolo"
+      },
+      "items": [
+        {
+          "type": "press",
+          "source": "ForbesLife",
+          "title": "Raluca Andrenacci sulla copertina di ForbesLife",
+          "image": "portrait-leaning"
+        },
+        {
+          "type": "event",
+          "source": "Forbes CEE Forum",
+          "title": "Speaker su imprenditoria e imprese familiari",
+          "image": "portrait-headshot"
+        },
+        {
+          "type": "video",
+          "source": "Forbes Power Breakfast",
+          "title": "Una conversazione su leadership e successione",
+          "image": "desk-notebook"
+        },
+        {
+          "type": "video",
+          "source": "ZF Live",
+          "title": "Ospite a ZF Live",
+          "image": "portrait-armchair"
+        },
+        {
+          "type": "interview",
+          "source": "SMARK.RO",
+          "title": "Intervista a SMARK.RO",
+          "image": "marble-table"
+        },
+        {
+          "type": "article",
+          "source": "Blog",
+          "title": "Come possono le persone più ricche della Romania proteggere il proprio patrimonio e garantire il successo delle generazioni future",
+          "image": "hero-portrait"
+        }
+      ]
+    },
+    "blog": {
+      "eyebrow": "Blog",
+      "title": "Dal blog",
+      "all": "Tutti gli articoli",
+      "read": "Leggi",
+      "items": [
+        {
+          "category": "Denaro e famiglia",
+          "date": "gennaio 2026",
+          "title": "Quanto è abbastanza? Riflessioni su denaro, vita, famiglia e sull’eredità che costruiamo",
+          "image": "portrait-headshot"
+        },
+        {
+          "category": "Leadership",
+          "date": "ottobre 2025",
+          "title": "La lezione più difficile che impari dopo aver avuto successo",
+          "image": "desk-notebook"
+        },
+        {
+          "category": "Leadership",
+          "date": "ottobre 2025",
+          "title": "Cosa significa ancora AUTOREVOLEZZA in un mondo di TikTok, pubblicità a pagamento e validazione istantanea",
+          "image": "portrait-armchair"
+        },
+        {
+          "category": "Famiglia",
+          "date": "aprile 2025",
+          "title": "Come ci assumiamo la responsabilità dell’educazione dei nostri figli in Romania?",
+          "image": "working-laptop"
+        },
+        {
+          "category": "Governance",
+          "date": "aprile 2025",
+          "title": "Come può la governance familiare aiutare l’azienda della tua famiglia?",
+          "image": "marble-table"
+        }
+      ]
     }
   },
   "programsPage": {

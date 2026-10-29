@@ -56,6 +56,7 @@ const LOGOS = {
   zf: 'zf-ziarul-financiar.png',
   emcc: 'emcc-global.png',
   ffi: 'ffi-wikimedia.png',
+  elian: 'elian.svg',
 };
 
 await rm(LOGO_OUT, { recursive: true, force: true });

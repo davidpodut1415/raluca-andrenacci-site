@@ -5,14 +5,17 @@ import { ScrollFill } from './ScrollFill';
 
 /**
  * Spacing standards (8px grid):
- * - container: max 1280px, gutters 20 / 32 / 48px
+ * - container: up to 1920px wide, gutters 20 / 32 / 40px (same as the header and carousels)
  * - section rhythm: 48 / 64 / 80px vertical padding
  * - section heading → content: 32 / 48px
  * - grid gaps: 24 / 32px; card padding: 24 / 32px
  */
 export function Container({ className, ...rest }: ComponentProps<'div'>) {
   return (
-    <div className={cn('mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12', className)} {...rest} />
+    <div
+      className={cn('mx-auto w-full max-w-[120rem] px-5 sm:px-8 lg:px-10', className)}
+      {...rest}
+    />
   );
 }
 

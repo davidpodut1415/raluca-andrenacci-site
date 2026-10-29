@@ -70,6 +70,11 @@ export const LOGO_MANIFEST = {
     width: 120,
     height: 67,
   },
+  elian: {
+    src: '/logos/elian.svg',
+    width: 250,
+    height: 40,
+  },
 } as const;
 
 export type LogoName = keyof typeof LOGO_MANIFEST;

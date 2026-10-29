@@ -60,7 +60,7 @@ export function Header() {
         hidden && '-translate-y-full',
       )}
     >
-      <div className="flex h-14 items-center justify-between gap-6 px-4 sm:px-6 lg:grid lg:h-16 lg:grid-cols-[1fr_auto_1fr] lg:px-8">
+      <div className="flex h-14 items-center justify-between gap-6 px-5 sm:px-8 lg:grid lg:h-16 lg:grid-cols-[1fr_auto_1fr] lg:px-10">
         <LocalizedLink
           to={{ key: 'home' }}
           className="justify-self-start text-button font-semibold tracking-wordmark whitespace-nowrap text-ink-900 uppercase"
@@ -93,7 +93,7 @@ export function Header() {
 
       {open && (
         <div id="mobile-menu" className="border-t border-line bg-grey-50 lg:hidden">
-          <div className="flex flex-col gap-8 px-4 py-8 sm:px-6">
+          <div className="flex flex-col gap-8 px-5 py-8 sm:px-8">
             <nav aria-label={t('nav.label')}>
               <ul className="flex flex-col divide-y divide-line text-button">
                 {NAV_ITEMS.map((key) => (

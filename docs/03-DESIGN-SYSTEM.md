@@ -119,3 +119,13 @@ Based on the reference footer/hero screenshots from the client (airy, large roun
 - **Header (reference-based):** full-width gutters (16 / 24 / 32px), 56px (64px desktop) high, three columns on desktop — uppercase wordmark with wide tracking (left), links centered (Poppins 500, 14px), language dropdown + small primary button (right). It **hides when scrolling down and returns on scroll up** (always visible near the top, while the mobile menu is open, and on keyboard focus).
 - **Hero (reference-based):** a rounded-2xl video panel inset 12–16px from the viewport edges, filling the space under the header; headline block bottom-left, supporting facts bottom-right, black gradient from the bottom; video aligned to the top on desktop so the face stays in frame. **No pause button** (client decision). Note: WCAG 2.2.2 asks for a way to pause auto-playing motion longer than 5 s; the video is silent, decorative and stops under `prefers-reduced-motion`. If an accessibility statement is required, reconsider adding a control.
 - **CTA band** uses the `light` button variant (white on burgundy).
+
+## 12. Landing page structure (2026-10-29)
+
+Order: hero (video) → "Featured in" logos → **programs** → testimonials → **Despre mine** (media carousel) → **blog** → **closing CTA photo panel** → footer.
+
+- **Side padding** follows tonyrobbins.com (measured: 40px at 1440px for header and sections): 20 / 32 / 40px on mobile / tablet / desktop for the header, `Container`, carousels and footer; hero and CTA panels are inset 12–16px from the viewport edge.
+- **Programs** (inspired by their "pillars" block): a large typographic index of the five programs (active name dark, others dimmed, arrow on the active one) with a sticky rounded photo panel that follows hover/focus; below `lg` the photo is dropped and each name shows its summary. One button leads to the Programs page.
+- **Blog:** one featured article (square image, centered category · date, large title) beside a list of four latest with thumbnails and a "Citește" action. Placeholder content until Phase 5.
+- **Closing CTA:** rounded photo panel, black 60% overlay, centered title + line + white button to the contact page.
+- **Token note:** `--color-black` is now defined; before, `bg-black/…` utilities silently produced nothing because the default palette is reset (so some overlays were missing).

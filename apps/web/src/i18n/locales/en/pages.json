@@ -9,12 +9,13 @@
       "trust": ["20+ years of entrepreneurship", "EMCC EIA Practitioner mentor", "ForbesLife cover"]
     },
     "credibility": {
-      "label": "Recognition and accreditations",
+      "label": "Featured in",
       "logos": {
         "forbes": "Forbes Romania (ForbesLife, Forbes CEE Forum, Forbes Power Breakfast)",
         "zf": "Ziarul Financiar (ZF Live)",
         "emcc": "EMCC Global",
-        "ffi": "Family Firm Institute (FFI)"
+        "ffi": "Family Firm Institute (FFI)",
+        "elian": "Elian Partners"
       }
     },
     "challenge": {
@@ -43,7 +44,7 @@
     "programs": {
       "eyebrow": "Programs",
       "title": "Five programs for families who think in generations",
-      "lead": "Each program is personalized, confidential and built around a clear outcome.",
+      "lead": "Choose your direction: every program is personalized, confidential and built around a clear outcome.",
       "learnMore": "Learn more",
       "cta": "See all programs"
     },
@@ -88,6 +89,98 @@
     "cta": {
       "title": "Let's talk about the continuity of your business",
       "text": "The first session is free and confidential."
+    },
+    "media": {
+      "title": "About me",
+      "all": "See all",
+      "prev": "Previous",
+      "next": "Next",
+      "goTo": "Go to group {{n}}",
+      "label": "Media features",
+      "open": "Open",
+      "types": {
+        "press": "Press",
+        "event": "Event",
+        "video": "Video",
+        "interview": "Interview",
+        "article": "Article"
+      },
+      "items": [
+        {
+          "type": "press",
+          "source": "ForbesLife",
+          "title": "Raluca Andrenacci on the cover of ForbesLife",
+          "image": "portrait-leaning"
+        },
+        {
+          "type": "event",
+          "source": "Forbes CEE Forum",
+          "title": "Speaker on entrepreneurship and family businesses",
+          "image": "portrait-headshot"
+        },
+        {
+          "type": "video",
+          "source": "Forbes Power Breakfast",
+          "title": "A conversation on leadership and succession",
+          "image": "desk-notebook"
+        },
+        {
+          "type": "video",
+          "source": "ZF Live",
+          "title": "Guest at ZF Live",
+          "image": "portrait-armchair"
+        },
+        {
+          "type": "interview",
+          "source": "SMARK.RO",
+          "title": "Interview with SMARK.RO",
+          "image": "marble-table"
+        },
+        {
+          "type": "article",
+          "source": "Blog",
+          "title": "How can Romania's wealthiest people protect their wealth and secure the success of future generations",
+          "image": "hero-portrait"
+        }
+      ]
+    },
+    "blog": {
+      "eyebrow": "Blog",
+      "title": "From the blog",
+      "all": "All articles",
+      "read": "Read",
+      "items": [
+        {
+          "category": "Money & family",
+          "date": "January 2026",
+          "title": "How much is enough? Reflections on money, life, family, and the legacy we build",
+          "image": "portrait-headshot"
+        },
+        {
+          "category": "Leadership",
+          "date": "October 2025",
+          "title": "The hardest lesson you learn after you succeed",
+          "image": "desk-notebook"
+        },
+        {
+          "category": "Leadership",
+          "date": "October 2025",
+          "title": "What does AUTHORITY even mean in a world of TikTok, paid ads and instant validation",
+          "image": "portrait-armchair"
+        },
+        {
+          "category": "Family",
+          "date": "April 2025",
+          "title": "How do we take responsibility for our children’s education in Romania?",
+          "image": "working-laptop"
+        },
+        {
+          "category": "Governance",
+          "date": "April 2025",
+          "title": "How can family governance help your family business?",
+          "image": "marble-table"
+        }
+      ]
     }
   },
   "programsPage": {

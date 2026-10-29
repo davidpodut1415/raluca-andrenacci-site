@@ -10,9 +10,10 @@ const LOGOS: { name: LogoName; height: string }[] = [
   { name: 'zf', height: 'h-6 md:h-7' },
   { name: 'emcc', height: 'h-12 md:h-14' },
   { name: 'ffi', height: 'h-10 md:h-12' },
+  { name: 'elian', height: 'h-7 md:h-8' },
 ];
 
-/** Press and accreditation logos spread evenly across the container. The section label is for assistive tech only. */
+/** Press, accreditation and partner logos spread evenly across the container, with a centered label. */
 export function CredibilityBar() {
   const { t } = usePages();
   const list = useRef<HTMLUListElement>(null);
@@ -40,8 +41,11 @@ export function CredibilityBar() {
   }, []);
 
   return (
-    <section aria-label={t('home.credibility.label')} className="bg-grey-50">
+    <section aria-labelledby="featured-in" className="bg-grey-50">
       <Container className="py-10 md:py-14">
+        <p id="featured-in" className="mb-8 text-center text-body text-ink-700">
+          {t('home.credibility.label')}
+        </p>
         <ul
           ref={list}
           className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8 lg:flex-nowrap lg:justify-between lg:gap-x-8"
