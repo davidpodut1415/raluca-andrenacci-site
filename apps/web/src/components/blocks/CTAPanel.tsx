@@ -9,28 +9,35 @@ interface CTAPanelProps {
 }
 
 /**
- * Closing call-to-action: a tall full-width photo with the face in the upper half and the text
- * below it. The bottom fades into the footer colour so the two read as one block.
+ * Closing call-to-action, laid out like the reference: a tall dark photo with the person in the
+ * lower half, the text block centered above the face, the top fading in from black and the bottom
+ * fading into the footer colour (espresso-900) so photo and footer read as one block.
  */
 export function CTAPanel({ title, text, action }: CTAPanelProps) {
   return (
-    <section className="relative isolate flex min-h-[40rem] items-end justify-center overflow-hidden bg-black px-5 pt-16 pb-20 text-center sm:px-8 md:min-h-[46rem] lg:px-10">
+    <section className="relative isolate flex min-h-[44rem] items-start justify-center overflow-hidden bg-black px-5 pt-20 text-center sm:px-8 md:min-h-[48rem] md:pt-24 lg:px-10">
+      {/* Photo sits in the lower ~86% so the face lands below the text block. */}
       <Img
         name="portrait-armchair"
         decorative
         sizes="100vw"
-        className="absolute inset-0 -z-30 size-full object-cover object-[center_20%]"
+        className="absolute inset-x-0 top-[14%] -z-30 h-[86%] w-full object-cover object-top"
       />
-      <div aria-hidden="true" className="absolute inset-0 -z-20 bg-black/35" />
-      {/* Smooth fade into the footer's colour (espresso-900) over the lower part of the photo. */}
+      <div aria-hidden="true" className="absolute inset-0 -z-20 bg-black/55" />
+      {/* Top: from black into the photo. */}
       <div
         aria-hidden="true"
-        className="absolute inset-x-0 bottom-0 -z-10 h-3/5 bg-linear-to-t from-espresso-900 via-espresso-900/70 to-transparent"
+        className="absolute inset-x-0 top-0 -z-10 h-1/3 bg-linear-to-b from-black via-black/60 to-transparent"
       />
-      <div className="flex max-w-3xl flex-col items-center gap-6">
-        <h2 className="font-extrabold text-white">{title}</h2>
+      {/* Bottom: from the photo into the footer colour, low in the panel. */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-x-0 bottom-0 -z-10 h-[30%] bg-linear-to-t from-espresso-900 via-espresso-900/80 to-transparent"
+      />
+      <div className="flex max-w-4xl flex-col items-center gap-5">
+        <h2 className="text-display font-extrabold text-white">{title}</h2>
         {text && <p className="max-w-xl text-white/90">{text}</p>}
-        <div className="mt-2">{action}</div>
+        <div className="mt-4">{action}</div>
       </div>
     </section>
   );
