@@ -1,9 +1,15 @@
 {
   "brand": "Raluca Andrenacci",
   "skipToContent": "Treci la conținut",
-  "languages": { "ro": "Română", "en": "English", "it": "Italiano" },
+  "languages": {
+    "ro": "Română",
+    "en": "English",
+    "it": "Italiano"
+  },
   "languageNav": "Limba",
-  "cta": { "freeSession": "Prima sesiune gratuită" },
+  "cta": {
+    "freeSession": "Prima sesiune gratuită"
+  },
   "nav": {
     "label": "Navigare principală",
     "home": "Acasă",
@@ -25,7 +31,6 @@
     }
   },
   "footer": {
-    "tagline": "Mentorat confidențial pentru afaceri de familie: succesiune, guvernanță și continuitate.",
     "programsTitle": "Programe",
     "navTitle": "Site",
     "blurbs": {

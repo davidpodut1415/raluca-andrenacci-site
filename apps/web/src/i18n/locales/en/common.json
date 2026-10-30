@@ -1,9 +1,15 @@
 {
   "brand": "Raluca Andrenacci",
   "skipToContent": "Skip to content",
-  "languages": { "ro": "Română", "en": "English", "it": "Italiano" },
+  "languages": {
+    "ro": "Română",
+    "en": "English",
+    "it": "Italiano"
+  },
   "languageNav": "Language",
-  "cta": { "freeSession": "First session free" },
+  "cta": {
+    "freeSession": "First session free"
+  },
   "nav": {
     "label": "Main navigation",
     "home": "Home",
@@ -25,7 +31,6 @@
     }
   },
   "footer": {
-    "tagline": "Confidential mentoring for family businesses: succession, governance and continuity.",
     "programsTitle": "Programs",
     "navTitle": "Site",
     "blurbs": {

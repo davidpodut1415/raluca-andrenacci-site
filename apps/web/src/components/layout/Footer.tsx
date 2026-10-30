@@ -37,29 +37,7 @@ export function Footer() {
         <div aria-hidden="true" className="border-t border-white/15" />
         <div className="pt-12 md:pt-16 lg:pt-20">
           <div className="grid gap-12 lg:grid-cols-12 lg:gap-8">
-            <div className="lg:col-span-3">
-              <p className="text-button font-semibold tracking-wordmark text-white uppercase">
-                {t('brand')}
-              </p>
-              <p className="mt-4 max-w-xs text-small text-white/75">{t('footer.tagline')}</p>
-            </div>
-
-            <nav aria-labelledby="footer-programs" className="lg:col-span-4">
-              <h2 id="footer-programs" className="sr-only">
-                {t('footer.programsTitle')}
-              </h2>
-              <ul>
-                {PROGRAM_KEYS.map((program) => (
-                  <li key={program}>
-                    <LocalizedLink to={{ key: 'program', program }} className={linkClass}>
-                      {t(`programs.names.${program}`)}
-                    </LocalizedLink>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-
-            <nav aria-labelledby="footer-site" className="lg:col-span-2">
+            <nav aria-labelledby="footer-site" className="lg:col-span-3">
               <h2 id="footer-site" className="sr-only">
                 {t('footer.navTitle')}
               </h2>
@@ -68,6 +46,21 @@ export function Footer() {
                   <li key={key}>
                     <LocalizedLink to={{ key }} className={linkClass}>
                       {t(`nav.${key}`)}
+                    </LocalizedLink>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+
+            <nav aria-labelledby="footer-programs" className="lg:col-span-6">
+              <h2 id="footer-programs" className="sr-only">
+                {t('footer.programsTitle')}
+              </h2>
+              <ul className="lg:columns-2 lg:gap-8">
+                {PROGRAM_KEYS.map((program) => (
+                  <li key={program} className="break-inside-avoid">
+                    <LocalizedLink to={{ key: 'program', program }} className={linkClass}>
+                      {t(`programs.names.${program}`)}
                     </LocalizedLink>
                   </li>
                 ))}
@@ -111,7 +104,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="mt-16 grid items-start gap-8 border-t border-white/15 py-10 md:mt-20 lg:grid-cols-12 lg:gap-8">
+          <div className="mt-16 grid items-start gap-8 pb-10 md:mt-20 lg:grid-cols-12 lg:gap-8">
             <div className="lg:col-span-3">
               <LanguageMenu
                 placement="up"

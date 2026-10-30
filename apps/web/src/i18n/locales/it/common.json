@@ -1,9 +1,15 @@
 {
   "brand": "Raluca Andrenacci",
   "skipToContent": "Vai al contenuto",
-  "languages": { "ro": "Română", "en": "English", "it": "Italiano" },
+  "languages": {
+    "ro": "Română",
+    "en": "English",
+    "it": "Italiano"
+  },
   "languageNav": "Lingua",
-  "cta": { "freeSession": "Prima sessione gratuita" },
+  "cta": {
+    "freeSession": "Prima sessione gratuita"
+  },
   "nav": {
     "label": "Navigazione principale",
     "home": "Home",
@@ -25,7 +31,6 @@
     }
   },
   "footer": {
-    "tagline": "Mentoring riservato per imprese familiari: successione, governance e continuità.",
     "programsTitle": "Programmi",
     "navTitle": "Sito",
     "blurbs": {
