@@ -8,7 +8,7 @@
   },
   "languageNav": "Language",
   "cta": {
-    "freeSession": "First session free"
+    "freeSession": "Schedule your session"
   },
   "nav": {
     "label": "Main navigation",
@@ -35,7 +35,7 @@
     "navTitle": "Site",
     "blurbs": {
       "freeSession": {
-        "title": "First session free",
+        "title": "Schedule your session",
         "text": "Book a confidential conversation about your situation."
       },
       "contact": {

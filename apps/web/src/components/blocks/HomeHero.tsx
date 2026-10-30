@@ -34,9 +34,6 @@ export function HomeHero() {
               <ButtonLink to={{ key: 'contact' }} search="?type=free-session" size="lg">
                 {t('cta.freeSession')}
               </ButtonLink>
-              <ButtonLink to={{ key: 'programs' }} variant="inverted" size="lg">
-                {tp('home.hero.ctaSecondary')}
-              </ButtonLink>
             </div>
           </div>
           <ul className="flex flex-col items-center gap-2 text-small text-white/90 sm:flex-row sm:gap-x-8">

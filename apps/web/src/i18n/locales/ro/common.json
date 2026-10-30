@@ -8,7 +8,7 @@
   },
   "languageNav": "Limba",
   "cta": {
-    "freeSession": "Prima sesiune gratuită"
+    "freeSession": "Programează sesiunea"
   },
   "nav": {
     "label": "Navigare principală",
@@ -35,7 +35,7 @@
     "navTitle": "Site",
     "blurbs": {
       "freeSession": {
-        "title": "Prima sesiune gratuită",
+        "title": "Programează sesiunea",
         "text": "Programează o conversație confidențială despre situația ta."
       },
       "contact": {

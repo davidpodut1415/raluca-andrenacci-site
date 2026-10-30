@@ -124,7 +124,7 @@ describe('header', () => {
   it('navigates between pages and keeps the free-session CTA pointing at contact', async () => {
     renderApp('/');
     await screen.findByRole('heading', { level: 1 });
-    const cta = screen.getAllByRole('link', { name: 'Prima sesiune gratuită' })[0];
+    const cta = screen.getAllByRole('link', { name: 'Programează sesiunea' })[0];
     expect(cta).toHaveAttribute('href', '/contact?type=free-session');
 
     await userEvent.click(screen.getAllByRole('link', { name: 'Despre mine' })[0]!);

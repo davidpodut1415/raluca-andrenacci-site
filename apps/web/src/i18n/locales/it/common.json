@@ -8,7 +8,7 @@
   },
   "languageNav": "Lingua",
   "cta": {
-    "freeSession": "Prima sessione gratuita"
+    "freeSession": "Prenota la tua sessione"
   },
   "nav": {
     "label": "Navigazione principale",
@@ -35,7 +35,7 @@
     "navTitle": "Sito",
     "blurbs": {
       "freeSession": {
-        "title": "Prima sessione gratuita",
+        "title": "Prenota la tua sessione",
         "text": "Prenota una conversazione riservata sulla tua situazione."
       },
       "contact": {
