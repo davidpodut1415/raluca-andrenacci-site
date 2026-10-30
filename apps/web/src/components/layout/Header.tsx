@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 import { matchPath, type StaticRouteKey } from '../../i18n/routes';
-import { useHidingHeader } from '../../lib/useHidingHeader';
 import { cn } from '../../lib/cn';
 import { ButtonLink } from '../ui/Button';
 import { CloseIcon, MenuIcon } from '../ui/icons';
@@ -26,7 +25,6 @@ export function Header() {
   const [openedAt, setOpenedAt] = useState<string | null>(null);
   const open = openedAt === pathname;
   const active = activeNavKey(pathname);
-  const { hidden, reveal } = useHidingHeader(open);
 
   useEffect(() => {
     if (!open) return;
@@ -53,13 +51,7 @@ export function Header() {
   ));
 
   return (
-    <header
-      onFocusCapture={reveal}
-      className={cn(
-        'sticky top-0 z-40 bg-grey-50 transition-transform duration-300 motion-reduce:transition-none',
-        hidden && '-translate-y-full',
-      )}
-    >
+    <header className="sticky top-0 z-40 bg-grey-50">
       <div className="flex h-14 items-center justify-between gap-6 px-5 sm:px-8 lg:grid lg:h-16 lg:grid-cols-[1fr_auto_1fr] lg:px-10">
         <LocalizedLink
           to={{ key: 'home' }}
