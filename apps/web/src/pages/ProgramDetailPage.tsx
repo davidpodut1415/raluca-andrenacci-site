@@ -107,8 +107,8 @@ function ProgramDetail({ program }: { program: (typeof PROGRAM_KEYS)[number] }) 
       </Section>
 
       {isAudit && (
-        <Section tone="muted">
-          <Eyebrow className="mb-8">{tp('home.testimonials.eyebrow')}</Eyebrow>
+        <Section tone="black" className="py-20 md:py-28 lg:py-32">
+          <Eyebrow className="mb-8 text-white/70">{tp('home.testimonials.eyebrow')}</Eyebrow>
           <h2 className="sr-only">{tp('home.testimonials.title')}</h2>
           <Testimonials indexes={[2, 1, 3]} />
         </Section>

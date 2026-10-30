@@ -24,6 +24,7 @@ const sectionStyles = cva('py-12 md:py-16 lg:py-20', {
     tone: {
       light: 'bg-grey-50',
       muted: 'bg-grey-50',
+      black: 'bg-black text-white/85 [&_h2]:text-white',
       dark: 'bg-espresso-900 text-white/85 [&_h2]:text-white [&_h3]:text-white',
     },
   },
