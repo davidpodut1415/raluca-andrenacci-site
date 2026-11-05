@@ -18,7 +18,8 @@
     "blog": "Blog",
     "contact": "Contatti",
     "menuOpen": "Apri il menu",
-    "menuClose": "Chiudi il menu"
+    "menuClose": "Chiudi il menu",
+    "allPrograms": "Tutti i programmi"
   },
   "programs": {
     "names": {

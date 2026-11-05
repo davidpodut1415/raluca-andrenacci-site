@@ -18,7 +18,8 @@
     "blog": "Blog",
     "contact": "Contact",
     "menuOpen": "Deschide meniul",
-    "menuClose": "Închide meniul"
+    "menuClose": "Închide meniul",
+    "allPrograms": "Toate programele"
   },
   "programs": {
     "names": {

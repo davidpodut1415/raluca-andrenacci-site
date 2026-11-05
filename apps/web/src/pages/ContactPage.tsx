@@ -53,7 +53,7 @@ export function ContactPage() {
               <Checkbox name="consent" required label={tp('contact.form.consent')} />
               <LocalizedLink
                 to={{ key: 'privacy' }}
-                className="ml-8 text-small text-burgundy-700 underline underline-offset-4"
+                className="ml-8 inline-flex min-h-11 items-center text-small text-burgundy-700 underline underline-offset-4"
               >
                 {t('footer.privacy')}
               </LocalizedLink>

@@ -40,17 +40,14 @@ describe('home', () => {
     ).not.toBeInTheDocument();
   });
 
-  it('plays three decorative muted clips in sequence in the hero, with no pause control', async () => {
+  it('uses a decorative photo slideshow in the hero (no video, no pause control)', async () => {
     renderApp('/');
     await screen.findByRole('heading', { level: 1 });
     const hero = document.querySelector('section')!;
-    const videos = hero.querySelectorAll('video');
-    expect(videos).toHaveLength(3);
-    videos.forEach((v) => {
-      expect(v.muted).toBe(true);
-      expect(v.loop).toBe(false);
-      expect(v.getAttribute('poster')).toMatch(/^\/video\/.+-poster\.jpg$/);
-    });
+    const slides = hero.querySelectorAll('img.hero-slide');
+    expect(slides).toHaveLength(3);
+    slides.forEach((img) => expect(img).toHaveAttribute('alt', ''));
+    expect(hero.querySelector('video')).toBeNull();
     expect(screen.queryByRole('button', { name: /pauz|pause/i })).not.toBeInTheDocument();
   });
 

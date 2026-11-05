@@ -116,27 +116,27 @@
           "type": "event",
           "source": "Forbes CEE Forum",
           "title": "Speaker despre afaceri de familie",
-          "video": "forbes-collage",
-          "href": "https://www.forbes.ro/forbes-cee-forum-2024-ziua-iii-live-text-409208"
+          "href": "https://www.forbes.ro/forbes-cee-forum-2024-ziua-iii-live-text-409208",
+          "image": "event-mic"
         },
         {
           "type": "video",
           "source": "Forbes Power Breakfast",
           "title": "Conversație despre leadership și succesiune",
           "href": "https://www.forbes.ro/raluca-andrenacci-mentor-specializat-in-afacerile-de-familie-si-gestionarea-averii-la-power-breakfast-407661",
-          "video": "studio-talk"
+          "image": "pro-medium"
         },
         {
           "type": "video",
           "source": "ZF Live",
           "title": "Invitată la ZF Live",
-          "video": "fashion-1"
+          "image": "event-fullbody"
         },
         {
           "type": "interview",
           "source": "SMARK.RO",
           "title": "Interviu SMARK.RO",
-          "video": "notebook"
+          "image": "library-chairs"
         },
         {
           "type": "article",

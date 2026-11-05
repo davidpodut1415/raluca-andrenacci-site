@@ -20,7 +20,7 @@ export function BlogShowcase() {
         <h2 className="font-extrabold">{t('home.blog.title')}</h2>
         <LocalizedLink
           to={{ key: 'blog' }}
-          className="inline-flex items-center gap-2 font-medium text-ink-700 hover:text-ink-900"
+          className="inline-flex min-h-11 items-center gap-2 font-medium text-ink-700 hover:text-ink-900"
         >
           {t('home.blog.all')}
           <ArrowRightIcon className="size-4" />

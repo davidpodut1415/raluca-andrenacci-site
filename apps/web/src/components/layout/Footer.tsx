@@ -51,7 +51,7 @@ export function Footer() {
               </ul>
             </nav>
 
-            <nav aria-labelledby="footer-programs" className="lg:col-span-6">
+            <nav aria-labelledby="footer-programs" className="hidden lg:col-span-6 lg:block">
               <h2 id="footer-programs" className="sr-only">
                 {t('footer.programsTitle')}
               </h2>
@@ -66,14 +66,14 @@ export function Footer() {
               </ul>
             </nav>
 
-            <div className="flex flex-col gap-10 lg:col-span-3">
+            <div className="hidden flex-col gap-10 lg:col-span-3 lg:flex">
               <Blurb
                 text={t('footer.blurbs.freeSession.text')}
                 link={
                   <LocalizedLink
                     to={{ key: 'contact' }}
                     search="?type=free-session"
-                    className="underline-offset-4 hover:underline"
+                    className="inline-flex min-h-11 items-center underline-offset-4 hover:underline"
                   >
                     {t('footer.blurbs.freeSession.title')}
                   </LocalizedLink>
@@ -94,7 +94,7 @@ export function Footer() {
                 link={
                   <LocalizedLink
                     to={{ key: 'contact' }}
-                    className="underline-offset-4 hover:underline"
+                    className="inline-flex min-h-11 items-center underline-offset-4 hover:underline"
                   >
                     {t('footer.blurbs.contact.title')}
                   </LocalizedLink>
@@ -103,7 +103,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="mt-16 grid items-start gap-8 pb-10 md:mt-20 lg:grid-cols-12 lg:gap-8">
+          <div className="mt-8 grid items-start gap-6 pb-10 md:mt-20 lg:grid-cols-12 lg:gap-8">
             <div className="lg:col-span-3">
               <LanguageMenu
                 placement="up"

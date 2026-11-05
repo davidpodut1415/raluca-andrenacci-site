@@ -7,6 +7,7 @@ import { ButtonLink } from '../ui/Button';
 import { CloseIcon, MenuIcon } from '../ui/icons';
 import { LocalizedLink } from '../ui/LocalizedLink';
 import { LanguageMenu } from './LanguageMenu';
+import { MobileMenu } from './MobileMenu';
 
 const NAV_ITEMS: StaticRouteKey[] = ['programs', 'about', 'blog', 'contact'];
 
@@ -55,7 +56,7 @@ export function Header() {
       <div className="flex h-14 items-center justify-between gap-6 px-5 sm:px-8 lg:grid lg:h-16 lg:grid-cols-[1fr_auto_1fr] lg:px-10">
         <LocalizedLink
           to={{ key: 'home' }}
-          className="justify-self-start text-button font-semibold tracking-wordmark whitespace-nowrap text-ink-900 uppercase"
+          className="inline-flex min-h-11 items-center justify-self-start text-button font-semibold tracking-wordmark whitespace-nowrap text-ink-900 uppercase"
         >
           {t('brand')}
         </LocalizedLink>
@@ -83,34 +84,7 @@ export function Header() {
         </button>
       </div>
 
-      {open && (
-        <div id="mobile-menu" className="bg-grey-50 lg:hidden">
-          <div className="flex flex-col gap-8 px-5 py-8 sm:px-8">
-            <nav aria-label={t('nav.label')}>
-              <ul className="flex flex-col text-button">
-                {NAV_ITEMS.map((key) => (
-                  <li key={key}>
-                    <LocalizedLink
-                      to={{ key }}
-                      aria-current={active === key ? 'page' : undefined}
-                      className={cn(
-                        'flex min-h-12 items-center',
-                        active === key ? 'text-burgundy-700' : 'text-ink-900',
-                      )}
-                    >
-                      {t(`nav.${key}`)}
-                    </LocalizedLink>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-            <ButtonLink to={{ key: 'contact' }} search="?type=free-session" size="lg">
-              {t('cta.freeSession')}
-            </ButtonLink>
-            <LanguageMenu align="left" className="-ml-3 self-start" />
-          </div>
-        </div>
-      )}
+      {open && <MobileMenu id="mobile-menu" items={NAV_ITEMS} active={active} />}
     </header>
   );
 }

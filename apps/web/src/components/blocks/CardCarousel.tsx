@@ -84,7 +84,7 @@ export function CardCarousel({
             {seeAll && (
               <LocalizedLink
                 to={seeAll.to}
-                className="inline-flex items-center gap-1 font-medium text-ink-500 hover:text-ink-900"
+                className="inline-flex min-h-11 items-center gap-1 font-medium text-ink-500 hover:text-ink-900"
               >
                 {seeAll.label}
                 <ChevronRightIcon className="size-4" />
@@ -130,7 +130,7 @@ export function CardCarousel({
                 aria-label={goToLabel(i + 1)}
                 aria-current={i === page ? 'true' : undefined}
                 onClick={() => goTo(i)}
-                className="inline-flex size-6 items-center justify-center"
+                className="inline-flex size-9 items-center justify-center"
               >
                 <span
                   className={cn('size-2 rounded-full', i === page ? 'bg-ink-900' : 'bg-ink-500/40')}
