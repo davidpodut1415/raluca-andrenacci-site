@@ -1,6 +1,8 @@
 import { useId, useRef, useState, type KeyboardEvent } from 'react';
 import { cn } from '../../lib/cn';
+import type { ImageName } from '../../lib/images.generated';
 import { usePages } from '../../lib/usePages';
+import { Img } from '../ui/Img';
 
 interface Testimonial {
   quote: string;
@@ -22,7 +24,14 @@ const initials = (name: string) =>
  * person is bright, the others dimmed (tabs pattern, arrow keys move the selection).
  * Short excerpts only: full testimonials need the client's written approval (docs/00-DECISIONS.md Q3).
  */
-export function Testimonials({ indexes }: { indexes?: number[] }) {
+export function Testimonials({
+  indexes,
+  backgrounds,
+}: {
+  indexes?: number[];
+  /** Optional photos (one per testimonial) cross-faded behind the banner; the parent section must be `relative isolate overflow-hidden`. */
+  backgrounds?: ImageName[];
+}) {
   const { items } = usePages();
   const all = items<Testimonial>('testimonials.items');
   const shown = indexes ? indexes.map((i) => all[i]).filter((x): x is Testimonial => !!x) : all;
@@ -44,6 +53,23 @@ export function Testimonials({ indexes }: { indexes?: number[] }) {
 
   return (
     <div>
+      {backgrounds && (
+        <div aria-hidden="true" className="absolute inset-0 -z-10">
+          {backgrounds.slice(0, shown.length).map((name, i) => (
+            <Img
+              key={name}
+              name={name}
+              decorative
+              sizes="100vw"
+              className={cn(
+                'absolute inset-0 size-full object-cover object-center transition-opacity duration-700',
+                i === active ? 'opacity-100' : 'opacity-0',
+              )}
+            />
+          ))}
+          <div className="absolute inset-0 bg-black/85" />
+        </div>
+      )}
       <div
         role="tabpanel"
         id={`${base}-panel`}
