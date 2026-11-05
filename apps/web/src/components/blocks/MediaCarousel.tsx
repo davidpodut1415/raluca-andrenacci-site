@@ -23,7 +23,8 @@ interface MediaItem {
 export function MediaCarousel({
   title,
   showAll = true,
-}: { title?: string; showAll?: boolean } = {}) {
+  dots = true,
+}: { title?: string; showAll?: boolean; dots?: boolean } = {}) {
   const { t, items } = usePages();
   const entries = items<MediaItem>('home.media.items');
 
@@ -32,6 +33,7 @@ export function MediaCarousel({
       label={t('home.media.label')}
       title={title ?? t('home.media.title')}
       seeAll={showAll ? { to: { key: 'about' }, label: t('home.media.all') } : undefined}
+      dots={dots}
       prevLabel={t('home.media.prev')}
       nextLabel={t('home.media.next')}
       goToLabel={(n) => t('home.media.goTo', { n })}

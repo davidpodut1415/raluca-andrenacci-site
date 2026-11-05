@@ -65,7 +65,7 @@ export function AboutPage() {
       </Section>
 
       <div className="bg-grey-50 py-12 md:py-16 lg:py-20">
-        <MediaCarousel title={tp('about.pressTitle')} showAll={false} />
+        <MediaCarousel title={tp('about.pressTitle')} showAll={false} dots={false} />
       </div>
     </>
   );
