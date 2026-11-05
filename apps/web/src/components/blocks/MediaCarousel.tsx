@@ -1,6 +1,7 @@
 import type { ImageName } from '../../lib/images.generated';
 import { usePages } from '../../lib/usePages';
 import { Img } from '../ui/Img';
+import { CardArrow } from '../ui/CardArrow';
 import { LocalizedLink } from '../ui/LocalizedLink';
 import { CAROUSEL_ITEM, CardCarousel } from './CardCarousel';
 
@@ -75,6 +76,7 @@ export function MediaCarousel({
               )}
             </h3>
             <p className="mt-4 line-clamp-3 min-h-[4.5em] text-small text-white/90">{item.title}</p>
+            <CardArrow />
           </article>
         </li>
       ))}

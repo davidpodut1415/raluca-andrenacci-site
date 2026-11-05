@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { Seo } from '../components/Seo';
+import { CardArrow } from '../components/ui/CardArrow';
 import { Img } from '../components/ui/Img';
 import { LocalizedLink } from '../components/ui/LocalizedLink';
 import { Container } from '../components/ui/layout';
@@ -20,7 +21,7 @@ export function ProgramsPage() {
     <>
       <Seo title={t('nav.programs')} description={tp('programsPage.seoDescription')} />
 
-      <header className="bg-grey-50 pt-12 pb-12 md:pt-20 md:pb-16 lg:pt-24 lg:pb-20">
+      <header className="bg-grey-50 pt-12 pb-12 md:pt-16 md:pb-16 lg:pt-20 lg:pb-20">
         <Container>
           <div className="grid items-center gap-8 lg:grid-cols-12 lg:gap-16">
             <h1 className="text-display font-extrabold lg:col-span-7">
@@ -46,9 +47,9 @@ export function ProgramsPage() {
                   aria-hidden="true"
                   className="absolute inset-0 -z-10 bg-black/20 bg-linear-to-t from-black/90 via-black/45 to-transparent"
                 />
-                <span className="absolute top-6 left-6 rounded-xl bg-black px-5 py-3 text-center text-eyebrow font-semibold text-white uppercase md:top-10 md:left-10 lg:top-auto lg:right-10 lg:bottom-10 lg:left-auto lg:max-w-52 lg:py-4">
+                <p className="mb-3 text-eyebrow font-semibold tracking-widest text-white/80 uppercase">
                   {t(`programs.names.${program}`)}
-                </span>
+                </p>
                 <h2 className="max-w-xl font-serif text-h2 leading-tight font-extrabold text-white lg:max-w-[60%] lg:text-h2">
                   <LocalizedLink
                     to={{ key: 'program', program }}
@@ -58,9 +59,10 @@ export function ProgramsPage() {
                     {tp(`program.items.${program}.summary`)}
                   </LocalizedLink>
                 </h2>
-                <p className="mt-4 max-w-xl text-white/85 lg:max-w-[60%]">
+                <p className="mt-4 max-w-xl pr-14 text-white/85 lg:max-w-[60%]">
                   {tp(`program.items.${program}.tagline`)}
                 </p>
+                <CardArrow />
               </article>
             </li>
           ))}

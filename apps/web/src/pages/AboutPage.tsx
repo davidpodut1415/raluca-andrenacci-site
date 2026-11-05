@@ -7,7 +7,7 @@ import { StatsStagger } from '../components/blocks/StatsStagger';
 import { MediaCarousel } from '../components/blocks/MediaCarousel';
 import { Seo } from '../components/Seo';
 import { Img } from '../components/ui/Img';
-import { Section } from '../components/ui/layout';
+import { FullBleedSection, Section } from '../components/ui/layout';
 import { ScrollFill } from '../components/ui/ScrollFill';
 import { usePages } from '../lib/usePages';
 
@@ -64,9 +64,9 @@ export function AboutPage() {
         </div>
       </Section>
 
-      <div className="bg-grey-50 py-12 md:py-16 lg:py-20">
+      <FullBleedSection>
         <MediaCarousel title={tp('about.pressTitle')} showAll={false} dots={false} />
-      </div>
+      </FullBleedSection>
     </>
   );
 }

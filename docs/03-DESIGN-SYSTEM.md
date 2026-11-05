@@ -179,3 +179,11 @@ Dividers: no horizontal rules between rows or sections anywhere (lists, FAQ, foo
 - Mobile footer shows only the site links, language, legal links and social icons (programs list and blurbs are desktop-only).
 - Tap targets are at least 44 px (brand link, "see all" links, carousel dots 36 px, legal links). No page has horizontal overflow at 360 px.
 - No videos anywhere: the hero cross-fades photos, cards and the 404 use stills. `public/video`, `LoopVideo` and the video script were removed.
+
+## 19. Rhythm, opacity and touch cues
+
+- **One vertical rhythm:** light bands 48/64/80 px, black bands 64/80/96 px (`Section`, `FullBleedSection`); two light bands in a row share one gap (`[data-tone]` rule in index.css). Page headers end with the same 48/64/80 px.
+- **No loading effects on text:** headings and program titles are always fully opaque (`ScrollFill` is now a plain heading); the partner logos are always in colour.
+- **Touch cues:** there is no hover on phones, so cards carry a round arrow (`CardArrow`, always visible on touch, shown on hover on desktop) and program rows always show their arrow.
+- **Featured in** on mobile: a balanced grid, three logos on the first row and two wider cells on the second.
+- The Programs page cards no longer have a black name bar; the name is a small label above the headline.

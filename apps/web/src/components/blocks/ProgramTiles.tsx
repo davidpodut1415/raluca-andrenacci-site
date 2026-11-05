@@ -3,6 +3,7 @@ import type { ProgramKey } from '../../i18n/routes';
 import { PROGRAM_IMAGES } from '../../lib/programImages';
 import { usePages } from '../../lib/usePages';
 import { Img } from '../ui/Img';
+import { CardArrow } from '../ui/CardArrow';
 import { LocalizedLink } from '../ui/LocalizedLink';
 
 /** Tall photo tiles (same look as the media carousel cards), one per program, whole tile clickable. */
@@ -36,6 +37,7 @@ export function ProgramTiles({ programs }: { programs: ProgramKey[] }) {
             <p className="mt-3 text-small text-white/90">
               {tp(`program.items.${program}.summary`)}
             </p>
+            <CardArrow />
           </article>
         </li>
       ))}

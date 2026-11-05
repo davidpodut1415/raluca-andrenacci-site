@@ -3,6 +3,8 @@ import { CAROUSEL_ITEM, CardCarousel } from '../components/blocks/CardCarousel';
 import { Seo } from '../components/Seo';
 import { ButtonLink } from '../components/ui/Button';
 import { Img } from '../components/ui/Img';
+import { CardArrow } from '../components/ui/CardArrow';
+import { FullBleedSection } from '../components/ui/layout';
 import { LocalizedLink } from '../components/ui/LocalizedLink';
 import { PROGRAM_KEYS } from '../i18n/routes';
 import { PROGRAM_IMAGES } from '../lib/programImages';
@@ -42,7 +44,7 @@ export function NotFoundPage() {
         </div>
       </section>
 
-      <div className="bg-grey-50 pt-12 pb-12 md:pt-16 md:pb-16">
+      <FullBleedSection>
         <CardCarousel
           label={t('notFound.explore')}
           title={t('notFound.explore')}
@@ -74,11 +76,12 @@ export function NotFoundPage() {
                 <p className="mt-4 text-small text-white/90">
                   {tp(`program.items.${program}.summary`)}
                 </p>
+                <CardArrow />
               </article>
             </li>
           ))}
         </CardCarousel>
-      </div>
+      </FullBleedSection>
     </>
   );
 }

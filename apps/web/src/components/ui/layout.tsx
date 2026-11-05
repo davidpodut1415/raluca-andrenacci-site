@@ -19,13 +19,14 @@ export function Container({ className, ...rest }: ComponentProps<'div'>) {
   );
 }
 
+/** One vertical rhythm for every band: 48 / 64 / 80 px on light, 64 / 80 / 96 px on black. */
 const sectionStyles = cva('py-12 md:py-16 lg:py-20', {
   variants: {
     tone: {
       light: 'bg-grey-50',
       muted: 'bg-grey-50',
-      black: 'bg-black text-white/85 [&_h2]:text-white',
-      dark: 'bg-black text-white/85 [&_h2]:text-white [&_h3]:text-white',
+      black: 'py-16 md:py-20 lg:py-24 bg-black text-white/85 [&_h2]:text-white',
+      dark: 'py-16 md:py-20 lg:py-24 bg-black text-white/85 [&_h2]:text-white [&_h3]:text-white',
     },
   },
   defaultVariants: { tone: 'light' },
@@ -38,9 +39,24 @@ export function Section({
   ...rest
 }: ComponentProps<'section'> & VariantProps<typeof sectionStyles>) {
   return (
-    <section className={cn(sectionStyles({ tone }), className)} {...rest}>
+    <section
+      data-tone={tone ?? 'light'}
+      className={cn(sectionStyles({ tone }), className)}
+      {...rest}
+    >
       <Container>{children}</Container>
     </section>
+  );
+}
+
+/** Light band without a Container, for full-bleed content (carousels); same rhythm as <Section>. */
+export function FullBleedSection({ className, ...rest }: ComponentProps<'section'>) {
+  return (
+    <section
+      data-tone="light"
+      className={cn('bg-grey-50 py-12 md:py-16 lg:py-20', className)}
+      {...rest}
+    />
   );
 }
 

@@ -53,7 +53,7 @@ export function ProgramShowcase() {
                     <span
                       className={cn(
                         'block font-serif text-h3 leading-tight font-extrabold transition-colors duration-300',
-                        isActive ? 'text-ink-900' : 'text-ink-900/35',
+                        'text-ink-900',
                       )}
                     >
                       {t(`programs.names.${program}`)}
@@ -65,7 +65,9 @@ export function ProgramShowcase() {
                   <ArrowRightIcon
                     className={cn(
                       'size-6 shrink-0 text-burgundy-700 transition-all duration-300',
-                      isActive ? 'translate-x-0 opacity-100' : '-translate-x-2 opacity-0',
+                      isActive
+                        ? 'translate-x-0 opacity-100'
+                        : 'opacity-100 lg:-translate-x-2 lg:opacity-0',
                     )}
                   />
                 </LocalizedLink>

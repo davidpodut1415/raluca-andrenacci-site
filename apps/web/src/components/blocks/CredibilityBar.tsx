@@ -1,4 +1,3 @@
-import { useEffect, useRef, useState } from 'react';
 import { cn } from '../../lib/cn';
 import { LOGO_MANIFEST, type LogoName } from '../../lib/images.generated';
 import { usePages } from '../../lib/usePages';
@@ -16,29 +15,6 @@ const LOGOS: { name: LogoName; height: string }[] = [
 /** Press, accreditation and partner logos spread evenly across the container, with a centered label. */
 export function CredibilityBar() {
   const { t } = usePages();
-  const list = useRef<HTMLUListElement>(null);
-  const [revealed, setRevealed] = useState(false);
-
-  // Logos start greyed out and fade into colour once the row scrolls into view.
-  useEffect(() => {
-    const el = list.current;
-    const reduced = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
-    if (!el || reduced || typeof IntersectionObserver === 'undefined') {
-      setRevealed(true);
-      return;
-    }
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry?.isIntersecting) {
-          setRevealed(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.6 },
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
 
   return (
     <section aria-labelledby="featured-in" className="bg-grey-50">
@@ -46,14 +22,11 @@ export function CredibilityBar() {
         <p id="featured-in" className="mb-8 text-center text-body text-ink-700">
           {t('home.credibility.label')}
         </p>
-        <ul
-          ref={list}
-          className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8 lg:flex-nowrap lg:justify-between lg:gap-x-8"
-        >
-          {LOGOS.map(({ name, height }) => {
+        <ul className="grid grid-cols-6 items-center justify-items-center gap-x-6 gap-y-10 md:flex md:flex-wrap md:justify-center md:gap-x-12 lg:flex-nowrap lg:justify-between lg:gap-x-8">
+          {LOGOS.map(({ name, height }, i) => {
             const { src, width, height: h } = LOGO_MANIFEST[name];
             return (
-              <li key={name}>
+              <li key={name} className={cn('md:col-auto', i < 3 ? 'col-span-2' : 'col-span-3')}>
                 <img
                   src={src}
                   width={width}
@@ -61,11 +34,7 @@ export function CredibilityBar() {
                   alt={t(`home.credibility.logos.${name}`)}
                   loading="lazy"
                   decoding="async"
-                  className={cn(
-                    'w-auto transition-[filter,opacity] duration-1000 ease-out',
-                    revealed ? 'opacity-100 grayscale-0' : 'opacity-60 grayscale',
-                    height,
-                  )}
+                  className={cn('w-auto', height)}
                 />
               </li>
             );

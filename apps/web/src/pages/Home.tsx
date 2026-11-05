@@ -6,7 +6,7 @@ import { StatsStagger } from '../components/blocks/StatsStagger';
 import { ProgramShowcase } from '../components/blocks/ProgramShowcase';
 import { Testimonials } from '../components/blocks/Testimonials';
 import { Seo } from '../components/Seo';
-import { Container, Eyebrow, Section } from '../components/ui/layout';
+import { Container, Eyebrow, FullBleedSection, Section } from '../components/ui/layout';
 import { usePages } from '../lib/usePages';
 
 /** Landing page: hero → partner logos → programs → testimonials → Despre mine → blog → closing CTA (the CTA lives in the layout). */
@@ -26,7 +26,7 @@ export function Home() {
         </Container>
       </section>
 
-      <Section tone="black" className="relative isolate overflow-hidden py-20 md:py-28 lg:py-32">
+      <Section tone="black" className="relative isolate overflow-hidden">
         <Eyebrow className="mb-8 text-white/70">{tp('home.testimonials.eyebrow')}</Eyebrow>
         <h2 className="sr-only">{tp('home.testimonials.title')}</h2>
         <Testimonials
@@ -37,9 +37,9 @@ export function Home() {
 
       <StatsStagger stats={items<{ value: string; label: string }>('about.stats')} />
 
-      <div className="bg-grey-50 py-12 md:py-16 lg:py-20">
+      <FullBleedSection>
         <MediaCarousel />
-      </div>
+      </FullBleedSection>
 
       <Section>
         <BlogShowcase />

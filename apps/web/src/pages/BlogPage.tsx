@@ -30,7 +30,7 @@ export function BlogPage() {
     <>
       <Seo title={t('nav.blog')} description={tp('blogPage.lead')} />
 
-      <header className="bg-grey-50 pt-12 pb-10 md:pt-20 md:pb-14 lg:pt-24">
+      <header className="bg-grey-50 pt-12 pb-12 md:pt-16 md:pb-16 lg:pt-20 lg:pb-20">
         <Container>
           <h1 className="text-display font-extrabold">{tp('blogPage.title')}</h1>
         </Container>

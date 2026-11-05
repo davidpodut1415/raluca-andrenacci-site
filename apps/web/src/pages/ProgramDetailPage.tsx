@@ -65,7 +65,7 @@ function ProgramDetail({ program }: { program: ProgramKey }) {
         </div>
       </Section>
 
-      <Section tone="black" className="py-20 md:py-28 lg:py-32">
+      <Section tone="black">
         <Eyebrow className="mb-8 text-white/70">{tp('program.outcomeLabel')}</Eyebrow>
         <p className="max-w-5xl font-serif text-h2 leading-tight font-bold text-white lg:text-display">
           {tp(`${base}.outcome`)}
@@ -85,7 +85,7 @@ function ProgramDetail({ program }: { program: ProgramKey }) {
       </Section>
 
       {isAudit && (
-        <Section tone="black" className="py-20 md:py-28 lg:py-32">
+        <Section tone="black">
           <Eyebrow className="mb-8 text-white/70">{tp('home.testimonials.eyebrow')}</Eyebrow>
           <h2 className="sr-only">{tp('home.testimonials.title')}</h2>
           <Testimonials indexes={[2, 1, 3]} />
