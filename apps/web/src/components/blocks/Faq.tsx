@@ -8,7 +8,7 @@ interface FaqItem {
 /** Native <details>: keyboard and screen-reader accessible without JavaScript. */
 export function Faq({ items }: { items: FaqItem[] }) {
   return (
-    <div className="divide-y divide-line border-y border-line">
+    <div className="flex flex-col">
       {items.map((item) => (
         <details key={item.q} className="group py-2">
           <summary className="flex min-h-14 cursor-pointer list-none items-center justify-between gap-6 py-3 font-serif text-h4 font-semibold text-ink-900 [&::-webkit-details-marker]:hidden">

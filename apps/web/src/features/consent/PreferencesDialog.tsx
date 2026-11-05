@@ -15,7 +15,7 @@ interface ToggleProps {
 
 function Toggle({ id, title, text, checked, disabled, onChange }: ToggleProps) {
   return (
-    <div className="flex items-start gap-4 border-t border-line py-4">
+    <div className="flex items-start gap-4 py-4">
       <input
         id={id}
         type="checkbox"

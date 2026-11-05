@@ -170,3 +170,5 @@ Every page title (H1) is `text-display` (36→56px), every section heading (H2) 
 ## 17. Base interaction for clickable elements
 
 Buttons, button links, topic pills, carousel arrows and the menu toggle use the `hover-zoom` utility (index.css): scale 1.05 on hover (hover-capable devices only), 0.98 while pressed, 200 ms; disabled with reduced motion. Photo cards zoom as a whole (scale 1.03). Use `hover-zoom` for any new clickable control.
+
+Dividers: no horizontal rules between rows or sections anywhere (lists, FAQ, footer, header menu, page headers); separation comes from spacing only. Outlines around cards, inputs and pills stay.

@@ -34,7 +34,6 @@ export function Footer() {
   return (
     <footer className="bg-black text-white/85">
       <Container>
-        <div aria-hidden="true" className="border-t border-white/15" />
         <div className="pt-12 md:pt-16 lg:pt-20">
           <div className="grid gap-12 lg:grid-cols-12 lg:gap-8">
             <nav aria-labelledby="footer-site" className="lg:col-span-3">

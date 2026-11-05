@@ -84,10 +84,10 @@ export function Header() {
       </div>
 
       {open && (
-        <div id="mobile-menu" className="border-t border-line bg-grey-50 lg:hidden">
+        <div id="mobile-menu" className="bg-grey-50 lg:hidden">
           <div className="flex flex-col gap-8 px-5 py-8 sm:px-8">
             <nav aria-label={t('nav.label')}>
-              <ul className="flex flex-col divide-y divide-line text-button">
+              <ul className="flex flex-col text-button">
                 {NAV_ITEMS.map((key) => (
                   <li key={key}>
                     <LocalizedLink

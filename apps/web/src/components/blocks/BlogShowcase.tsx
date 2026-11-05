@@ -50,7 +50,7 @@ export function BlogShowcase() {
           </h3>
         </article>
 
-        <ul className="divide-y divide-line border-y border-line">
+        <ul className="flex flex-col">
           {latest.map((post) => (
             <li key={post.slug}>
               <article className="group relative flex items-center gap-5 py-5 md:gap-6">

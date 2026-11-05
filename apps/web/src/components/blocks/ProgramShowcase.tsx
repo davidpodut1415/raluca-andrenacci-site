@@ -42,7 +42,7 @@ export function ProgramShowcase() {
           {PROGRAMS.map((program) => {
             const isActive = program === active;
             return (
-              <li key={program} className="border-t border-line last:border-b">
+              <li key={program}>
                 <LocalizedLink
                   to={{ key: 'program', program }}
                   onMouseEnter={() => setActive(program)}

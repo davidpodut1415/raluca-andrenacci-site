@@ -1,11 +1,11 @@
 /** Large-numeral rows separated by hairlines (used for directions, benefits, credentials). */
 export function NumberedList({ items }: { items: string[] }) {
   return (
-    <ol className="border-b border-line">
+    <ol>
       {items.map((item, i) => (
         <li
           key={item}
-          className="grid grid-cols-[3.5rem_1fr] items-baseline gap-4 border-t border-line py-6 md:grid-cols-[5rem_1fr] md:py-8"
+          className="grid grid-cols-[3.5rem_1fr] items-baseline gap-4 py-6 md:grid-cols-[5rem_1fr] md:py-8"
         >
           <span
             aria-hidden="true"
