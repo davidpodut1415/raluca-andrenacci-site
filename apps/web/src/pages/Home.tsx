@@ -26,8 +26,6 @@ export function Home() {
         </Container>
       </section>
 
-      <StatsStagger stats={items<{ value: string; label: string }>('about.stats')} />
-
       <Section tone="black" className="relative isolate overflow-hidden py-20 md:py-28 lg:py-32">
         <Eyebrow className="mb-8 text-white/70">{tp('home.testimonials.eyebrow')}</Eyebrow>
         <h2 className="sr-only">{tp('home.testimonials.title')}</h2>
@@ -36,6 +34,8 @@ export function Home() {
           backgrounds={['event-stage', 'event-mic', 'library-chairs']}
         />
       </Section>
+
+      <StatsStagger stats={items<{ value: string; label: string }>('about.stats')} />
 
       <div className="bg-grey-50 py-12 md:py-16 lg:py-20">
         <MediaCarousel />
