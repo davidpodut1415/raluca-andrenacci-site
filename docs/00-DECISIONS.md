@@ -57,3 +57,11 @@
 - **No separate logos exist for ForbesLife, Forbes CEE Forum, Forbes Power Breakfast or ZF Live** (only promo photos), so the Forbes mark stands for the first three and the ZF mark for ZF Live. The alt texts name the events.
 - **Usage rights:** these are third-party trademarks. EMCC and FFI publish usage rules for accredited practitioners/members, and press logos normally need the publisher's OK. Confirm with the client before launch (and swap in the approved artwork).
 - **Hero video:** `copy_75C95384…mp4` from the current site (9 s, silent, 724×1280 portrait). It is re-encoded to 720 px wide (`npm run video` → `hero.webm` 630 KB, `hero.mp4` 830 KB, JPG poster). Because it is portrait and low resolution, it is cropped and enlarged on desktop (soft, like on the old site) — **ask for a landscape 1080p original** for a sharper hero. It has a visible pause/play button and does not autoplay with `prefers-reduced-motion`.
+
+## Placeholders added with the section templates (2026-11-05)
+
+- **About stats:** "20+ years", "3 industries" and "EMCC accreditation" are real; **"40+ families and entrepreneurs mentored" is a placeholder** — replace with the real number or remove.
+- **Programs stats** (1:1, 60 minutes, 90 days, 5 programs) come from the current site's program format.
+- **Blog:** the five articles on the home page, blog index and post pages are the real titles from the old site with placeholder photos, invented categories and a "full article coming soon" body until Phase 5.
+- **Program/banner photos** are the nine existing photos reused; several programs share a photo. Replace with dedicated photography.
+- **Per-page CTA headlines** (home, about, programs, program, audit, blog) are drafts in `pages.json` → `ctaPanel`.

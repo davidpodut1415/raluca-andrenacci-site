@@ -23,7 +23,7 @@ const IMAGES = {
   'certificate-emcc': 'PHOTO-2024-02-14-17-55-18-1.webp',
 };
 
-const WIDTHS = [480, 800, 1200];
+const WIDTHS = [480, 800, 1200, 1600];
 
 await rm(outDir, { recursive: true, force: true });
 await mkdir(outDir, { recursive: true });
@@ -34,7 +34,7 @@ for (const [name, file] of Object.entries(IMAGES)) {
   const { width, height } = await sharp(input).metadata();
   // Never upscale: use the widths below the original, plus the original width itself.
   const widths = [
-    ...new Set([...WIDTHS.filter((w) => w < width), width > 1200 ? 1200 : width]),
+    ...new Set([...WIDTHS.filter((w) => w < width), width > 1600 ? 1600 : width]),
   ].sort((a, b) => a - b);
   for (const w of widths) {
     await sharp(input)

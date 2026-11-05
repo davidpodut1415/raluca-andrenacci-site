@@ -1,19 +1,15 @@
-import { useTranslation } from 'react-i18next';
 import { BlogShowcase } from '../components/blocks/BlogShowcase';
 import { CredibilityBar } from '../components/blocks/CredibilityBar';
-import { CTAPanel } from '../components/blocks/CTAPanel';
 import { HomeHero } from '../components/blocks/HomeHero';
 import { MediaCarousel } from '../components/blocks/MediaCarousel';
 import { ProgramShowcase } from '../components/blocks/ProgramShowcase';
 import { Testimonials } from '../components/blocks/Testimonials';
 import { Seo } from '../components/Seo';
-import { ButtonLink } from '../components/ui/Button';
 import { Container, Eyebrow, Section } from '../components/ui/layout';
 import { usePages } from '../lib/usePages';
 
-/** Landing page: hero → partner logos → programs → testimonials → Despre mine → blog → closing CTA. */
+/** Landing page: hero → partner logos → programs → testimonials → Despre mine → blog → closing CTA (the CTA lives in the layout). */
 export function Home() {
-  const { t } = useTranslation();
   const { t: tp } = usePages();
 
   return (
@@ -42,16 +38,6 @@ export function Home() {
       <Section>
         <BlogShowcase />
       </Section>
-
-      <CTAPanel
-        title={tp('home.cta.title')}
-        text={tp('home.cta.text')}
-        action={
-          <ButtonLink to={{ key: 'contact' }} search="?type=free-session" variant="light" size="lg">
-            {t('cta.freeSession')}
-          </ButtonLink>
-        }
-      />
     </>
   );
 }

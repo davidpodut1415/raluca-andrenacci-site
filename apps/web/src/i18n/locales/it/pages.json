@@ -89,10 +89,6 @@
       "text": "Ho oltre 20 anni di esperienza imprenditoriale nell'immobiliare, nelle costruzioni e nell'HoReCa, e investo nel settore immobiliare e nelle start-up. Come mentore e coach certificata, membro FFI e accreditata EMCC, offro programmi personalizzati a chi vuole raggiungere il proprio massimo potenziale.",
       "cta": "Leggi la mia storia"
     },
-    "cta": {
-      "title": "Parliamo della continuità della tua azienda",
-      "text": "La prima sessione è gratuita e riservata."
-    },
     "media": {
       "title": "Chi sono",
       "all": "Vedi tutto",
@@ -157,31 +153,36 @@
           "category": "Denaro e famiglia",
           "date": "gennaio 2026",
           "title": "Quanto è abbastanza? Riflessioni su denaro, vita, famiglia e sull’eredità che costruiamo",
-          "image": "portrait-headshot"
+          "image": "portrait-headshot",
+          "slug": "cat-este-suficient-despre-bani-viata-familie-si-mostenirea-pe-care-o-construim"
         },
         {
           "category": "Leadership",
           "date": "ottobre 2025",
           "title": "La lezione più difficile che impari dopo aver avuto successo",
-          "image": "desk-notebook"
+          "image": "desk-notebook",
+          "slug": "cea-mai-grea-lectie-pe-care-o-inveti-dupa-ce-ai-succes"
         },
         {
           "category": "Leadership",
           "date": "ottobre 2025",
           "title": "Cosa significa ancora AUTOREVOLEZZA in un mondo di TikTok, pubblicità a pagamento e validazione istantanea",
-          "image": "portrait-armchair"
+          "image": "portrait-armchair",
+          "slug": "ce-mai-inseamna-autoritate-intr-o-lume-cu-tiktok-reclame-platite-si-validare-instanta"
         },
         {
           "category": "Famiglia",
           "date": "aprile 2025",
           "title": "Come ci assumiamo la responsabilità dell’educazione dei nostri figli in Romania?",
-          "image": "working-laptop"
+          "image": "working-laptop",
+          "slug": "educatia-copiilor-asumare-parinti"
         },
         {
           "category": "Governance",
           "date": "aprile 2025",
           "title": "Come può la governance familiare aiutare l’azienda della tua famiglia?",
-          "image": "marble-table"
+          "image": "marble-table",
+          "slug": "cum-poate-ajuta-guvernanta-familiala-afacerea-familiei-tale"
         }
       ]
     }
@@ -213,7 +214,27 @@
           "a": "A fondatori e successori di imprese familiari, e a imprenditori e professionisti che cercano chiarezza, resilienza ed equilibrio."
         }
       ]
-    }
+    },
+    "stats": [
+      {
+        "value": "1:1",
+        "label": "sessioni individuali e riservate"
+      },
+      {
+        "value": "60",
+        "label": "minuti per sessione"
+      },
+      {
+        "value": "90",
+        "label": "giorni nel piano personalizzato"
+      },
+      {
+        "value": "5",
+        "label": "programmi per imprese familiari"
+      }
+    ],
+    "howTitle": "Come lavoriamo",
+    "individualTitle": "Per imprenditori e professionisti"
   },
   "program": {
     "forLabel": "Programma",
@@ -226,8 +247,6 @@
       "Un piano personalizzato per i prossimi 90 giorni"
     ],
     "othersTitle": "Altri programmi",
-    "ctaTitle": "Vuoi scoprire se questo programma fa per te?",
-    "ctaText": "La prima sessione è gratuita e riservata.",
     "items": {
       "coLeadership": {
         "tagline": "La successione non è un momento. È una fase strategica, gestita con finezza ed equilibrio.",
@@ -364,6 +383,10 @@
       {
         "value": "EMCC",
         "label": "accreditata Mentor EIA Practitioner"
+      },
+      {
+        "value": "40+",
+        "label": "famiglie e imprenditori seguiti"
       }
     ],
     "credentialsTitle": "Certificazioni",
@@ -380,8 +403,7 @@
       "Speaker, Forbes Power Breakfast",
       "Speaker, ZF Live"
     ],
-    "ctaTitle": "Facciamo conoscenza",
-    "ctaText": "La prima sessione è gratuita e riservata."
+    "storyTitle": "Oltre 20 anni di imprenditoria"
   },
   "contact": {
     "seoDescription": "Prenota la prima sessione gratuita di mentoring o scrivimi un messaggio.",
@@ -433,5 +455,43 @@
   },
   "legal": {
     "translationNotice": "Questo documento è attualmente disponibile solo in rumeno."
+  },
+  "ctaPanel": {
+    "home": {
+      "title": "Parliamo della continuità della tua azienda",
+      "text": "La prima sessione è gratuita e riservata."
+    },
+    "about": {
+      "title": "Facciamo conoscenza",
+      "text": "La prima sessione è gratuita e riservata."
+    },
+    "programs": {
+      "title": "Quale programma fa per te?",
+      "text": "Raccontami la tua situazione e scegliamo insieme la direzione."
+    },
+    "program": {
+      "title": "Vuoi scoprire se questo programma fa per te?",
+      "text": "La prima sessione è gratuita e riservata."
+    },
+    "audit": {
+      "title": "Sei pronto per un audit del tuo presente?",
+      "text": "Inizia con una conversazione gratuita e riservata."
+    },
+    "blog": {
+      "title": "Una domanda dopo la lettura?",
+      "text": "Parliamo della tua situazione."
+    }
+  },
+  "blogPage": {
+    "eyebrow": "Blog",
+    "title": "Idee su denaro, famiglia e leadership",
+    "lead": "Riflessioni su imprese familiari, successione e sull'eredità che costruiamo.",
+    "featured": "In evidenza",
+    "read": "Leggi l'articolo"
+  },
+  "postPage": {
+    "soon": "L'articolo completo sarà pubblicato a breve.",
+    "back": "Torna al blog",
+    "related": "Altri articoli"
   }
 }

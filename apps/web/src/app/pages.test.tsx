@@ -111,8 +111,9 @@ describe('media carousel', () => {
 describe('programs', () => {
   it('lists the programs and an FAQ', async () => {
     renderApp('/programe');
-    await screen.findByRole('heading', { level: 1, name: /mentorat personalizat/i });
-    expect(screen.getAllByRole('article')).toHaveLength(5);
+    await screen.findByRole('heading', { level: 1, name: /programe de mentorat/i });
+    // five family programs + the individual Audit track, each as one "Part" block
+    expect(screen.getAllByRole('article')).toHaveLength(6);
     expect(screen.getByText('Ce este prima sesiune gratuită?')).toBeInTheDocument();
   });
 
@@ -206,5 +207,81 @@ describe('footer', () => {
     ).toHaveAttribute('rel', 'noopener noreferrer');
     expect(within(footer).getByRole('button', { name: 'Language: English' })).toBeInTheDocument();
     expect(within(footer).getByRole('button', { name: 'Cookie settings' })).toBeInTheDocument();
+  });
+});
+
+describe('persistent chrome and templates', () => {
+  it.each([
+    ['/', /discutăm despre continuitatea/i],
+    ['/despre-mine', /să ne cunoaștem/i],
+    ['/programe', /care program ți se potrivește/i],
+    ['/programe/auditul-prezentului-tau', /audit al prezentului tău/i],
+    ['/blog', /ai o întrebare după ce ai citit/i],
+    ['/en/programs/entrepreneur-in-residence', /find out if this program is right for you/i],
+  ])(
+    '%s ends with the closing CTA (page-specific headline) above the footer',
+    async (path, title) => {
+      renderApp(path);
+      await screen.findByRole('heading', { level: 1 });
+      const cta = screen.getByRole('heading', { level: 2, name: title });
+      const footer = screen.getByRole('contentinfo');
+      expect(cta.compareDocumentPosition(footer) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+      const section = cta.closest('section')!;
+      const link = within(section).getByRole('link', { name: /sesiunea|session/i });
+      expect(link.getAttribute('href')).toMatch(/\/contact\?type=free-session$/);
+    },
+  );
+
+  it('the contact page has no closing CTA (it is the form)', async () => {
+    renderApp('/contact');
+    await screen.findByRole('heading', { level: 1 });
+    expect(
+      screen.queryByRole('heading', { level: 2, name: /discutăm despre continuitatea/i }),
+    ).not.toBeInTheDocument();
+    expect(screen.getByRole('contentinfo')).toBeInTheDocument();
+  });
+
+  it('about shows the numbers band and testimonials', async () => {
+    renderApp('/despre-mine');
+    await screen.findByRole('heading', { level: 1, name: 'Raluca Andrenacci' });
+    expect(screen.getByText('20+')).toBeInTheDocument();
+    expect(screen.getAllByRole('tab')).toHaveLength(3);
+  });
+
+  it('program pages show numbered directions and step cards', async () => {
+    renderApp('/programe/mentorat-succesori-nextgen');
+    await screen.findByRole('heading', { level: 1 });
+    expect(screen.getAllByRole('listitem').some((li) => li.textContent?.startsWith('01'))).toBe(
+      true,
+    );
+    expect(
+      screen.getByRole('heading', {
+        level: 3,
+        name: /Plan personalizat pentru următoarele 90 de zile/,
+      }),
+    ).toBeInTheDocument();
+  });
+
+  it('blog index lists featured and latest articles that link to post pages', async () => {
+    renderApp('/blog');
+    await screen.findByRole('heading', { level: 1, name: /idei despre bani/i });
+    const links = screen.getAllByRole('link', {
+      name: /Cât este suficient|Cea mai grea lecție|AUTORITATE|educația copiilor|guvernanța familială/,
+    });
+    expect(links.length).toBeGreaterThanOrEqual(5);
+    for (const link of links) expect(link.getAttribute('href')).toMatch(/^\/blog\/.+/);
+  });
+
+  it('post pages show the article template; unknown slugs 404', async () => {
+    const { unmount } = renderApp('/blog/cea-mai-grea-lectie-pe-care-o-inveti-dupa-ce-ai-succes');
+    expect(
+      await screen.findByRole('heading', { level: 1, name: /cea mai grea lecție/i }),
+    ).toBeInTheDocument();
+    expect(screen.getByText(/va fi publicat în curând/i)).toBeInTheDocument();
+    unmount();
+    renderApp('/blog/nu-exista');
+    expect(
+      await screen.findByRole('heading', { level: 1, name: /pagina nu a fost găsită/i }),
+    ).toBeInTheDocument();
   });
 });

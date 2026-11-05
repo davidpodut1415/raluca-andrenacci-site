@@ -72,7 +72,7 @@ describe('routing and i18n', () => {
 describe('header', () => {
   it('marks the current section in the main navigation', async () => {
     renderApp('/en/programs');
-    await screen.findByRole('heading', { level: 1, name: /personalized mentoring/i });
+    await screen.findByRole('heading', { level: 1, name: /mentoring programs/i });
     const nav = screen.getByRole('navigation', { name: 'Main navigation' });
     expect(within(nav).getByRole('link', { name: 'Programs' })).toHaveAttribute(
       'aria-current',
@@ -82,7 +82,7 @@ describe('header', () => {
 
   it('switches language from a dropdown that links to the equivalent page', async () => {
     renderApp('/en/programs');
-    await screen.findByRole('heading', { level: 1, name: /personalized mentoring/i });
+    await screen.findByRole('heading', { level: 1, name: /mentoring programs/i });
 
     const toggle = screen.getAllByRole('button', { name: 'Language: English' })[0]!;
     expect(toggle).toHaveAttribute('aria-expanded', 'false');
@@ -103,7 +103,7 @@ describe('header', () => {
 
     await userEvent.click(within(menu).getByRole('link', { name: 'Italiano' }));
     expect(
-      await screen.findByRole('heading', { level: 1, name: /mentoring personalizzato/i }),
+      await screen.findByRole('heading', { level: 1, name: /programmi di mentoring/i }),
     ).toBeInTheDocument();
     expect(screen.queryByRole('navigation', { name: 'Lingua' })).not.toBeInTheDocument();
   });

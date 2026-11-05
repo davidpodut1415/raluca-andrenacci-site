@@ -11,19 +11,19 @@ export const IMAGE_MANIFEST = {
     widths: [480, 800, 1200],
   },
   'portrait-leaning': {
-    width: 1200,
-    height: 1799,
-    widths: [480, 800, 1200],
+    width: 1400,
+    height: 2099,
+    widths: [480, 800, 1200, 1400],
   },
   'portrait-armchair': {
-    width: 1200,
-    height: 1200,
-    widths: [480, 800, 1200],
+    width: 1600,
+    height: 1600,
+    widths: [480, 800, 1200, 1600],
   },
   'desk-notebook': {
-    width: 1200,
-    height: 801,
-    widths: [480, 800, 1200],
+    width: 1400,
+    height: 934,
+    widths: [480, 800, 1200, 1400],
   },
   'working-laptop': {
     width: 1000,

@@ -1,14 +1,14 @@
 import { useTranslation } from 'react-i18next';
-import { CTABand } from '../components/blocks/CTABand';
 import { Faq } from '../components/blocks/Faq';
-import { PageHero } from '../components/blocks/PageHero';
-import { ProgramCard } from '../components/blocks/ProgramCard';
-import { Steps } from '../components/blocks/Steps';
+import { FeatureSplit } from '../components/blocks/FeatureSplit';
+import { PageBanner } from '../components/blocks/PageBanner';
+import { StatsBand } from '../components/blocks/StatsBand';
+import { StepCards } from '../components/blocks/StepCards';
 import { Seo } from '../components/Seo';
 import { ButtonLink } from '../components/ui/Button';
-import { Img } from '../components/ui/Img';
-import { Container, Eyebrow, Section, SectionHeading } from '../components/ui/layout';
+import { Section, SectionHeading } from '../components/ui/layout';
 import { PROGRAM_KEYS } from '../i18n/routes';
+import { PROGRAM_IMAGES } from '../lib/programImages';
 import { usePages } from '../lib/usePages';
 
 const FAMILY_PROGRAMS = PROGRAM_KEYS.filter((key) => key !== 'audit');
@@ -17,11 +17,16 @@ interface Item {
   title: string;
   text: string;
 }
+interface Stat {
+  value: string;
+  label: string;
+}
 interface FaqItem {
   q: string;
   a: string;
 }
 
+/** Programs overview: photo banner → intro → one "Part" block per program → facts → individual track → how we work → FAQ. */
 export function ProgramsPage() {
   const { t } = useTranslation();
   const { t: tp, items } = usePages();
@@ -29,64 +34,64 @@ export function ProgramsPage() {
   return (
     <>
       <Seo title={t('nav.programs')} description={tp('programsPage.seoDescription')} />
-      <PageHero
-        eyebrow={tp('programsPage.eyebrow')}
-        title={tp('programsPage.title')}
-        lead={tp('programsPage.lead')}
+      <PageBanner
+        image="desk-notebook"
+        title={tp('programsPage.eyebrow')}
+        lead={tp('programsPage.title')}
+        position="center 30%"
       />
 
-      <Section>
-        <SectionHeading title={tp('programsPage.familyTitle')} />
-        <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
-          {FAMILY_PROGRAMS.map((program) => (
-            <li key={program}>
-              <ProgramCard program={program} />
-            </li>
-          ))}
-        </ul>
+      <Section className="pb-0 md:pb-0 lg:pb-0">
+        <SectionHeading
+          title={tp('programsPage.familyTitle')}
+          lead={tp('programsPage.lead')}
+          className="mb-0 md:mb-0"
+        />
       </Section>
 
-      <section className="bg-grey-50 py-12 md:py-16 lg:py-20">
-        <Container>
-          <div className="grid overflow-hidden rounded-2xl bg-white shadow-card lg:grid-cols-2">
-            <div className="flex flex-col items-start justify-center gap-6 p-8 sm:p-12 lg:p-16">
-              <Eyebrow>{tp('programsPage.individualEyebrow')}</Eyebrow>
-              <h2>{t('programs.names.audit')}</h2>
-              <p className="text-ink-700">{tp('program.items.audit.tagline')}</p>
-              <ButtonLink to={{ key: 'program', program: 'audit' }} variant="secondary" size="lg">
-                {tp('home.audit.cta')}
-              </ButtonLink>
-            </div>
-            <div className="relative aspect-3/2 lg:aspect-auto">
-              <Img
-                name="working-laptop"
-                sizes="(min-width: 1024px) 50vw, 100vw"
-                className="absolute inset-0 size-full object-cover"
-              />
-            </div>
-          </div>
-        </Container>
-      </section>
+      {FAMILY_PROGRAMS.map((program, i) => (
+        <Section key={program}>
+          <FeatureSplit
+            number={String(i + 1).padStart(2, '0')}
+            title={t(`programs.names.${program}`)}
+            image={PROGRAM_IMAGES[program]}
+            reverse={i % 2 === 1}
+          >
+            <p className="max-w-prose text-ink-700">{tp(`program.items.${program}.tagline`)}</p>
+            <p className="max-w-prose font-serif text-h4 leading-snug font-semibold text-ink-900">
+              {tp(`program.items.${program}.outcome`)}
+            </p>
+            <ButtonLink to={{ key: 'program', program }} variant="secondary" size="lg">
+              {tp('home.programs.learnMore')}
+            </ButtonLink>
+          </FeatureSplit>
+        </Section>
+      ))}
+
+      <StatsBand stats={items<Stat>('programsPage.stats')} />
 
       <Section>
-        <SectionHeading eyebrow={tp('home.process.eyebrow')} title={tp('home.process.title')} />
-        <Steps steps={items<Item>('home.process.steps')} />
+        <FeatureSplit
+          eyebrow={tp('programsPage.individualEyebrow')}
+          title={t('programs.names.audit')}
+          image={PROGRAM_IMAGES.audit}
+        >
+          <p className="max-w-prose text-ink-700">{tp('program.items.audit.tagline')}</p>
+          <ButtonLink to={{ key: 'program', program: 'audit' }} variant="secondary" size="lg">
+            {tp('home.audit.cta')}
+          </ButtonLink>
+        </FeatureSplit>
       </Section>
 
-      <Section tone="muted">
+      <Section>
+        <SectionHeading eyebrow={tp('home.process.eyebrow')} title={tp('programsPage.howTitle')} />
+        <StepCards steps={items<Item>('home.process.steps')} />
+      </Section>
+
+      <Section>
         <SectionHeading title={tp('programsPage.faq.title')} />
         <Faq items={items<FaqItem>('programsPage.faq.items')} />
       </Section>
-
-      <CTABand
-        title={tp('home.cta.title')}
-        text={tp('home.cta.text')}
-        action={
-          <ButtonLink to={{ key: 'contact' }} search="?type=free-session" size="lg">
-            {t('cta.freeSession')}
-          </ButtonLink>
-        }
-      />
     </>
   );
 }

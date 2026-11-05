@@ -89,10 +89,6 @@
       "text": "Am peste 20 de ani de experiență antreprenorială în imobiliare, construcții și HoReCa și sunt investitor în piața imobiliară și start-upuri. Ca mentor și coach certificat, membră FFI și acreditată EMCC, ofer programe personalizate pentru cei care vor să-și atingă potențialul maxim.",
       "cta": "Citește povestea mea"
     },
-    "cta": {
-      "title": "Hai să discutăm despre continuitatea afacerii tale",
-      "text": "Prima sesiune este gratuită și confidențială."
-    },
     "media": {
       "title": "Despre mine",
       "all": "Vezi toate",
@@ -157,31 +153,36 @@
           "category": "Bani & familie",
           "date": "ianuarie 2026",
           "title": "Cât este suficient?! Despre bani, viață, familie și moștenirea pe care o construim",
-          "image": "portrait-headshot"
+          "image": "portrait-headshot",
+          "slug": "cat-este-suficient-despre-bani-viata-familie-si-mostenirea-pe-care-o-construim"
         },
         {
           "category": "Leadership",
           "date": "octombrie 2025",
           "title": "Cea mai grea lecție pe care o înveți după ce ai succes",
-          "image": "desk-notebook"
+          "image": "desk-notebook",
+          "slug": "cea-mai-grea-lectie-pe-care-o-inveti-dupa-ce-ai-succes"
         },
         {
           "category": "Leadership",
           "date": "octombrie 2025",
           "title": "Ce mai înseamnă AUTORITATE într-o lume cu TikTok, reclame plătite și validare instantă",
-          "image": "portrait-armchair"
+          "image": "portrait-armchair",
+          "slug": "ce-mai-inseamna-autoritate-intr-o-lume-cu-tiktok-reclame-platite-si-validare-instanta"
         },
         {
           "category": "Familie",
           "date": "aprilie 2025",
           "title": "Cum ne asumăm educația copiilor noștri în România?",
-          "image": "working-laptop"
+          "image": "working-laptop",
+          "slug": "educatia-copiilor-asumare-parinti"
         },
         {
           "category": "Guvernanță",
           "date": "aprilie 2025",
           "title": "Cum poate ajuta guvernanța familială afacerea familiei tale?",
-          "image": "marble-table"
+          "image": "marble-table",
+          "slug": "cum-poate-ajuta-guvernanta-familiala-afacerea-familiei-tale"
         }
       ]
     }
@@ -213,7 +214,27 @@
           "a": "Pentru fondatori și succesori din afaceri de familie, precum și pentru antreprenori și profesioniști care caută claritate, reziliență și echilibru."
         }
       ]
-    }
+    },
+    "stats": [
+      {
+        "value": "1:1",
+        "label": "sesiuni individuale și confidențiale"
+      },
+      {
+        "value": "60",
+        "label": "de minute într-o sesiune"
+      },
+      {
+        "value": "90",
+        "label": "de zile în planul personalizat"
+      },
+      {
+        "value": "5",
+        "label": "programe pentru afaceri de familie"
+      }
+    ],
+    "howTitle": "Cum lucrăm",
+    "individualTitle": "Pentru antreprenori și profesioniști"
   },
   "program": {
     "forLabel": "Program",
@@ -226,8 +247,6 @@
       "Plan personalizat pentru următoarele 90 de zile"
     ],
     "othersTitle": "Alte programe",
-    "ctaTitle": "Vrei să afli dacă acest program ți se potrivește?",
-    "ctaText": "Prima sesiune este gratuită și confidențială.",
     "items": {
       "coLeadership": {
         "tagline": "Succesiunea nu este un moment. Este o etapă strategică, gestionată cu finețe și echilibru.",
@@ -364,6 +383,10 @@
       {
         "value": "EMCC",
         "label": "acreditare Mentor EIA Practitioner"
+      },
+      {
+        "value": "40+",
+        "label": "familii și antreprenori mentorați"
       }
     ],
     "credentialsTitle": "Certificări",
@@ -380,8 +403,7 @@
       "Speaker, Forbes Power Breakfast",
       "Speaker, ZF Live"
     ],
-    "ctaTitle": "Să ne cunoaștem",
-    "ctaText": "Prima sesiune este gratuită și confidențială."
+    "storyTitle": "Un parcurs de peste 20 de ani în antreprenoriat"
   },
   "contact": {
     "seoDescription": "Programează prima sesiune gratuită de mentorat sau scrie-mi un mesaj.",
@@ -433,5 +455,43 @@
   },
   "legal": {
     "translationNotice": "Acest document este disponibil momentan doar în limba română."
+  },
+  "ctaPanel": {
+    "home": {
+      "title": "Hai să discutăm despre continuitatea afacerii tale",
+      "text": "Prima sesiune este gratuită și confidențială."
+    },
+    "about": {
+      "title": "Să ne cunoaștem",
+      "text": "Prima sesiune este gratuită și confidențială."
+    },
+    "programs": {
+      "title": "Care program ți se potrivește?",
+      "text": "Spune-mi despre situația ta și alegem împreună direcția."
+    },
+    "program": {
+      "title": "Vrei să afli dacă acest program ți se potrivește?",
+      "text": "Prima sesiune este gratuită și confidențială."
+    },
+    "audit": {
+      "title": "Ești gata pentru un audit al prezentului tău?",
+      "text": "Începe cu o conversație gratuită și confidențială."
+    },
+    "blog": {
+      "title": "Ai o întrebare după ce ai citit?",
+      "text": "Hai să discutăm despre situația ta."
+    }
+  },
+  "blogPage": {
+    "eyebrow": "Blog",
+    "title": "Idei despre bani, familie și leadership",
+    "lead": "Gânduri despre afaceri de familie, succesiune și moștenirea pe care o construim.",
+    "featured": "Recomandat",
+    "read": "Citește articolul"
+  },
+  "postPage": {
+    "soon": "Articolul complet va fi publicat în curând.",
+    "back": "Înapoi la blog",
+    "related": "Alte articole"
   }
 }

@@ -129,3 +129,22 @@ Order: hero (video) → "Featured in" logos → **programs** → testimonials �
 - **Blog:** one featured article (square image, centered category · date, large title) beside a list of four latest with thumbnails and a "Citește" action. Placeholder content until Phase 5.
 - **Closing CTA:** rounded photo panel, black 60% overlay, centered title + line + white button to the contact page.
 - **Token note:** `--color-black` is now defined; before, `bg-black/…` utilities silently produced nothing because the default palette is reset (so some overlays were missing).
+
+## 13. Section template library (2026-11-05)
+
+Modelled on tonyrobbins.com's page templates so every page shares one visual language. **Persistent on every page:** the header, the closing CTA photo panel (`PersistentCTA`, rendered by `LocaleLayout`, page-specific headline, hidden only on Contact) and the footer.
+
+| Template (component)        | What it is                                                                                   | Used on                                                 |
+| --------------------------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
+| `PageBanner`                | Inset rounded photo panel ~60% high, black scrim, centered uppercase title + line (+ button) | Programs, program pages, About                          |
+| `PageHeader`                | Text-led opener: eyebrow, large title, line, hairline                                        | Contact, Blog, post, legal, 404                         |
+| `FeatureSplit` ("Part 01…") | Large numeral, ScrollFill title, text, photo; alternates left/right                          | Programs overview, About story                          |
+| `NumberedList`              | Large-numeral rows between hairlines                                                         | Program directions, About credentials, Contact benefits |
+| `StepCards`                 | "How it works" cards with numeral, title, text                                               | Programs, program format, Audit perks, press items      |
+| `StatsBand`                 | Full-width black band of big numerals (lining figures)                                       | Programs, About                                         |
+| Outcome block               | Full-width black band with one large serif statement                                         | Program pages                                           |
+| `ProgramTiles`              | Tall photo tiles (same look as the media carousel)                                           | "Other programs"                                        |
+| `BlogCard` / featured split | Photo, category · date, title                                                                | Blog index, post page, home                             |
+| `Testimonials`              | Black banner showcase                                                                        | Home, About, Audit                                      |
+
+Rules: alternate light and black bands, never two black bands next to each other; one h1 per page (banner or header); numerals use `font-variant-numeric: lining-nums` (Playfair defaults to old-style figures). Inner-page opener style depends on the content: photo banner where the page sells or introduces; text-led where the page is a form, an archive or a document.

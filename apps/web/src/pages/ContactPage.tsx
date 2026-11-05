@@ -1,14 +1,15 @@
 import { useId } from 'react';
 import { useTranslation } from 'react-i18next';
-import { CheckList } from '../components/blocks/CheckList';
 import { Faq } from '../components/blocks/Faq';
-import { PageHero } from '../components/blocks/PageHero';
+import { NumberedList } from '../components/blocks/NumberedList';
+import { PageHeader } from '../components/blocks/PageHeader';
 import { Seo } from '../components/Seo';
 import { Button } from '../components/ui/Button';
 import { Checkbox, FormField, Input, Select, Textarea } from '../components/ui/form';
 import { Img } from '../components/ui/Img';
 import { LocalizedLink } from '../components/ui/LocalizedLink';
 import { Card, Section, SectionHeading } from '../components/ui/layout';
+import { ScrollFill } from '../components/ui/ScrollFill';
 import { PROGRAM_KEYS } from '../i18n/routes';
 import { site } from '../lib/site';
 import { usePages } from '../lib/usePages';
@@ -32,13 +33,13 @@ export function ContactPage() {
   return (
     <>
       <Seo title={t('nav.contact')} description={tp('contact.seoDescription')} />
-      <PageHero
+      <PageHeader
         eyebrow={tp('contact.eyebrow')}
         title={tp('contact.title')}
         lead={tp('contact.lead')}
       />
 
-      <Section>
+      <Section className="pt-0 md:pt-0 lg:pt-0">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-7">
             <Card className="md:p-10">
@@ -155,13 +156,13 @@ export function ContactPage() {
         </div>
       </Section>
 
-      <Section tone="muted">
-        <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
-          <div className="lg:col-span-5">
-            <h2>{tp('contact.benefits.title')}</h2>
+      <Section>
+        <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-4">
+            <ScrollFill as="h2" text={tp('contact.benefits.title')} className="font-extrabold" />
           </div>
-          <div className="lg:col-span-7">
-            <CheckList items={list('contact.benefits.items')} />
+          <div className="lg:col-span-8">
+            <NumberedList items={list('contact.benefits.items')} />
           </div>
         </div>
       </Section>

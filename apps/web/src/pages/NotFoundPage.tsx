@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { PageHero } from '../components/blocks/PageHero';
+import { PageHeader } from '../components/blocks/PageHeader';
 import { Seo } from '../components/Seo';
 import { ButtonLink } from '../components/ui/Button';
 
@@ -9,11 +9,11 @@ export function NotFoundPage() {
   return (
     <>
       <Seo title={t('notFound.title')} noindex />
-      <PageHero title={t('notFound.title')} lead={t('notFound.text')}>
-        <div>
-          <ButtonLink to={{ key: 'home' }}>{t('notFound.back')}</ButtonLink>
-        </div>
-      </PageHero>
+      <PageHeader title={t('notFound.title')} lead={t('notFound.text')}>
+        <ButtonLink to={{ key: 'home' }} size="lg">
+          {t('notFound.back')}
+        </ButtonLink>
+      </PageHeader>
     </>
   );
 }

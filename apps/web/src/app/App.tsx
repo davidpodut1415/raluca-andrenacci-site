@@ -21,9 +21,7 @@ const Styleguide = import.meta.env.DEV
 const AboutPage = page(() => import('../pages/AboutPage'), 'AboutPage');
 const ContactPage = page(() => import('../pages/ContactPage'), 'ContactPage');
 const LegalPage = lazy(() => import('../pages/LegalPage').then((m) => ({ default: m.LegalPage })));
-const PlaceholderPage = lazy(() =>
-  import('../pages/PlaceholderPage').then((m) => ({ default: m.PlaceholderPage })),
-);
+const BlogPage = page(() => import('../pages/BlogPage'), 'BlogPage');
 
 function staticElement(key: StaticRouteKey) {
   switch (key) {
@@ -39,7 +37,7 @@ function staticElement(key: StaticRouteKey) {
     case 'cookies':
       return <LegalPage document={key} />;
     default:
-      return <PlaceholderPage routeKey={key} />;
+      return <BlogPage />;
   }
 }
 

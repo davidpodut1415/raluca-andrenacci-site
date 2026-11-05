@@ -6,6 +6,7 @@ import { LocalizedLink } from '../ui/LocalizedLink';
 import { Container } from '../ui/layout';
 
 interface Post {
+  slug: string;
   category: string;
   date: string;
   title: string;
@@ -49,7 +50,10 @@ export function BlogShowcase() {
             {featured.category} <span aria-hidden="true">·</span> {featured.date}
           </p>
           <h3 className="mt-3 max-w-lg font-serif text-h3 leading-tight font-extrabold">
-            <LocalizedLink to={{ key: 'blog' }} className="after:absolute after:inset-0">
+            <LocalizedLink
+              to={{ key: 'post', slug: featured.slug }}
+              className="after:absolute after:inset-0"
+            >
               {featured.title}
             </LocalizedLink>
           </h3>
@@ -72,7 +76,10 @@ export function BlogShowcase() {
                     {post.category} <span aria-hidden="true">·</span> {post.date}
                   </p>
                   <h3 className="mt-2 text-h4 leading-snug font-semibold">
-                    <LocalizedLink to={{ key: 'blog' }} className="after:absolute after:inset-0">
+                    <LocalizedLink
+                      to={{ key: 'post', slug: post.slug }}
+                      className="after:absolute after:inset-0"
+                    >
                       {post.title}
                     </LocalizedLink>
                   </h3>

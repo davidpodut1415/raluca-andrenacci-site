@@ -85,10 +85,6 @@
       "text": "I have over 20 years of entrepreneurial experience in real estate, construction and HoReCa, and I invest in real estate and start-ups. As a certified mentor and coach, FFI member and EMCC-accredited, I offer personalized programs for those who want to reach their full potential.",
       "cta": "Read my story"
     },
-    "cta": {
-      "title": "Let's talk about the continuity of your business",
-      "text": "The first session is free and confidential."
-    },
     "media": {
       "title": "About me",
       "all": "See all",
@@ -153,31 +149,36 @@
           "category": "Money & family",
           "date": "January 2026",
           "title": "How much is enough? Reflections on money, life, family, and the legacy we build",
-          "image": "portrait-headshot"
+          "image": "portrait-headshot",
+          "slug": "cat-este-suficient-despre-bani-viata-familie-si-mostenirea-pe-care-o-construim"
         },
         {
           "category": "Leadership",
           "date": "October 2025",
           "title": "The hardest lesson you learn after you succeed",
-          "image": "desk-notebook"
+          "image": "desk-notebook",
+          "slug": "cea-mai-grea-lectie-pe-care-o-inveti-dupa-ce-ai-succes"
         },
         {
           "category": "Leadership",
           "date": "October 2025",
           "title": "What does AUTHORITY even mean in a world of TikTok, paid ads and instant validation",
-          "image": "portrait-armchair"
+          "image": "portrait-armchair",
+          "slug": "ce-mai-inseamna-autoritate-intr-o-lume-cu-tiktok-reclame-platite-si-validare-instanta"
         },
         {
           "category": "Family",
           "date": "April 2025",
           "title": "How do we take responsibility for our children’s education in Romania?",
-          "image": "working-laptop"
+          "image": "working-laptop",
+          "slug": "educatia-copiilor-asumare-parinti"
         },
         {
           "category": "Governance",
           "date": "April 2025",
           "title": "How can family governance help your family business?",
-          "image": "marble-table"
+          "image": "marble-table",
+          "slug": "cum-poate-ajuta-guvernanta-familiala-afacerea-familiei-tale"
         }
       ]
     }
@@ -209,7 +210,27 @@
           "a": "Founders and successors in family businesses, as well as entrepreneurs and professionals looking for clarity, resilience and balance."
         }
       ]
-    }
+    },
+    "stats": [
+      {
+        "value": "1:1",
+        "label": "individual, confidential sessions"
+      },
+      {
+        "value": "60",
+        "label": "minutes per session"
+      },
+      {
+        "value": "90",
+        "label": "days in the personalized plan"
+      },
+      {
+        "value": "5",
+        "label": "programs for family businesses"
+      }
+    ],
+    "howTitle": "How we work",
+    "individualTitle": "For entrepreneurs and professionals"
   },
   "program": {
     "forLabel": "Program",
@@ -222,8 +243,6 @@
       "A personalized plan for the next 90 days"
     ],
     "othersTitle": "Other programs",
-    "ctaTitle": "Want to find out if this program is right for you?",
-    "ctaText": "The first session is free and confidential.",
     "items": {
       "coLeadership": {
         "tagline": "Succession is not a moment. It is a strategic stage, handled with finesse and balance.",
@@ -360,6 +379,10 @@
       {
         "value": "EMCC",
         "label": "accredited Mentor EIA Practitioner"
+      },
+      {
+        "value": "40+",
+        "label": "families and entrepreneurs mentored"
       }
     ],
     "credentialsTitle": "Certifications",
@@ -376,8 +399,7 @@
       "Speaker, Forbes Power Breakfast",
       "Speaker, ZF Live"
     ],
-    "ctaTitle": "Let's get to know each other",
-    "ctaText": "The first session is free and confidential."
+    "storyTitle": "Over 20 years of entrepreneurship"
   },
   "contact": {
     "seoDescription": "Book your free first mentoring session or send me a message.",
@@ -429,5 +451,43 @@
   },
   "legal": {
     "translationNotice": "This document is currently available in Romanian only."
+  },
+  "ctaPanel": {
+    "home": {
+      "title": "Let's talk about the continuity of your business",
+      "text": "The first session is free and confidential."
+    },
+    "about": {
+      "title": "Let's get to know each other",
+      "text": "The first session is free and confidential."
+    },
+    "programs": {
+      "title": "Which program is right for you?",
+      "text": "Tell me about your situation and we'll choose the direction together."
+    },
+    "program": {
+      "title": "Want to find out if this program is right for you?",
+      "text": "The first session is free and confidential."
+    },
+    "audit": {
+      "title": "Ready for an audit of your present?",
+      "text": "Start with a free, confidential conversation."
+    },
+    "blog": {
+      "title": "A question after reading?",
+      "text": "Let's talk about your situation."
+    }
+  },
+  "blogPage": {
+    "eyebrow": "Blog",
+    "title": "Ideas on money, family and leadership",
+    "lead": "Thoughts on family businesses, succession and the legacy we build.",
+    "featured": "Featured",
+    "read": "Read the article"
+  },
+  "postPage": {
+    "soon": "The full article will be published soon.",
+    "back": "Back to the blog",
+    "related": "More articles"
   }
 }

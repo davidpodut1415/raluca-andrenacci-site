@@ -2,6 +2,7 @@ import type { Locale } from '@raluca/shared';
 import { Suspense, useLayoutEffect, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Outlet, useLocation } from 'react-router-dom';
+import { PersistentCTA } from '../components/blocks/PersistentCTA';
 import { Footer } from '../components/layout/Footer';
 import { Header } from '../components/layout/Header';
 import { CookieBanner } from '../features/consent/CookieBanner';
@@ -46,6 +47,7 @@ export function LocaleLayout({ locale: localeProp }: { locale?: Locale }) {
           <Outlet />
         </Suspense>
       </main>
+      <PersistentCTA />
       <Footer />
       <CookieBanner />
       <PreferencesDialog />

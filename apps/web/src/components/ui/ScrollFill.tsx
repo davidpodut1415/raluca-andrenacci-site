@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef, type ElementType } from 'react';
+import { Fragment, useLayoutEffect, useRef, type ElementType } from 'react';
 
 const DIM = 0.25;
 const START = 0.9; // fill starts when the heading's top reaches 90% of the viewport height
@@ -62,12 +62,12 @@ export function ScrollFill({
   return (
     <Tag ref={ref} className={className}>
       {words.map((word, i) => (
-        <span key={`${word}-${i}`}>
+        <Fragment key={`${word}-${i}`}>
           <span data-w className="transition-opacity duration-150">
             {word}
           </span>
           {i < words.length - 1 ? ' ' : null}
-        </span>
+        </Fragment>
       ))}
     </Tag>
   );

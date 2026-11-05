@@ -1,6 +1,8 @@
 import { useState } from 'react';
-import { PageHero } from '../components/blocks/PageHero';
-import { CTABand } from '../components/blocks/CTABand';
+import { NumberedList } from '../components/blocks/NumberedList';
+import { PageHeader } from '../components/blocks/PageHeader';
+import { StatsBand } from '../components/blocks/StatsBand';
+import { StepCards } from '../components/blocks/StepCards';
 import { Seo } from '../components/Seo';
 import { Button, ButtonLink } from '../components/ui/Button';
 import { Checkbox, FormField, Input, Select, Textarea } from '../components/ui/form';
@@ -39,7 +41,7 @@ export function Styleguide() {
   return (
     <>
       <Seo title="Styleguide" noindex />
-      <PageHero
+      <PageHeader
         eyebrow="Design system"
         title="Styleguide"
         lead="Tokens and components from docs/03-DESIGN-SYSTEM.md. Dev only."
@@ -141,10 +143,30 @@ export function Styleguide() {
         </form>
       </Section>
 
-      <CTABand
-        title="Closing call to action"
-        text="Light band; the footer is the page's single dark block."
-        action={<ButtonLink to={{ key: 'contact' }}>Primary action</ButtonLink>}
+      <Section>
+        <SectionHeading title="Numbered list" />
+        <NumberedList items={['First direction', 'Second direction', 'Third direction']} />
+      </Section>
+
+      <Section>
+        <SectionHeading title="Step cards" />
+        <StepCards
+          steps={[
+            { title: 'Step one', text: 'Short supporting text.' },
+            { title: 'Step two', text: 'Short supporting text.' },
+            { title: 'Step three' },
+            { title: 'Step four' },
+          ]}
+        />
+      </Section>
+
+      <StatsBand
+        stats={[
+          { value: '20+', label: 'years' },
+          { value: '3', label: 'industries' },
+          { value: '90', label: 'days' },
+          { value: '1:1', label: 'sessions' },
+        ]}
       />
     </>
   );
