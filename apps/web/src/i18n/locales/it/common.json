@@ -67,7 +67,8 @@
   },
   "notFound": {
     "title": "Pagina non trovata",
-    "text": "L'indirizzo che hai aperto non esiste o è stato spostato.",
-    "back": "Torna alla home"
+    "back": "Torna alla home",
+    "headline": "Spiacenti, non abbiamo trovato ciò che cercavi",
+    "explore": "Esplora i programmi"
   }
 }

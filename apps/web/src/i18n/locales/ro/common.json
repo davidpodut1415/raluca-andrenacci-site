@@ -67,7 +67,8 @@
   },
   "notFound": {
     "title": "Pagina nu a fost găsită",
-    "text": "Adresa pe care ai accesat-o nu există sau a fost mutată.",
-    "back": "Înapoi acasă"
+    "back": "Înapoi acasă",
+    "headline": "Ne pare rău, nu am găsit ce căutai",
+    "explore": "Explorează programele"
   }
 }

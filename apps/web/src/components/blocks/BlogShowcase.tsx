@@ -1,25 +1,16 @@
+import { POSTS } from '../../content/blog';
+import { useBlogMeta } from '../../lib/useBlogMeta';
 import { usePages } from '../../lib/usePages';
-import type { ImageName } from '../../lib/images.generated';
 import { ArrowRightIcon } from '../ui/icons';
-import { Img } from '../ui/Img';
+import { BlogImg } from '../ui/BlogImg';
 import { LocalizedLink } from '../ui/LocalizedLink';
 import { Container } from '../ui/layout';
 
-interface Post {
-  slug: string;
-  category: string;
-  date: string;
-  title: string;
-  image: ImageName;
-}
-
-/**
- * Blog block: one featured article (large square image, centered meta and title) next to a list
- * of the latest ones. Placeholder content; every link goes to the blog index until Phase 5.
- */
+/** Landing-page blog block: one featured article (large square image) next to three latest articles. */
 export function BlogShowcase() {
-  const { t, items } = usePages();
-  const [featured, ...rest] = items<Post>('home.blog.items');
+  const { t } = usePages();
+  const meta = useBlogMeta();
+  const [featured, ...rest] = POSTS;
   const latest = rest.slice(0, 3);
   if (!featured) return null;
 
@@ -38,16 +29,16 @@ export function BlogShowcase() {
 
       <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
         <article className="group relative flex flex-col items-center text-center">
-          <div className="w-full max-w-64 overflow-hidden rounded-2xl shadow-card">
-            <Img
-              name={featured.image}
-              decorative
+          <div className="w-full max-w-64 overflow-hidden rounded-2xl bg-grey-100 shadow-card">
+            <BlogImg
+              image={featured.cover}
               sizes="16rem"
               className="aspect-square w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
             />
           </div>
           <p className="mt-6 text-small tracking-wide text-ink-500 uppercase">
-            {featured.category} <span aria-hidden="true">·</span> {featured.date}
+            {meta.category(featured.category)} <span aria-hidden="true">·</span>{' '}
+            {meta.date(featured.date)}
           </p>
           <h3 className="mt-3 max-w-lg font-serif text-h3 leading-tight font-extrabold">
             <LocalizedLink
@@ -61,19 +52,19 @@ export function BlogShowcase() {
 
         <ul className="divide-y divide-line border-y border-line">
           {latest.map((post) => (
-            <li key={post.title}>
+            <li key={post.slug}>
               <article className="group relative flex items-center gap-5 py-5 md:gap-6">
-                <div className="size-20 shrink-0 overflow-hidden rounded-xl md:size-24">
-                  <Img
-                    name={post.image}
-                    decorative
+                <div className="size-20 shrink-0 overflow-hidden rounded-xl bg-grey-100 md:size-24">
+                  <BlogImg
+                    image={post.cover}
                     sizes="6rem"
                     className="size-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
                 <div className="min-w-0 flex-1">
                   <p className="text-small tracking-wide text-ink-500 uppercase">
-                    {post.category} <span aria-hidden="true">·</span> {post.date}
+                    {meta.category(post.category)} <span aria-hidden="true">·</span>{' '}
+                    {meta.date(post.date)}
                   </p>
                   <h3 className="mt-2 text-h4 leading-snug font-semibold">
                     <LocalizedLink

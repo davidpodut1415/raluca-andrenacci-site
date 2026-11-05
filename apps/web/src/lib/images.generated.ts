@@ -78,3 +78,79 @@ export const LOGO_MANIFEST = {
 } as const;
 
 export type LogoName = keyof typeof LOGO_MANIFEST;
+
+export const BLOG_IMAGES: Record<
+  string,
+  { width: number; height: number; widths: readonly number[] }
+> = {
+  '2025-un-an-al-rezilientei-dar-noi-profesionistii-suntem-pregatiti': {
+    width: 800,
+    height: 644,
+    widths: [480, 800],
+  },
+  'cat-este-suficient-despre-bani-viata-familie-si-mostenirea-pe-care-o-construim': {
+    width: 1200,
+    height: 800,
+    widths: [480, 800, 1200],
+  },
+  'ce-mai-inseamna-autoritate-intr-o-lume-cu-tiktok-reclame-platite-si-validare-instanta': {
+    width: 768,
+    height: 479,
+    widths: [480, 768],
+  },
+  'cea-mai-grea-lectie-pe-care-o-inveti-dupa-ce-ai-succes': {
+    width: 1200,
+    height: 1200,
+    widths: [480, 800, 1200],
+  },
+  'cum-poate-ajuta-guvernanta-familiala-afacerea-familiei-tale': {
+    width: 1200,
+    height: 800,
+    widths: [480, 800, 1200],
+  },
+  'de-ce-nu-pot-lucra-cu-membrii-familiei-mele-2': {
+    width: 761,
+    height: 768,
+    widths: [480, 761],
+  },
+  'educatia-copiilor-asumare-parinti': {
+    width: 1200,
+    height: 800,
+    widths: [480, 800, 1200],
+  },
+  'mentorat-protectie-avere-generatii-romania': {
+    width: 1200,
+    height: 800,
+    widths: [480, 800, 1200],
+  },
+  'mentoring-notes-3--1': {
+    width: 32,
+    height: 32,
+    widths: [32],
+  },
+  'mentoring-notes-3': {
+    width: 1200,
+    height: 714,
+    widths: [480, 800, 1200],
+  },
+  'smark-2': {
+    width: 1200,
+    height: 1498,
+    widths: [480, 800, 1200],
+  },
+  'un-moment-de-reflectie-inceputuri-sens-si-misiune-personala': {
+    width: 1200,
+    height: 800,
+    widths: [480, 800, 1200],
+  },
+  'validarea-ca-moneda-sociala-in-lumea-elitelor': {
+    width: 600,
+    height: 400,
+    widths: [480, 600],
+  },
+  'viata-e-perversanu-e-dreapta-si-niciodata-destula-2': {
+    width: 529,
+    height: 793,
+    widths: [480, 529],
+  },
+};

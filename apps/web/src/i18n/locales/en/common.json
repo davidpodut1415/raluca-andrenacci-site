@@ -67,7 +67,8 @@
   },
   "notFound": {
     "title": "Page not found",
-    "text": "The address you opened does not exist or has been moved.",
-    "back": "Back to home"
+    "back": "Back to home",
+    "headline": "Sorry, we couldn’t find what you’re looking for",
+    "explore": "Explore the programs"
   }
 }

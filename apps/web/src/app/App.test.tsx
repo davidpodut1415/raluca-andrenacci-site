@@ -59,12 +59,12 @@ describe('routing and i18n', () => {
   it('shows a 404 for unknown paths and unknown program slugs', async () => {
     const { unmount } = renderApp('/nu-exista');
     expect(
-      await screen.findByRole('heading', { level: 1, name: /pagina nu a fost găsită/i }),
+      await screen.findByRole('heading', { level: 1, name: /nu am găsit ce căutai/i }),
     ).toBeInTheDocument();
     unmount();
     renderApp('/programe/nu-exista');
     expect(
-      await screen.findByRole('heading', { level: 1, name: /pagina nu a fost găsită/i }),
+      await screen.findByRole('heading', { level: 1, name: /nu am găsit ce căutai/i }),
     ).toBeInTheDocument();
   });
 });

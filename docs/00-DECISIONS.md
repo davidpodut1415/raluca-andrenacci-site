@@ -65,3 +65,11 @@
 - **Blog:** the five articles on the home page, blog index and post pages are the real titles from the old site with placeholder photos, invented categories and a "full article coming soon" body until Phase 5.
 - **Program/banner photos** are the nine existing photos reused; several programs share a photo. Replace with dedicated photography.
 - **Per-page CTA headlines** (home, about, programs, program, audit, blog) are drafts in `pages.json` → `ctaPanel`.
+
+## Blog content import (2026-11-05)
+
+- All **13 posts** of the current RO blog were imported with `node scripts/import-blog.mjs` (title, original publish date, full text, inline images, cover = the site's social image) into `apps/web/src/content/blog/posts.ro.json`; images are optimized by `npm run images` into `apps/web/public/blog/`. Text is kept verbatim (inline formatting limited to bold, italic, links); the only edit is the source typo "reflecție:începuturi" → "reflecție: începuturi" in a title.
+- **Categories were invented** (the old site has none): Bani & familie, Leadership, Afaceri de familie, Mentorat, Reflecții, Interviuri. Please confirm or rename.
+- **Excerpts** are the first ~190 characters of each post.
+- **Languages:** only the Romanian posts exist in the new site; EN/IT visitors see the RO articles with a notice. The old site has EN versions of the newest posts (and possibly IT) — to be imported/translated.
+- Comments ("0 Comments") and the old "Top posts" widget are not carried over. Phase 5 moves this content into the database/admin (`Post` + `PostTranslation`).

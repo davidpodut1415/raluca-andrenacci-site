@@ -1,11 +1,14 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { BlogCard, type BlogPost } from '../components/blocks/BlogCard';
+import { BlogCard } from '../components/blocks/BlogCard';
 import { Seo } from '../components/Seo';
-import { Img } from '../components/ui/Img';
+import { BlogImg } from '../components/ui/BlogImg';
 import { LocalizedLink } from '../components/ui/LocalizedLink';
 import { Container, Section } from '../components/ui/layout';
 import { cn } from '../lib/cn';
+import { CATEGORY_KEYS, POSTS } from '../content/blog';
+import type { CategoryKey } from '../content/blog';
+import { useBlogMeta } from '../lib/useBlogMeta';
 import { usePages } from '../lib/usePages';
 
 /**
@@ -15,12 +18,12 @@ import { usePages } from '../lib/usePages';
  */
 export function BlogPage() {
   const { t } = useTranslation();
-  const { t: tp, items } = usePages();
-  const posts = items<BlogPost>('home.blog.items');
+  const { t: tp } = usePages();
+  const meta = useBlogMeta();
+  const posts = POSTS;
   const [featured, ...rest] = posts;
   const latest = rest.slice(0, 3);
-  const categories = [...new Set(posts.map((p) => p.category))];
-  const [topic, setTopic] = useState<string | null>(null);
+  const [topic, setTopic] = useState<CategoryKey | null>(null);
   const shown = topic ? posts.filter((p) => p.category === topic) : posts;
 
   return (
@@ -38,9 +41,8 @@ export function BlogPage() {
           <Container>
             <div className="grid gap-8 lg:grid-cols-12 lg:gap-12">
               <article className="group relative isolate flex min-h-[28rem] flex-col justify-end overflow-hidden rounded-2xl bg-black p-6 md:min-h-[36rem] md:p-10 lg:col-span-7">
-                <Img
-                  name={featured.image}
-                  decorative
+                <BlogImg
+                  image={featured.cover}
                   priority
                   sizes="(min-width: 1024px) 58vw, 100vw"
                   className="absolute inset-0 -z-20 size-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
@@ -70,16 +72,16 @@ export function BlogPage() {
                   <li key={post.slug}>
                     <article className="group relative flex items-center gap-5 md:gap-6">
                       <div className="w-32 shrink-0 overflow-hidden rounded-xl md:w-44">
-                        <Img
-                          name={post.image}
-                          decorative
+                        <BlogImg
+                          image={post.cover}
                           sizes="11rem"
                           className="aspect-4/3 w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                         />
                       </div>
                       <div className="min-w-0">
                         <p className="text-small tracking-wide text-ink-500 uppercase">
-                          {post.category}
+                          {meta.category(post.category)} <span aria-hidden="true">·</span>{' '}
+                          {meta.date(post.date)}
                         </p>
                         <h3 className="mt-2 text-h4 leading-snug font-semibold">
                           <LocalizedLink
@@ -110,7 +112,7 @@ export function BlogPage() {
           aria-label={tp('blogPage.topics')}
           className="mb-10 flex flex-wrap gap-3 md:mb-14"
         >
-          {[null, ...categories].map((c) => {
+          {[null, ...CATEGORY_KEYS].map((c) => {
             const active = c === topic;
             return (
               <button
@@ -125,7 +127,7 @@ export function BlogPage() {
                     : 'border-line bg-grey-50 text-ink-900 hover:border-ink-900',
                 )}
               >
-                {c ?? tp('blogPage.allTopics')}
+                {c ? meta.category(c) : tp('blogPage.allTopics')}
               </button>
             );
           })}

@@ -268,13 +268,13 @@ describe('persistent chrome and templates', () => {
     ).toBeInTheDocument();
   });
 
-  it('blog index lists featured and latest articles that link to post pages', async () => {
+  it('blog index lists the imported articles that link to post pages', async () => {
     renderApp('/blog');
     await screen.findByRole('heading', { level: 1, name: /idei care contează/i });
     const links = screen.getAllByRole('link', {
-      name: /Cât este suficient|Cea mai grea lecție|AUTORITATE|educația copiilor|guvernanța familială/,
+      name: /Cât este suficient|Cea mai grea lecție|Interviu SMARK/,
     });
-    expect(links.length).toBeGreaterThanOrEqual(5);
+    expect(links.length).toBeGreaterThanOrEqual(3);
     for (const link of links) expect(link.getAttribute('href')).toMatch(/^\/blog\/.+/);
   });
 
@@ -287,25 +287,26 @@ describe('persistent chrome and templates', () => {
       'true',
     );
     const grid = screen.getAllByRole('list').find((l) => l.className.includes('lg:grid-cols-3'))!;
-    expect(within(grid).getAllByRole('article')).toHaveLength(5);
+    expect(within(grid).getAllByRole('article')).toHaveLength(13);
     await userEvent.click(within(group).getByRole('button', { name: 'Leadership' }));
-    expect(within(grid).getAllByRole('article')).toHaveLength(2);
+    expect(within(grid).getAllByRole('article')).toHaveLength(4);
     expect(within(group).getByRole('button', { name: 'Leadership' })).toHaveAttribute(
       'aria-pressed',
       'true',
     );
   });
 
-  it('post pages show the article template; unknown slugs 404', async () => {
+  it('post pages show the full imported article text; unknown slugs 404', async () => {
     const { unmount } = renderApp('/blog/cea-mai-grea-lectie-pe-care-o-inveti-dupa-ce-ai-succes');
     expect(
       await screen.findByRole('heading', { level: 1, name: /cea mai grea lecție/i }),
     ).toBeInTheDocument();
-    expect(screen.getByText(/va fi publicat în curând/i)).toBeInTheDocument();
+    expect(screen.getByText(/Toată lumea vorbește despre cum să reușești/)).toBeInTheDocument();
+    expect(screen.getAllByRole('article').length).toBe(3); // related articles
     unmount();
     renderApp('/blog/nu-exista');
     expect(
-      await screen.findByRole('heading', { level: 1, name: /pagina nu a fost găsită/i }),
+      await screen.findByRole('heading', { level: 1, name: /nu am găsit ce căutai/i }),
     ).toBeInTheDocument();
   });
 });

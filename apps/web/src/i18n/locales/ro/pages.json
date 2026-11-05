@@ -147,49 +147,7 @@
       "eyebrow": "Blog",
       "title": "Din blog",
       "all": "Toate articolele",
-      "read": "Citește",
-      "items": [
-        {
-          "category": "Bani & familie",
-          "date": "ianuarie 2026",
-          "title": "Cât este suficient?! Despre bani, viață, familie și moștenirea pe care o construim",
-          "image": "portrait-headshot",
-          "slug": "cat-este-suficient-despre-bani-viata-familie-si-mostenirea-pe-care-o-construim",
-          "excerpt": "Cât este suficient? O reflecție despre bani, familie și moștenirea pe care alegem să o lăsăm."
-        },
-        {
-          "category": "Leadership",
-          "date": "octombrie 2025",
-          "title": "Cea mai grea lecție pe care o înveți după ce ai succes",
-          "image": "desk-notebook",
-          "slug": "cea-mai-grea-lectie-pe-care-o-inveti-dupa-ce-ai-succes",
-          "excerpt": "Succesul aduce lecții pe care nu le înveți din eșecuri. Iată pe cea mai grea dintre ele."
-        },
-        {
-          "category": "Leadership",
-          "date": "octombrie 2025",
-          "title": "Ce mai înseamnă AUTORITATE într-o lume cu TikTok, reclame plătite și validare instantă",
-          "image": "portrait-armchair",
-          "slug": "ce-mai-inseamna-autoritate-intr-o-lume-cu-tiktok-reclame-platite-si-validare-instanta",
-          "excerpt": "Autoritatea nu se mai câștigă ca înainte. Ce rămâne valabil într-o lume a validării instante?"
-        },
-        {
-          "category": "Familie",
-          "date": "aprilie 2025",
-          "title": "Cum ne asumăm educația copiilor noștri în România?",
-          "image": "working-laptop",
-          "slug": "educatia-copiilor-asumare-parinti",
-          "excerpt": "Despre responsabilitatea părinților pentru educația copiilor: între școală, familie și exemplul personal."
-        },
-        {
-          "category": "Guvernanță",
-          "date": "aprilie 2025",
-          "title": "Cum poate ajuta guvernanța familială afacerea familiei tale?",
-          "image": "marble-table",
-          "slug": "cum-poate-ajuta-guvernanta-familiala-afacerea-familiei-tale",
-          "excerpt": "Cum un cadru clar de guvernanță familială protejează relațiile, deciziile și continuitatea afacerii."
-        }
-      ]
+      "read": "Citește"
     }
   },
   "programsPage": {
@@ -497,8 +455,16 @@
     "topics": "Subiecte"
   },
   "postPage": {
-    "soon": "Articolul complet va fi publicat în curând.",
     "back": "Înapoi la blog",
-    "related": "Alte articole"
+    "related": "Alte articole",
+    "roOnly": "Articol disponibil momentan doar în limba română."
+  },
+  "blogCategories": {
+    "moneyFamily": "Bani & familie",
+    "leadership": "Leadership",
+    "familyBusiness": "Afaceri de familie",
+    "mentoring": "Mentorat",
+    "reflections": "Reflecții",
+    "interviews": "Interviuri"
   }
 }
