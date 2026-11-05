@@ -61,7 +61,7 @@ export function MediaCarousel({
             <p className="text-eyebrow font-semibold text-white/85 uppercase">
               {t(`home.media.types.${item.type}`)}
             </p>
-            <h3 className="mt-3 font-serif text-h3 leading-tight font-extrabold text-white uppercase">
+            <h3 className="mt-3 min-h-[2.5em] font-serif text-h3 leading-tight font-extrabold text-white uppercase">
               {item.href ? (
                 <a
                   href={item.href}
@@ -82,7 +82,7 @@ export function MediaCarousel({
                 </LocalizedLink>
               )}
             </h3>
-            <p className="mt-4 text-small text-white/90">{item.title}</p>
+            <p className="mt-4 line-clamp-3 min-h-[4.5em] text-small text-white/90">{item.title}</p>
           </article>
         </li>
       ))}
