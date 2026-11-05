@@ -112,42 +112,6 @@
   }
 }
 
-@layer components {
-  /* Hero cross-fade: each slide fades in, holds with a slow zoom, fades out (3 slides × 6 s). */
-  .hero-slide {
-    opacity: 0;
-    animation: hero-slide 18s ease-in-out infinite;
-  }
-  @keyframes hero-slide {
-    0% {
-      opacity: 0;
-      transform: scale(1);
-    }
-    7% {
-      opacity: 1;
-    }
-    36% {
-      opacity: 1;
-    }
-    43% {
-      opacity: 0;
-      transform: scale(1.12);
-    }
-    100% {
-      opacity: 0;
-      transform: scale(1.12);
-    }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .hero-slide {
-      animation: none !important;
-    }
-    .hero-slide:first-child {
-      opacity: 1;
-    }
-  }
-}
-
 @layer base {
   html {
     -webkit-text-size-adjust: 100%;
