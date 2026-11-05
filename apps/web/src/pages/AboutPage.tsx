@@ -37,6 +37,13 @@ export function AboutPage() {
         </FeatureSplit>
       </Section>
 
+      <QuoteBand
+        image="pro-closeup"
+        quote={testimonial?.quote ?? ''}
+        name={testimonial?.name ?? ''}
+        role={testimonial?.role}
+      />
+
       <StatsStagger stats={items<Stat>('about.stats')} />
 
       <Section>
@@ -60,13 +67,6 @@ export function AboutPage() {
       <div className="bg-grey-50 py-12 md:py-16 lg:py-20">
         <MediaCarousel title={tp('about.pressTitle')} showAll={false} />
       </div>
-
-      <QuoteBand
-        image="pro-closeup"
-        quote={testimonial?.quote ?? ''}
-        name={testimonial?.name ?? ''}
-        role={testimonial?.role}
-      />
     </>
   );
 }
