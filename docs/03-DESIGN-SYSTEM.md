@@ -166,3 +166,7 @@ Rules: alternate light and black bands, never two black bands next to each other
 ## 16. Type scale rule (one scale for every page)
 
 Every page title (H1) is `text-display` (36→56px), every section heading (H2) is `text-h2` (30→44px; quotes and the closing CTA step up to `text-display`), card titles are `text-h3`, list/card sub-titles `text-h4`, body `text-body`. No arbitrary `text-[…]` sizes for headings, and the former `text-hero` token was removed. Only the key-figure numerals (`StatsStagger`) use a larger display size on purpose.
+
+## 17. Base interaction for clickable elements
+
+Buttons, button links, topic pills, carousel arrows and the menu toggle use the `hover-zoom` utility (index.css): scale 1.05 on hover (hover-capable devices only), 0.98 while pressed, 200 ms; disabled with reduced motion. Photo cards zoom as a whole (scale 1.03). Use `hover-zoom` for any new clickable control.

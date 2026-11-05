@@ -4,7 +4,7 @@ import { cn } from '../../lib/cn';
 import { LocalizedLink, type LocalizedLinkProps } from './LocalizedLink';
 
 export const buttonStyles = cva(
-  'inline-flex items-center justify-center gap-2 rounded-md text-button whitespace-nowrap font-semibold transition-colors disabled:pointer-events-none disabled:opacity-60',
+  'inline-flex items-center justify-center gap-2 rounded-md text-button whitespace-nowrap font-semibold hover-zoom disabled:pointer-events-none disabled:opacity-60',
   {
     variants: {
       variant: {

@@ -88,6 +88,30 @@
   --shadow-card: 0 8px 24px -12px rgb(0 0 0 / 0.14);
 }
 
+/* Base interaction for anything clickable (buttons, pills, arrows): a small zoom on hover, a press on click. */
+@utility hover-zoom {
+  transition:
+    transform 200ms ease-out,
+    background-color 200ms,
+    color 200ms,
+    border-color 200ms,
+    opacity 200ms;
+  @media (hover: hover) {
+    &:hover:not(:disabled) {
+      transform: scale(1.05);
+    }
+  }
+  &:active:not(:disabled) {
+    transform: scale(0.98);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    &:hover:not(:disabled),
+    &:active:not(:disabled) {
+      transform: none;
+    }
+  }
+}
+
 @layer components {
   /* Hero cross-fade: each slide fades in, holds with a slow zoom, fades out (3 slides × 6 s). */
   .hero-slide {

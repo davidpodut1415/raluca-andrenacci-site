@@ -21,7 +21,7 @@ interface CardCarouselProps {
 }
 
 const roundButton =
-  'inline-flex size-12 items-center justify-center rounded-full bg-ink-900 text-white transition-opacity hover:bg-ink-700 disabled:opacity-30 disabled:hover:bg-ink-900';
+  'inline-flex size-12 items-center justify-center rounded-full bg-ink-900 text-white hover-zoom hover:bg-ink-700 disabled:opacity-30 disabled:hover:bg-ink-900';
 
 /** Scroll-snap card carousel: header with title, optional link and arrows; full-bleed track; dots. */
 export function CardCarousel({

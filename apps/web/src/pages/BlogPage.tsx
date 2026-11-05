@@ -121,7 +121,7 @@ export function BlogPage() {
                 aria-pressed={active}
                 onClick={() => setTopic(c)}
                 className={cn(
-                  'inline-flex min-h-11 items-center rounded-full border px-6 font-medium transition-colors',
+                  'inline-flex min-h-11 items-center rounded-full border px-6 font-medium hover-zoom',
                   active
                     ? 'border-black bg-black text-white'
                     : 'border-line bg-grey-50 text-ink-900 hover:border-ink-900',
