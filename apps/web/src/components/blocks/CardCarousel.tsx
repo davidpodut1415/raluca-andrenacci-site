@@ -16,6 +16,8 @@ interface CardCarouselProps {
   nextLabel: string;
   /** Dot label with `{{n}}` already interpolated by the caller. */
   goToLabel: (n: number) => string;
+  /** Show the page dots under the track (default true). */
+  dots?: boolean;
   /** <li> cards, each using CAROUSEL_ITEM. */
   children: ReactNode;
 }
@@ -31,6 +33,7 @@ export function CardCarousel({
   prevLabel,
   nextLabel,
   goToLabel,
+  dots = true,
   children,
 }: CardCarouselProps) {
   const track = useRef<HTMLUListElement>(null);
@@ -118,22 +121,24 @@ export function CardCarousel({
           {children}
         </ul>
 
-        <div className="mt-6 flex justify-center gap-2" role="group">
-          {Array.from({ length: pages }, (_, i) => (
-            <button
-              key={i}
-              type="button"
-              aria-label={goToLabel(i + 1)}
-              aria-current={i === page ? 'true' : undefined}
-              onClick={() => goTo(i)}
-              className="inline-flex size-6 items-center justify-center"
-            >
-              <span
-                className={cn('size-2 rounded-full', i === page ? 'bg-ink-900' : 'bg-ink-500/40')}
-              />
-            </button>
-          ))}
-        </div>
+        {dots && (
+          <div className="mt-6 flex justify-center gap-2" role="group">
+            {Array.from({ length: pages }, (_, i) => (
+              <button
+                key={i}
+                type="button"
+                aria-label={goToLabel(i + 1)}
+                aria-current={i === page ? 'true' : undefined}
+                onClick={() => goTo(i)}
+                className="inline-flex size-6 items-center justify-center"
+              >
+                <span
+                  className={cn('size-2 rounded-full', i === page ? 'bg-ink-900' : 'bg-ink-500/40')}
+                />
+              </button>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
