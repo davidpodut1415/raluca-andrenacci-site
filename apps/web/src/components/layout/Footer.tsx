@@ -32,7 +32,7 @@ export function Footer() {
   const { openPreferences } = useConsent();
 
   return (
-    <footer className="bg-espresso-900 text-white/85">
+    <footer className="bg-black text-white/85">
       <Container>
         <div aria-hidden="true" className="border-t border-white/15" />
         <div className="pt-12 md:pt-16 lg:pt-20">

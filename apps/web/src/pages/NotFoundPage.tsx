@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { CAROUSEL_ITEM, CardCarousel } from '../components/blocks/CardCarousel';
 import { Seo } from '../components/Seo';
 import { ButtonLink } from '../components/ui/Button';
+import { LoopVideo } from '../components/ui/LoopVideo';
 import { Img } from '../components/ui/Img';
 import { LocalizedLink } from '../components/ui/LocalizedLink';
 import { PROGRAM_KEYS } from '../i18n/routes';
@@ -21,12 +22,9 @@ export function NotFoundPage() {
       <Seo title={t('notFound.title')} noindex />
 
       <section className="relative isolate flex min-h-[32rem] items-center justify-center overflow-hidden bg-black px-5 pt-16 pb-28 text-center sm:px-8 md:min-h-[min(40rem,75svh)] lg:px-10">
-        <Img
-          name="portrait-leaning"
-          priority
-          decorative
-          sizes="100vw"
-          className="absolute inset-0 -z-20 size-full object-cover object-[left_20%]"
+        <LoopVideo
+          name="fashion-2"
+          className="absolute inset-0 -z-20 size-full object-cover object-[50%_30%]"
         />
         <div
           aria-hidden="true"

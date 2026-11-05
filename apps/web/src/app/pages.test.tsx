@@ -40,16 +40,22 @@ describe('home', () => {
     ).not.toBeInTheDocument();
   });
 
-  it('plays a silent looping background video without a pause control', async () => {
+  it('uses a decorative photo slideshow in the hero (no video, no pause control)', async () => {
     renderApp('/');
     await screen.findByRole('heading', { level: 1 });
-    const video = document.querySelector('video')!;
-    expect(video).toHaveAttribute('poster', '/video/hero-poster.jpg');
-    expect(video.muted).toBe(true);
-    expect(video.loop).toBe(true);
-    expect(video).toHaveAttribute('aria-hidden', 'true');
-    expect(video.querySelectorAll('source')).toHaveLength(2);
-    expect(screen.queryByRole('button', { name: /videoclip/i })).not.toBeInTheDocument();
+    const hero = document.querySelector('section')!;
+    const slides = hero.querySelectorAll('img.hero-slide');
+    expect(slides).toHaveLength(3);
+    slides.forEach((img) => expect(img).toHaveAttribute('alt', ''));
+    expect(hero.querySelector('video')).toBeNull();
+    expect(screen.queryByRole('button', { name: /pauz|pause/i })).not.toBeInTheDocument();
+  });
+
+  it('shows the key figures on the landing page, with the first one oversized', async () => {
+    renderApp('/');
+    await screen.findByRole('heading', { level: 1 });
+    expect(screen.getByText('20+')).toBeInTheDocument();
+    expect(screen.getByText('EMCC')).toBeInTheDocument();
   });
 
   it('shows a centered "Featured in" label above the partner logos', async () => {

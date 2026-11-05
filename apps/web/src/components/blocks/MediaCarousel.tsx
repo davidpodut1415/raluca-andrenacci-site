@@ -1,6 +1,7 @@
 import type { ImageName } from '../../lib/images.generated';
 import { usePages } from '../../lib/usePages';
 import { Img } from '../ui/Img';
+import { LoopVideo } from '../ui/LoopVideo';
 import { LocalizedLink } from '../ui/LocalizedLink';
 import { CAROUSEL_ITEM, CardCarousel } from './CardCarousel';
 
@@ -8,7 +9,9 @@ interface MediaItem {
   type: 'press' | 'event' | 'video' | 'interview' | 'article';
   source: string;
   title: string;
-  image: ImageName;
+  image?: ImageName;
+  /** Looping clip name in /video; shown instead of the still. */
+  video?: string;
 }
 
 /**
@@ -31,12 +34,21 @@ export function MediaCarousel() {
       {entries.map((item) => (
         <li key={item.title} className={CAROUSEL_ITEM}>
           <article className="group relative isolate flex aspect-2/3 flex-col items-center justify-end overflow-hidden rounded-2xl bg-ink-900 px-6 pb-12 text-center text-white">
-            <Img
-              name={item.image}
-              decorative
-              sizes="(min-width: 1024px) 22vw, (min-width: 640px) 38vw, 72vw"
-              className="absolute inset-0 -z-20 size-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-            />
+            {item.video ? (
+              <LoopVideo
+                name={item.video}
+                className="absolute inset-0 -z-20 size-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            ) : (
+              item.image && (
+                <Img
+                  name={item.image}
+                  decorative
+                  sizes="(min-width: 1024px) 22vw, (min-width: 640px) 38vw, 72vw"
+                  className="absolute inset-0 -z-20 size-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                />
+              )
+            )}
             <div
               aria-hidden="true"
               className="absolute inset-0 -z-10 bg-black/30 bg-linear-to-t from-black/90 via-black/60 to-transparent"

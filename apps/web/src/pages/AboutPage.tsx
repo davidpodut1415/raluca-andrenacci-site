@@ -3,7 +3,7 @@ import { FeatureSplit } from '../components/blocks/FeatureSplit';
 import { NumberedList } from '../components/blocks/NumberedList';
 import { AboutHero } from '../components/blocks/AboutHero';
 import { QuoteBand } from '../components/blocks/QuoteBand';
-import { StatsBand } from '../components/blocks/StatsBand';
+import { StatsStagger } from '../components/blocks/StatsStagger';
 import { StepCards } from '../components/blocks/StepCards';
 import { Seo } from '../components/Seo';
 import { Img } from '../components/ui/Img';
@@ -28,7 +28,7 @@ export function AboutPage() {
       <AboutHero eyebrow={tp('about.eyebrow')} title={tp('home.about.title')} />
 
       <Section>
-        <FeatureSplit title={tp('about.storyTitle')} image="portrait-headshot" reverse>
+        <FeatureSplit title={tp('about.storyTitle')} image="library-chairs" reverse>
           <div className="flex max-w-prose flex-col gap-5 text-ink-700">
             {list('about.bio').map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
@@ -37,7 +37,7 @@ export function AboutPage() {
         </FeatureSplit>
       </Section>
 
-      <StatsBand stats={items<Stat>('about.stats')} />
+      <StatsStagger stats={items<Stat>('about.stats')} />
 
       <Section>
         <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-16">
@@ -68,7 +68,7 @@ export function AboutPage() {
       </Section>
 
       <QuoteBand
-        image="portrait-headshot"
+        image="pro-closeup"
         quote={testimonial?.quote ?? ''}
         name={testimonial?.name ?? ''}
         role={testimonial?.role}

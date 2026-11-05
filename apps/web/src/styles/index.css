@@ -27,7 +27,6 @@
   --color-burgundy-100: #f6e4df;
   --color-burgundy-700: #812816;
   --color-burgundy-800: #661e10;
-  --color-espresso-900: #3e1d16; /* footer only */
   --color-wall: #cccbc3; /* top-edge colour of the CTA photo, so its offset top blends in */
   --color-ink-900: #1a1a1a;
   --color-ink-700: #444444;
@@ -89,6 +88,42 @@
 
   --shadow-*: initial;
   --shadow-card: 0 8px 24px -12px rgb(0 0 0 / 0.14);
+}
+
+@layer components {
+  /* Hero cross-fade: each slide fades in, holds with a slow zoom, fades out (3 slides × 6 s). */
+  .hero-slide {
+    opacity: 0;
+    animation: hero-slide 18s ease-in-out infinite;
+  }
+  @keyframes hero-slide {
+    0% {
+      opacity: 0;
+      transform: scale(1);
+    }
+    7% {
+      opacity: 1;
+    }
+    36% {
+      opacity: 1;
+    }
+    43% {
+      opacity: 0;
+      transform: scale(1.12);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1.12);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero-slide {
+      animation: none !important;
+    }
+    .hero-slide:first-child {
+      opacity: 1;
+    }
+  }
 }
 
 @layer base {

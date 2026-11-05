@@ -45,6 +45,56 @@ export const IMAGE_MANIFEST = {
     height: 1600,
     widths: [480, 800, 1146],
   },
+  'forbes-cover': {
+    width: 1600,
+    height: 2197,
+    widths: [480, 800, 1200, 1600],
+  },
+  'studio-stool': {
+    width: 1600,
+    height: 2399,
+    widths: [480, 800, 1200, 1600],
+  },
+  'pro-medium': {
+    width: 1600,
+    height: 1067,
+    widths: [480, 800, 1200, 1600],
+  },
+  'pro-closeup': {
+    width: 1600,
+    height: 2399,
+    widths: [480, 800, 1200, 1600],
+  },
+  'pro-dark': {
+    width: 1600,
+    height: 2399,
+    widths: [480, 800, 1200, 1600],
+  },
+  'event-fullbody': {
+    width: 1080,
+    height: 1620,
+    widths: [480, 800, 1080],
+  },
+  'event-audience': {
+    width: 1600,
+    height: 1067,
+    widths: [480, 800, 1200, 1600],
+  },
+  'event-mic': {
+    width: 1600,
+    height: 1266,
+    widths: [480, 800, 1200, 1600],
+  },
+  'event-stage': {
+    width: 1600,
+    height: 649,
+    widths: [480, 800, 1200, 1600],
+  },
+  'library-chairs': {
+    width: 1068,
+    height: 1600,
+    widths: [480, 800, 1068],
+  },
 } as const;
 
 export type ImageName = keyof typeof IMAGE_MANIFEST;

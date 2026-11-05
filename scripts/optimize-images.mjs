@@ -21,6 +21,16 @@ const IMAGES = {
   'mentoring-session': 'photo-4.webp',
   'marble-table': 'photo-blog.webp',
   'certificate-emcc': 'PHOTO-2024-02-14-17-55-18-1.webp',
+  'forbes-cover': 'forbes-cover-clean.jpg',
+  'studio-stool': 'forbes-studio-fullbody.jpg',
+  'pro-medium': 'pro-medium.jpg',
+  'pro-closeup': 'pro-closeup.jpg',
+  'pro-dark': 'pro-cowboy.jpg',
+  'event-fullbody': 'fbn-fullbody.jpeg',
+  'event-audience': 'forbes-audience.jpeg',
+  'event-mic': 'forbes-closeup.jpeg',
+  'event-stage': 'forbes-stage.jpeg',
+  'library-chairs': 'knowledge-library.jpeg',
 };
 
 const WIDTHS = [480, 800, 1200, 1600];

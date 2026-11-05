@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { NumberedList } from '../components/blocks/NumberedList';
 import { PageHeader } from '../components/blocks/PageHeader';
-import { StatsBand } from '../components/blocks/StatsBand';
+import { StatsStagger } from '../components/blocks/StatsStagger';
 import { StepCards } from '../components/blocks/StepCards';
 import { Seo } from '../components/Seo';
 import { Button, ButtonLink } from '../components/ui/Button';
@@ -15,7 +15,7 @@ const SWATCHES = [
   ['burgundy-800', 'bg-burgundy-800'],
   ['burgundy-100', 'bg-burgundy-100'],
   ['ink-900', 'bg-ink-900'],
-  ['espresso-900 (footer)', 'bg-espresso-900'],
+  ['black (footer)', 'bg-black'],
   ['ink-700', 'bg-ink-700'],
   ['ink-500', 'bg-ink-500'],
   ['grey-50', 'bg-grey-50'],
@@ -160,7 +160,7 @@ export function Styleguide() {
         />
       </Section>
 
-      <StatsBand
+      <StatsStagger
         stats={[
           { value: '20+', label: 'years' },
           { value: '3', label: 'industries' },

@@ -2,10 +2,10 @@ import { useTranslation } from 'react-i18next';
 import { usePages } from '../../lib/usePages';
 import { ButtonLink } from '../ui/Button';
 import { Eyebrow } from '../ui/layout';
-import { HeroVideo } from './HeroVideo';
+import { HeroSlides } from './HeroSlides';
 
 /**
- * Hero: a large rounded video panel inset from the viewport edges, filling the space below the
+ * Hero: a large rounded panel of cross-fading portraits inset from the viewport edges, filling the space below the
  * header. Centered text block with supporting facts beneath, black scrim for contrast.
  */
 export function HomeHero() {
@@ -15,7 +15,7 @@ export function HomeHero() {
   return (
     <section className="px-3 pb-3 sm:px-4 sm:pb-4">
       <div className="relative isolate flex min-h-[calc(100svh-4.25rem)] items-center justify-center overflow-hidden rounded-2xl bg-black p-6 sm:min-h-[calc(100svh-4.5rem)] sm:p-10 lg:min-h-[calc(100svh-5rem)] lg:p-12">
-        <HeroVideo />
+        <HeroSlides />
         {/* Even black scrim behind the centered text. */}
         <div aria-hidden="true" className="absolute inset-0 -z-10 bg-black/60" />
         <div className="flex w-full flex-col items-center gap-10 text-center">

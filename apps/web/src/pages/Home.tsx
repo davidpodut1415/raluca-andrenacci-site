@@ -2,6 +2,7 @@ import { BlogShowcase } from '../components/blocks/BlogShowcase';
 import { CredibilityBar } from '../components/blocks/CredibilityBar';
 import { HomeHero } from '../components/blocks/HomeHero';
 import { MediaCarousel } from '../components/blocks/MediaCarousel';
+import { StatsStagger } from '../components/blocks/StatsStagger';
 import { ProgramShowcase } from '../components/blocks/ProgramShowcase';
 import { Testimonials } from '../components/blocks/Testimonials';
 import { Seo } from '../components/Seo';
@@ -10,7 +11,7 @@ import { usePages } from '../lib/usePages';
 
 /** Landing page: hero → partner logos → programs → testimonials → Despre mine → blog → closing CTA (the CTA lives in the layout). */
 export function Home() {
-  const { t: tp } = usePages();
+  const { t: tp, items } = usePages();
 
   return (
     <>
@@ -24,6 +25,8 @@ export function Home() {
           <ProgramShowcase />
         </Container>
       </section>
+
+      <StatsStagger stats={items<{ value: string; label: string }>('about.stats')} />
 
       <Section tone="black" className="py-20 md:py-28 lg:py-32">
         <Eyebrow className="mb-8 text-white/70">{tp('home.testimonials.eyebrow')}</Eyebrow>

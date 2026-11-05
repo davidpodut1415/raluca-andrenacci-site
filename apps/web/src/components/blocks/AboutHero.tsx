@@ -17,7 +17,7 @@ export function AboutHero({ eyebrow, title }: AboutHeroProps) {
         <div className="order-2 flex flex-col justify-between gap-10 lg:order-1 lg:col-span-5">
           <div className="hidden overflow-hidden rounded-2xl lg:block">
             <Img
-              name="mentoring-session"
+              name="event-audience"
               decorative
               sizes="40vw"
               className="aspect-16/10 w-full object-cover"
@@ -35,11 +35,11 @@ export function AboutHero({ eyebrow, title }: AboutHeroProps) {
         </div>
         <div className="relative order-1 overflow-hidden rounded-2xl lg:order-2 lg:col-span-7">
           <Img
-            name="portrait-leaning"
+            name="event-mic"
             priority
             decorative
             sizes="(min-width: 1024px) 58vw, 100vw"
-            className="aspect-4/5 w-full object-cover object-top sm:aspect-3/2 lg:absolute lg:inset-0 lg:aspect-auto lg:size-full"
+            className="aspect-4/5 w-full object-cover object-[30%_20%] sm:aspect-3/2 lg:absolute lg:inset-0 lg:aspect-auto lg:size-full"
           />
         </div>
       </div>

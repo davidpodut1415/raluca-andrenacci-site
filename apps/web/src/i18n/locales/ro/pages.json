@@ -109,37 +109,37 @@
           "type": "press",
           "source": "ForbesLife",
           "title": "Raluca Andrenacci pe coperta ForbesLife",
-          "image": "portrait-leaning"
+          "image": "forbes-cover"
         },
         {
           "type": "event",
           "source": "Forbes CEE Forum",
           "title": "Speaker despre antreprenoriat și afaceri de familie",
-          "image": "portrait-headshot"
+          "video": "forbes-collage"
         },
         {
           "type": "video",
           "source": "Forbes Power Breakfast",
           "title": "Conversație despre leadership și succesiune",
-          "image": "desk-notebook"
+          "video": "podcast"
         },
         {
           "type": "video",
           "source": "ZF Live",
           "title": "Invitată la ZF Live",
-          "image": "portrait-armchair"
+          "video": "studio-talk"
         },
         {
           "type": "interview",
           "source": "SMARK.RO",
           "title": "Interviu SMARK.RO",
-          "image": "marble-table"
+          "video": "notebook"
         },
         {
           "type": "article",
           "source": "Blog",
           "title": "Cum pot cei mai bogați oameni din România să își protejeze averea și să asigure succesul generațiilor viitoare",
-          "image": "hero-portrait"
+          "image": "event-audience"
         }
       ]
     },
