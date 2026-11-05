@@ -23,7 +23,9 @@ export function ProgramsPage() {
       <header className="bg-grey-50 pt-12 pb-12 md:pt-20 md:pb-16 lg:pt-24 lg:pb-20">
         <Container>
           <div className="grid items-center gap-8 lg:grid-cols-12 lg:gap-16">
-            <h1 className="text-hero font-extrabold lg:col-span-7">{tp('programsPage.eyebrow')}</h1>
+            <h1 className="text-display font-extrabold lg:col-span-7">
+              {tp('programsPage.eyebrow')}
+            </h1>
             <p className="max-w-xl text-ink-700 lg:col-span-5">{tp('programsPage.lead')}</p>
           </div>
         </Container>
@@ -33,12 +35,12 @@ export function ProgramsPage() {
         <ul className="grid gap-3 sm:gap-4 lg:grid-cols-2">
           {PROGRAM_KEYS.map((program) => (
             <li key={program}>
-              <article className="group relative isolate flex min-h-[30rem] flex-col justify-end overflow-hidden rounded-2xl bg-black p-6 pt-24 md:min-h-[40rem] md:p-10 lg:min-h-[42rem]">
+              <article className="group relative isolate flex min-h-[30rem] flex-col justify-end overflow-hidden rounded-2xl bg-black p-6 pt-24 md:min-h-[40rem] md:p-10 lg:min-h-[42rem] transition-transform duration-500 hover:scale-[1.03]">
                 <Img
                   name={PROGRAM_IMAGES[program]}
                   decorative
                   sizes="(min-width: 1024px) 50vw, 100vw"
-                  className="absolute inset-0 -z-20 size-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                  className="absolute inset-0 -z-20 size-full object-cover object-top"
                 />
                 <div
                   aria-hidden="true"

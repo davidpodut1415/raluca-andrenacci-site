@@ -31,7 +31,7 @@ export function NotFoundPage() {
           className="absolute inset-0 -z-10 bg-black/50 bg-linear-to-b from-transparent via-black/30 to-black"
         />
         <div className="flex max-w-4xl flex-col items-center gap-8">
-          <h1 className="text-display font-bold text-balance text-white md:text-[clamp(2.75rem,5vw,4.5rem)] md:leading-[1.05]">
+          <h1 className="text-display font-bold text-balance text-white">
             {t('notFound.headline')}
           </h1>
           <ButtonLink to={{ key: 'home' }} variant="light" size="lg">
@@ -50,12 +50,12 @@ export function NotFoundPage() {
         >
           {PROGRAM_KEYS.map((program) => (
             <li key={program} className={CAROUSEL_ITEM}>
-              <article className="group relative isolate flex aspect-2/3 flex-col items-center justify-end overflow-hidden rounded-2xl bg-ink-900 px-6 pb-12 text-center text-white">
+              <article className="group relative isolate flex aspect-2/3 flex-col items-center justify-end overflow-hidden rounded-2xl bg-ink-900 px-6 pb-12 text-center text-white transition-transform duration-500 hover:scale-[1.03]">
                 <Img
                   name={PROGRAM_IMAGES[program]}
                   decorative
                   sizes="(min-width: 1024px) 22vw, (min-width: 640px) 38vw, 72vw"
-                  className="absolute inset-0 -z-20 size-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  className="absolute inset-0 -z-20 size-full object-cover object-top"
                 />
                 <div
                   aria-hidden="true"

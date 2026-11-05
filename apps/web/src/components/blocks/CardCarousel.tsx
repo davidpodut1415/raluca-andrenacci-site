@@ -113,7 +113,7 @@ export function CardCarousel({
         <ul
           ref={track}
           onScroll={measure}
-          className="flex snap-x snap-mandatory gap-3.5 overflow-x-auto scroll-px-5 px-5 pb-2 [scrollbar-width:none] sm:scroll-px-8 sm:px-8 lg:scroll-px-10 lg:px-10 [&::-webkit-scrollbar]:hidden"
+          className="flex snap-x snap-mandatory gap-3.5 overflow-x-auto scroll-px-5 px-5 py-4 [scrollbar-width:none] sm:scroll-px-8 sm:px-8 lg:scroll-px-10 lg:px-10 [&::-webkit-scrollbar]:hidden"
         >
           {children}
         </ul>

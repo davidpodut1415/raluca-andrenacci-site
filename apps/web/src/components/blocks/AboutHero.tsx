@@ -28,9 +28,7 @@ export function AboutHero({ eyebrow, title }: AboutHeroProps) {
               <span aria-hidden="true" className="size-2 rounded-full bg-white" />
               {eyebrow}
             </p>
-            <h1 className="mt-6 text-display font-extrabold text-white lg:text-[clamp(2.75rem,4.4vw,4.5rem)] lg:leading-[1.05]">
-              {title}
-            </h1>
+            <h1 className="mt-6 text-display font-extrabold text-white">{title}</h1>
           </div>
         </div>
         <div className="relative order-1 overflow-hidden rounded-2xl lg:order-2 lg:col-span-7">

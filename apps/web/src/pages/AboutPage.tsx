@@ -4,10 +4,10 @@ import { NumberedList } from '../components/blocks/NumberedList';
 import { AboutHero } from '../components/blocks/AboutHero';
 import { QuoteBand } from '../components/blocks/QuoteBand';
 import { StatsStagger } from '../components/blocks/StatsStagger';
-import { StepCards } from '../components/blocks/StepCards';
+import { MediaCarousel } from '../components/blocks/MediaCarousel';
 import { Seo } from '../components/Seo';
 import { Img } from '../components/ui/Img';
-import { Eyebrow, Section } from '../components/ui/layout';
+import { Section } from '../components/ui/layout';
 import { ScrollFill } from '../components/ui/ScrollFill';
 import { usePages } from '../lib/usePages';
 
@@ -57,15 +57,9 @@ export function AboutPage() {
         </div>
       </Section>
 
-      <Section>
-        <div className="mb-8 flex max-w-3xl flex-col gap-4 md:mb-12">
-          <Eyebrow>{tp('about.pressTitle')}</Eyebrow>
-          <p className="font-serif text-h3 leading-snug font-semibold text-ink-900">
-            {tp('about.pressText')}
-          </p>
-        </div>
-        <StepCards steps={list('about.pressItems').map((title) => ({ title }))} numbered={false} />
-      </Section>
+      <div className="bg-grey-50 py-12 md:py-16 lg:py-20">
+        <MediaCarousel title={tp('about.pressTitle')} showAll={false} />
+      </div>
 
       <QuoteBand
         image="pro-closeup"

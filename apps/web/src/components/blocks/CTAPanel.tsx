@@ -21,7 +21,7 @@ export function CTAPanel({ title, text, action }: CTAPanelProps) {
         name="studio-stool"
         decorative
         sizes="100vw"
-        className="absolute top-[-21%] left-[calc(50%+38px)] -z-30 h-[260%] w-[135%] max-w-none -translate-x-1/2 object-cover object-top"
+        className="absolute top-[-21%] left-[calc(50%+38px)] -z-30 h-[260%] w-[135%] max-w-none -translate-x-1/2 origin-[50%_19%] scale-125 object-cover object-top"
       />
       <div aria-hidden="true" className="absolute inset-0 -z-20 bg-black/55" />
       {/* Bottom: from the photo into the footer colour, low in the panel. */}

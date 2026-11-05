@@ -20,26 +20,29 @@ interface MediaItem {
  * "Despre mine" media-features carousel. Placeholder content: every card links to the blog until
  * the real article/video URLs are collected (docs/00-DECISIONS.md).
  */
-export function MediaCarousel() {
+export function MediaCarousel({
+  title,
+  showAll = true,
+}: { title?: string; showAll?: boolean } = {}) {
   const { t, items } = usePages();
   const entries = items<MediaItem>('home.media.items');
 
   return (
     <CardCarousel
       label={t('home.media.label')}
-      title={t('home.media.title')}
-      seeAll={{ to: { key: 'about' }, label: t('home.media.all') }}
+      title={title ?? t('home.media.title')}
+      seeAll={showAll ? { to: { key: 'about' }, label: t('home.media.all') } : undefined}
       prevLabel={t('home.media.prev')}
       nextLabel={t('home.media.next')}
       goToLabel={(n) => t('home.media.goTo', { n })}
     >
       {entries.map((item) => (
         <li key={item.title} className={CAROUSEL_ITEM}>
-          <article className="group relative isolate flex aspect-2/3 flex-col items-center justify-end overflow-hidden rounded-2xl bg-ink-900 px-6 pb-12 text-center text-white">
+          <article className="group relative isolate flex aspect-2/3 flex-col items-center justify-end overflow-hidden rounded-2xl bg-ink-900 px-6 pb-12 text-center text-white transition-transform duration-500 hover:scale-[1.03]">
             {item.video ? (
               <LoopVideo
                 name={item.video}
-                className="absolute inset-0 -z-20 size-full object-cover transition-transform duration-500 group-hover:scale-105"
+                className="absolute inset-0 -z-20 size-full object-cover"
               />
             ) : (
               item.image && (
@@ -47,7 +50,7 @@ export function MediaCarousel() {
                   name={item.image}
                   decorative
                   sizes="(min-width: 1024px) 22vw, (min-width: 640px) 38vw, 72vw"
-                  className="absolute inset-0 -z-20 size-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  className="absolute inset-0 -z-20 size-full object-cover object-top"
                 />
               )
             )}

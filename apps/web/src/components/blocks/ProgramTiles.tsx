@@ -14,12 +14,12 @@ export function ProgramTiles({ programs }: { programs: ProgramKey[] }) {
     <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
       {programs.map((program) => (
         <li key={program}>
-          <article className="group relative isolate flex aspect-2/3 flex-col items-center justify-end overflow-hidden rounded-2xl bg-ink-900 px-6 pb-10 text-center text-white">
+          <article className="group relative isolate flex aspect-2/3 flex-col items-center justify-end overflow-hidden rounded-2xl bg-ink-900 px-6 pb-10 text-center text-white transition-transform duration-500 hover:scale-[1.03]">
             <Img
               name={PROGRAM_IMAGES[program]}
               decorative
               sizes="(min-width: 1024px) 24vw, (min-width: 640px) 48vw, 100vw"
-              className="absolute inset-0 -z-20 size-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+              className="absolute inset-0 -z-20 size-full object-cover object-top"
             />
             <div
               aria-hidden="true"

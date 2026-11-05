@@ -32,7 +32,7 @@ export function BlogPage() {
 
       <header className="bg-grey-50 pt-12 pb-10 md:pt-20 md:pb-14 lg:pt-24">
         <Container>
-          <h1 className="text-hero font-extrabold">{tp('blogPage.title')}</h1>
+          <h1 className="text-display font-extrabold">{tp('blogPage.title')}</h1>
         </Container>
       </header>
 
@@ -40,12 +40,12 @@ export function BlogPage() {
         <section className="bg-grey-50 pb-12 md:pb-16">
           <Container>
             <div className="grid gap-8 lg:grid-cols-12 lg:gap-12">
-              <article className="group relative isolate flex min-h-[28rem] flex-col justify-end overflow-hidden rounded-2xl bg-black p-6 md:min-h-[36rem] md:p-10 lg:col-span-7">
+              <article className="group relative isolate flex min-h-[28rem] flex-col justify-end overflow-hidden rounded-2xl bg-black p-6 md:min-h-[36rem] md:p-10 lg:col-span-7 transition-transform duration-500 hover:scale-[1.03]">
                 <BlogImg
                   image={featured.cover}
                   priority
                   sizes="(min-width: 1024px) 58vw, 100vw"
-                  className="absolute inset-0 -z-20 size-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                  className="absolute inset-0 -z-20 size-full object-cover object-top"
                 />
                 <div
                   aria-hidden="true"
@@ -71,11 +71,11 @@ export function BlogPage() {
                 {latest.map((post) => (
                   <li key={post.slug}>
                     <article className="group relative flex items-center gap-5 md:gap-6">
-                      <div className="w-32 shrink-0 overflow-hidden rounded-xl md:w-44">
+                      <div className="w-32 shrink-0 overflow-hidden rounded-xl md:w-44 transition-transform duration-500 group-hover:scale-105">
                         <BlogImg
                           image={post.cover}
                           sizes="11rem"
-                          className="aspect-4/3 w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                          className="aspect-4/3 w-full object-cover object-top"
                         />
                       </div>
                       <div className="min-w-0">

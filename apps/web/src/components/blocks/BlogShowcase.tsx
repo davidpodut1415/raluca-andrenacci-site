@@ -29,11 +29,11 @@ export function BlogShowcase() {
 
       <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
         <article className="group relative flex flex-col items-center text-center">
-          <div className="w-full max-w-64 overflow-hidden rounded-2xl bg-grey-100 shadow-card">
+          <div className="w-full max-w-64 overflow-hidden rounded-2xl bg-grey-100 shadow-card transition-transform duration-500 group-hover:scale-105">
             <BlogImg
               image={featured.cover}
               sizes="16rem"
-              className="aspect-square w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+              className="aspect-square w-full object-cover object-top"
             />
           </div>
           <p className="mt-6 text-small tracking-wide text-ink-500 uppercase">
@@ -54,11 +54,11 @@ export function BlogShowcase() {
           {latest.map((post) => (
             <li key={post.slug}>
               <article className="group relative flex items-center gap-5 py-5 md:gap-6">
-                <div className="size-20 shrink-0 overflow-hidden rounded-xl bg-grey-100 md:size-24">
+                <div className="size-20 shrink-0 overflow-hidden rounded-xl bg-grey-100 md:size-24 transition-transform duration-500 group-hover:scale-105">
                   <BlogImg
                     image={post.cover}
                     sizes="6rem"
-                    className="size-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
+                    className="size-full object-cover object-top"
                   />
                 </div>
                 <div className="min-w-0 flex-1">

@@ -9,11 +9,11 @@ export function BlogCard({ post }: { post: BlogPostData }) {
 
   return (
     <article className="group relative flex flex-col">
-      <div className="overflow-hidden rounded-2xl bg-grey-100">
+      <div className="overflow-hidden rounded-2xl bg-grey-100 transition-transform duration-500 group-hover:scale-105">
         <BlogImg
           image={post.cover}
           sizes="(min-width: 1024px) 24vw, (min-width: 640px) 48vw, 100vw"
-          className="aspect-4/3 w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+          className="aspect-4/3 w-full object-cover object-top"
         />
       </div>
       <p className="mt-5 text-small tracking-wide text-ink-500 uppercase">

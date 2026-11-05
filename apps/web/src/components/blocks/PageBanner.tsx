@@ -1,5 +1,4 @@
 import type { ReactNode } from 'react';
-import { cn } from '../../lib/cn';
 import type { ImageName } from '../../lib/images.generated';
 import { Img } from '../ui/Img';
 import { Eyebrow } from '../ui/layout';
@@ -41,14 +40,7 @@ export function PageBanner({
         <div aria-hidden="true" className="absolute inset-0 -z-10 bg-black/60" />
         <div className="flex max-w-5xl flex-col items-center gap-5">
           {eyebrow && <Eyebrow className="text-white/85">{eyebrow}</Eyebrow>}
-          <h1
-            className={cn(
-              'font-bold text-white uppercase',
-              title.length > 30 ? 'text-h2' : 'text-h2 md:text-display',
-            )}
-          >
-            {title}
-          </h1>
+          <h1 className="font-bold text-white uppercase">{title}</h1>
           {lead && <p className="max-w-2xl text-white/90">{lead}</p>}
           {children && <div className="mt-3">{children}</div>}
         </div>
