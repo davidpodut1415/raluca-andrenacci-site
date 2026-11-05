@@ -144,6 +144,25 @@
       transform: scale(1.12);
     }
   }
+  /* Endless logo row: two identical lists, the track slides left by one list width. */
+  .marquee-track {
+    animation: marquee 40s linear infinite;
+  }
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track {
+      animation: none;
+      width: 100%;
+      justify-content: center;
+    }
+    .marquee-row[aria-hidden] {
+      display: none;
+    }
+  }
   @media (prefers-reduced-motion: reduce) {
     .hero-slide {
       animation: none !important;

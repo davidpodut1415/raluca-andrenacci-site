@@ -75,7 +75,7 @@ describe('home', () => {
       expect(logo).toHaveAttribute('width');
       expect(logo).toHaveAttribute('height');
     }
-    expect(within(bar).getByRole('list').className).toContain('justify-center');
+    expect(bar.querySelector('.marquee-track')).not.toBeNull();
   });
 
   it('shows one large testimonial at a time with a selectable attribution row', async () => {
