@@ -366,43 +366,12 @@
     "title": "Book your free first session",
     "lead": "Every transformation starts with a conversation. Sometimes we just need clarity to see the next step.",
     "form": {
-      "title": "Send me a message",
       "name": "Full name",
       "email": "Email",
-      "phone": "Phone (optional)",
-      "audience": "I am a…",
-      "audiencePlaceholder": "Choose an option",
-      "audienceOptions": {
-        "founder": "Founder",
-        "successor": "Successor",
-        "executive": "Executive / professional",
-        "other": "Something else"
-      },
-      "program": "Program of interest",
-      "programPlaceholder": "I don't know yet",
       "message": "Message",
-      "messageHint": "Tell me briefly what you want to change.",
       "consent": "I agree to the processing of my data in order to receive a reply, according to the privacy policy.",
       "submit": "Send message",
       "pending": "The form will be enabled soon. In the meantime, write to me directly at the email address below."
-    },
-    "next": {
-      "title": "What happens next",
-      "steps": [
-        "You send me your message.",
-        "You receive a reply as soon as possible.",
-        "Together we schedule the free first session."
-      ]
-    },
-    "benefits": {
-      "title": "The benefits of personal and professional coaching",
-      "items": [
-        "more clarity in your personal life",
-        "confidence in your own decisions",
-        "overcoming inner blocks",
-        "a clearer direction in your career or business",
-        "balance between personal and professional life"
-      ]
     },
     "direct": {
       "title": "Write to me directly"

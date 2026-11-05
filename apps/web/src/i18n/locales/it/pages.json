@@ -370,43 +370,12 @@
     "title": "Prenota la prima sessione gratuita",
     "lead": "Ogni trasformazione inizia da una conversazione. A volte serve solo un po' di chiarezza per vedere il passo successivo.",
     "form": {
-      "title": "Scrivimi un messaggio",
       "name": "Nome e cognome",
       "email": "Email",
-      "phone": "Telefono (facoltativo)",
-      "audience": "Sono…",
-      "audiencePlaceholder": "Scegli un'opzione",
-      "audienceOptions": {
-        "founder": "Fondatore",
-        "successor": "Successore",
-        "executive": "Dirigente / professionista",
-        "other": "Altro"
-      },
-      "program": "Programma di interesse",
-      "programPlaceholder": "Non lo so ancora",
       "message": "Messaggio",
-      "messageHint": "Raccontami in breve che cosa vuoi cambiare.",
       "consent": "Acconsento al trattamento dei miei dati per ricevere una risposta, secondo l'informativa sulla privacy.",
       "submit": "Invia il messaggio",
       "pending": "Il modulo sarà attivato a breve. Nel frattempo, scrivimi direttamente all'indirizzo email qui sotto."
-    },
-    "next": {
-      "title": "Cosa succede dopo",
-      "steps": [
-        "Mi invii il tuo messaggio.",
-        "Ricevi una risposta il prima possibile.",
-        "Fissiamo insieme la prima sessione gratuita."
-      ]
-    },
-    "benefits": {
-      "title": "I benefici del coaching personale e professionale",
-      "items": [
-        "più chiarezza nella vita personale",
-        "fiducia nelle proprie decisioni",
-        "superamento dei blocchi interiori",
-        "una direzione più chiara nella carriera o nel business",
-        "equilibrio tra vita personale e professionale"
-      ]
     },
     "direct": {
       "title": "Scrivimi direttamente"

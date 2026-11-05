@@ -370,43 +370,12 @@
     "title": "Programează prima sesiune gratuită",
     "lead": "Orice transformare începe cu o conversație. Uneori avem nevoie doar de claritate pentru a vedea următorul pas.",
     "form": {
-      "title": "Trimite-mi un mesaj",
       "name": "Nume și prenume",
       "email": "Email",
-      "phone": "Telefon (opțional)",
-      "audience": "Sunt…",
-      "audiencePlaceholder": "Alege o opțiune",
-      "audienceOptions": {
-        "founder": "Fondator",
-        "successor": "Succesor",
-        "executive": "Executiv / profesionist",
-        "other": "Altceva"
-      },
-      "program": "Program de interes",
-      "programPlaceholder": "Nu știu încă",
       "message": "Mesaj",
-      "messageHint": "Spune-mi pe scurt ce îți dorești să schimbi.",
       "consent": "Sunt de acord cu prelucrarea datelor mele pentru a primi un răspuns, conform politicii de confidențialitate.",
       "submit": "Trimite mesajul",
       "pending": "Formularul va fi activat în curând. Între timp, scrie-mi direct la adresa de email de mai jos."
-    },
-    "next": {
-      "title": "Ce urmează",
-      "steps": [
-        "Îmi trimiți mesajul.",
-        "Primești un răspuns în cel mai scurt timp.",
-        "Stabilim împreună prima sesiune gratuită."
-      ]
-    },
-    "benefits": {
-      "title": "Beneficiile coachingului personal și profesional",
-      "items": [
-        "mai multă claritate în viața personală",
-        "încredere în propriile decizii",
-        "depășirea blocajelor interioare",
-        "direcție mai clară în carieră sau business",
-        "echilibru între viața personală și cea profesională"
-      ]
     },
     "direct": {
       "title": "Scrie-mi direct"
