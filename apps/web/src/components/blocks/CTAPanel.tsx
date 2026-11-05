@@ -16,12 +16,12 @@ interface CTAPanelProps {
 export function CTAPanel({ title, text, action }: CTAPanelProps) {
   return (
     <section className="relative isolate flex min-h-[44rem] items-center justify-center overflow-hidden bg-wall px-5 text-center sm:px-8 md:min-h-[48rem] lg:px-10">
-      {/* The photo is shifted up 5% (and 5% taller) so the face sits behind the title and the body runs flush down to the footer; its top edge dissolves into the wall colour. */}
+      {/* The photo is enlarged (135% wide) so the face is big and sits dead center behind the text block. */}
       <Img
         name="studio-stool"
         decorative
         sizes="100vw"
-        className="absolute inset-x-0 top-[7%] -z-30 h-[105%] w-full object-cover object-top [mask-image:linear-gradient(to_bottom,transparent,black_20%)]"
+        className="absolute top-[-21%] left-1/2 -z-30 h-[260%] w-[135%] max-w-none -translate-x-1/2 object-cover object-top"
       />
       <div aria-hidden="true" className="absolute inset-0 -z-20 bg-black/55" />
       {/* Bottom: from the photo into the footer colour, low in the panel. */}
