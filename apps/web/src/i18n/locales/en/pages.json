@@ -150,35 +150,40 @@
           "date": "January 2026",
           "title": "How much is enough? Reflections on money, life, family, and the legacy we build",
           "image": "portrait-headshot",
-          "slug": "cat-este-suficient-despre-bani-viata-familie-si-mostenirea-pe-care-o-construim"
+          "slug": "cat-este-suficient-despre-bani-viata-familie-si-mostenirea-pe-care-o-construim",
+          "excerpt": "How much is enough? A reflection on money, family and the legacy we choose to leave."
         },
         {
           "category": "Leadership",
           "date": "October 2025",
           "title": "The hardest lesson you learn after you succeed",
           "image": "desk-notebook",
-          "slug": "cea-mai-grea-lectie-pe-care-o-inveti-dupa-ce-ai-succes"
+          "slug": "cea-mai-grea-lectie-pe-care-o-inveti-dupa-ce-ai-succes",
+          "excerpt": "Success brings lessons you do not learn from failure. Here is the hardest one."
         },
         {
           "category": "Leadership",
           "date": "October 2025",
           "title": "What does AUTHORITY even mean in a world of TikTok, paid ads and instant validation",
           "image": "portrait-armchair",
-          "slug": "ce-mai-inseamna-autoritate-intr-o-lume-cu-tiktok-reclame-platite-si-validare-instanta"
+          "slug": "ce-mai-inseamna-autoritate-intr-o-lume-cu-tiktok-reclame-platite-si-validare-instanta",
+          "excerpt": "Authority is no longer earned the way it used to be. What still holds in a world of instant validation?"
         },
         {
           "category": "Family",
           "date": "April 2025",
           "title": "How do we take responsibility for our children’s education in Romania?",
           "image": "working-laptop",
-          "slug": "educatia-copiilor-asumare-parinti"
+          "slug": "educatia-copiilor-asumare-parinti",
+          "excerpt": "On parents’ responsibility for their children’s education: between school, family and personal example."
         },
         {
           "category": "Governance",
           "date": "April 2025",
           "title": "How can family governance help your family business?",
           "image": "marble-table",
-          "slug": "cum-poate-ajuta-guvernanta-familiala-afacerea-familiei-tale"
+          "slug": "cum-poate-ajuta-guvernanta-familiala-afacerea-familiei-tale",
+          "excerpt": "How a clear family governance framework protects relationships, decisions and the continuity of the business."
         }
       ]
     }
@@ -480,10 +485,12 @@
   },
   "blogPage": {
     "eyebrow": "Blog",
-    "title": "Ideas on money, family and leadership",
+    "title": "Ideas that matter",
     "lead": "Thoughts on family businesses, succession and the legacy we build.",
     "featured": "Featured",
-    "read": "Read the article"
+    "read": "Read the article",
+    "allTopics": "All topics",
+    "topics": "Topics"
   },
   "postPage": {
     "soon": "The full article will be published soon.",

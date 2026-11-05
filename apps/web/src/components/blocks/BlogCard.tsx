@@ -7,6 +7,7 @@ export interface BlogPost {
   category: string;
   date: string;
   title: string;
+  excerpt?: string;
   image: ImageName;
 }
 
@@ -33,6 +34,7 @@ export function BlogCard({ post }: { post: BlogPost }) {
           {post.title}
         </LocalizedLink>
       </h3>
+      {post.excerpt && <p className="mt-3 line-clamp-2 text-ink-500">{post.excerpt}</p>}
     </article>
   );
 }

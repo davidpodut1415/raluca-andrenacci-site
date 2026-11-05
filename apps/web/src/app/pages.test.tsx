@@ -270,12 +270,30 @@ describe('persistent chrome and templates', () => {
 
   it('blog index lists featured and latest articles that link to post pages', async () => {
     renderApp('/blog');
-    await screen.findByRole('heading', { level: 1, name: /idei despre bani/i });
+    await screen.findByRole('heading', { level: 1, name: /idei care contează/i });
     const links = screen.getAllByRole('link', {
       name: /Cât este suficient|Cea mai grea lecție|AUTORITATE|educația copiilor|guvernanța familială/,
     });
     expect(links.length).toBeGreaterThanOrEqual(5);
     for (const link of links) expect(link.getAttribute('href')).toMatch(/^\/blog\/.+/);
+  });
+
+  it('blog topic pills filter the grid', async () => {
+    renderApp('/blog');
+    await screen.findByRole('heading', { level: 1, name: /idei care contează/i });
+    const group = screen.getByRole('group', { name: 'Subiecte' });
+    expect(within(group).getByRole('button', { name: 'Toate subiectele' })).toHaveAttribute(
+      'aria-pressed',
+      'true',
+    );
+    const grid = screen.getAllByRole('list').find((l) => l.className.includes('lg:grid-cols-3'))!;
+    expect(within(grid).getAllByRole('article')).toHaveLength(5);
+    await userEvent.click(within(group).getByRole('button', { name: 'Leadership' }));
+    expect(within(grid).getAllByRole('article')).toHaveLength(2);
+    expect(within(group).getByRole('button', { name: 'Leadership' })).toHaveAttribute(
+      'aria-pressed',
+      'true',
+    );
   });
 
   it('post pages show the article template; unknown slugs 404', async () => {

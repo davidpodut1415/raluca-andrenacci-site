@@ -154,35 +154,40 @@
           "date": "gennaio 2026",
           "title": "Quanto è abbastanza? Riflessioni su denaro, vita, famiglia e sull’eredità che costruiamo",
           "image": "portrait-headshot",
-          "slug": "cat-este-suficient-despre-bani-viata-familie-si-mostenirea-pe-care-o-construim"
+          "slug": "cat-este-suficient-despre-bani-viata-familie-si-mostenirea-pe-care-o-construim",
+          "excerpt": "Quanto è abbastanza? Una riflessione su denaro, famiglia e sull’eredità che scegliamo di lasciare."
         },
         {
           "category": "Leadership",
           "date": "ottobre 2025",
           "title": "La lezione più difficile che impari dopo aver avuto successo",
           "image": "desk-notebook",
-          "slug": "cea-mai-grea-lectie-pe-care-o-inveti-dupa-ce-ai-succes"
+          "slug": "cea-mai-grea-lectie-pe-care-o-inveti-dupa-ce-ai-succes",
+          "excerpt": "Il successo porta lezioni che non si imparano dai fallimenti. Ecco la più difficile."
         },
         {
           "category": "Leadership",
           "date": "ottobre 2025",
           "title": "Cosa significa ancora AUTOREVOLEZZA in un mondo di TikTok, pubblicità a pagamento e validazione istantanea",
           "image": "portrait-armchair",
-          "slug": "ce-mai-inseamna-autoritate-intr-o-lume-cu-tiktok-reclame-platite-si-validare-instanta"
+          "slug": "ce-mai-inseamna-autoritate-intr-o-lume-cu-tiktok-reclame-platite-si-validare-instanta",
+          "excerpt": "L’autorevolezza non si conquista più come un tempo. Cosa resta valido in un mondo di validazione istantanea?"
         },
         {
           "category": "Famiglia",
           "date": "aprile 2025",
           "title": "Come ci assumiamo la responsabilità dell’educazione dei nostri figli in Romania?",
           "image": "working-laptop",
-          "slug": "educatia-copiilor-asumare-parinti"
+          "slug": "educatia-copiilor-asumare-parinti",
+          "excerpt": "Sulla responsabilità dei genitori per l’educazione dei figli: tra scuola, famiglia ed esempio personale."
         },
         {
           "category": "Governance",
           "date": "aprile 2025",
           "title": "Come può la governance familiare aiutare l’azienda della tua famiglia?",
           "image": "marble-table",
-          "slug": "cum-poate-ajuta-guvernanta-familiala-afacerea-familiei-tale"
+          "slug": "cum-poate-ajuta-guvernanta-familiala-afacerea-familiei-tale",
+          "excerpt": "Come un quadro chiaro di governance familiare protegge relazioni, decisioni e continuità dell’azienda."
         }
       ]
     }
@@ -484,10 +489,12 @@
   },
   "blogPage": {
     "eyebrow": "Blog",
-    "title": "Idee su denaro, famiglia e leadership",
+    "title": "Idee che contano",
     "lead": "Riflessioni su imprese familiari, successione e sull'eredità che costruiamo.",
     "featured": "In evidenza",
-    "read": "Leggi l'articolo"
+    "read": "Leggi l'articolo",
+    "allTopics": "Tutti gli argomenti",
+    "topics": "Argomenti"
   },
   "postPage": {
     "soon": "L'articolo completo sarà pubblicato a breve.",
