@@ -109,12 +109,17 @@ describe('media carousel', () => {
 });
 
 describe('programs', () => {
-  it('lists the programs and an FAQ', async () => {
+  it('lists every program as a large photo card', async () => {
     renderApp('/programe');
     await screen.findByRole('heading', { level: 1, name: /programe de mentorat/i });
     // five family programs + the individual Audit track, each as one "Part" block
     expect(screen.getAllByRole('article')).toHaveLength(6);
-    expect(screen.getByText('Ce este prima sesiune gratuită?')).toBeInTheDocument();
+    // each card links to its program page
+    expect(
+      within(screen.getByRole('main')).getByRole('link', {
+        name: 'Co-Leadership: Fondator & NextGen',
+      }),
+    ).toHaveAttribute('href', '/programe/co-leadership-fondator-nextgen');
   });
 
   it.each(PROGRAM_KEYS)('renders the %s detail page in every language', async (program) => {
@@ -152,7 +157,7 @@ describe('programs', () => {
 describe('about, contact and legal', () => {
   it('about shows the bio, certifications and certificate image', async () => {
     renderApp('/despre-mine');
-    await screen.findByRole('heading', { level: 1, name: 'Raluca Andrenacci' });
+    await screen.findByRole('heading', { level: 1, name: 'Mentor, coach și antreprenor' });
     expect(screen.getByText(/Mentor EIA Practitioner, EMCC România/)).toBeInTheDocument();
     expect(screen.getByAltText(/Certificat EMCC/)).toBeInTheDocument();
   });
@@ -243,9 +248,10 @@ describe('persistent chrome and templates', () => {
 
   it('about shows the numbers band and testimonials', async () => {
     renderApp('/despre-mine');
-    await screen.findByRole('heading', { level: 1, name: 'Raluca Andrenacci' });
+    await screen.findByRole('heading', { level: 1, name: 'Mentor, coach și antreprenor' });
+    expect(screen.getByText('Despre Raluca Andrenacci')).toBeInTheDocument();
     expect(screen.getByText('20+')).toBeInTheDocument();
-    expect(screen.getAllByRole('tab')).toHaveLength(3);
+    expect(screen.getByRole('blockquote')).toHaveTextContent(/frustrarea în progres/);
   });
 
   it('program pages show numbered directions and step cards', async () => {

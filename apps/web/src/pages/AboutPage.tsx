@@ -1,10 +1,10 @@
 import { useTranslation } from 'react-i18next';
 import { FeatureSplit } from '../components/blocks/FeatureSplit';
 import { NumberedList } from '../components/blocks/NumberedList';
-import { PageBanner } from '../components/blocks/PageBanner';
+import { AboutHero } from '../components/blocks/AboutHero';
+import { QuoteBand } from '../components/blocks/QuoteBand';
 import { StatsBand } from '../components/blocks/StatsBand';
 import { StepCards } from '../components/blocks/StepCards';
-import { Testimonials } from '../components/blocks/Testimonials';
 import { Seo } from '../components/Seo';
 import { Img } from '../components/ui/Img';
 import { Eyebrow, Section } from '../components/ui/layout';
@@ -16,21 +16,16 @@ interface Stat {
   label: string;
 }
 
-/** About: photo banner → story → numbers → credentials + certificate → public presence → testimonials. */
+/** About: split opener → story → numbers → credentials + certificate → public presence → testimonials. */
 export function AboutPage() {
   const { t } = useTranslation();
   const { t: tp, list, items } = usePages();
+  const testimonial = items<{ quote: string; name: string; role: string }>('testimonials.items')[2];
 
   return (
     <>
       <Seo title={t('nav.about')} description={tp('about.seoDescription')} />
-      <PageBanner
-        image="portrait-leaning"
-        eyebrow={tp('about.eyebrow')}
-        title={tp('about.title')}
-        lead={tp('about.lead')}
-        position="center 12%"
-      />
+      <AboutHero eyebrow={tp('about.eyebrow')} title={tp('home.about.title')} />
 
       <Section>
         <FeatureSplit title={tp('about.storyTitle')} image="portrait-headshot" reverse>
@@ -72,11 +67,12 @@ export function AboutPage() {
         <StepCards steps={list('about.pressItems').map((title) => ({ title }))} numbered={false} />
       </Section>
 
-      <Section tone="black" className="py-20 md:py-28 lg:py-32">
-        <Eyebrow className="mb-8 text-white/70">{tp('home.testimonials.eyebrow')}</Eyebrow>
-        <h2 className="sr-only">{tp('home.testimonials.title')}</h2>
-        <Testimonials indexes={[0, 1, 2]} />
-      </Section>
+      <QuoteBand
+        image="portrait-headshot"
+        quote={testimonial?.quote ?? ''}
+        name={testimonial?.name ?? ''}
+        role={testimonial?.role}
+      />
     </>
   );
 }

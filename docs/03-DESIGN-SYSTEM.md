@@ -148,3 +148,8 @@ Modelled on tonyrobbins.com's page templates so every page shares one visual lan
 | `Testimonials`              | Black banner showcase                                                                        | Home, About, Audit                                      |
 
 Rules: alternate light and black bands, never two black bands next to each other; one h1 per page (banner or header); numerals use `font-variant-numeric: lining-nums` (Playfair defaults to old-style figures). Inner-page opener style depends on the content: photo banner where the page sells or introduces; text-led where the page is a form, an archive or a document.
+
+## 14. Programs and About layouts (2026-11-05, from client references)
+
+- **Programs overview:** a huge title (`text-hero`, up to 100px) on the left with a short paragraph on the right, then two-column large photo cards (about 640px tall): statement headline bottom-left, supporting line beneath, a small dark label with the program name bottom-right. Every card links to its program page. No other sections on this page (the stats, steps and FAQ blocks were removed to match the reference).
+- **About:** `AboutHero` — one black inset panel containing a small photo card (top-left), a tall portrait (right) and a dot eyebrow + two-line headline (bottom-left), one screen tall; then the story, numbers band, credentials, press, and `QuoteBand` (full-width photo, large centered quote, author chip) as the closing statement.

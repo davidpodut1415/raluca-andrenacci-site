@@ -34,7 +34,7 @@ describe('routing and i18n', () => {
   it('serves localized inner pages with title, canonical and hreflang tags', async () => {
     renderApp('/en/about');
     expect(
-      await screen.findByRole('heading', { level: 1, name: 'Raluca Andrenacci' }),
+      await screen.findByRole('heading', { level: 1, name: /mentor, coach/i }),
     ).toBeInTheDocument();
     await waitFor(() => expect(document.title).toBe('About — Raluca Andrenacci'));
     const alternates = [...document.querySelectorAll('link[rel="alternate"]')].map((l) => [
@@ -129,7 +129,7 @@ describe('header', () => {
 
     await userEvent.click(screen.getAllByRole('link', { name: 'Despre mine' })[0]!);
     expect(
-      await screen.findByRole('heading', { level: 1, name: 'Raluca Andrenacci' }),
+      await screen.findByRole('heading', { level: 1, name: /mentor, coach/i }),
     ).toBeInTheDocument();
   });
 
