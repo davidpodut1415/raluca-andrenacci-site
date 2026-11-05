@@ -40,7 +40,6 @@ export function Testimonials({
   const tabs = useRef<(HTMLButtonElement | null)[]>([]);
 
   if (shown.length === 0) return null;
-  const current = shown[active] ?? shown[0]!;
 
   const onKeyDown = (e: KeyboardEvent) => {
     const step = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
@@ -74,13 +73,23 @@ export function Testimonials({
         role="tabpanel"
         id={`${base}-panel`}
         aria-labelledby={`${base}-tab-${active}`}
-        className="min-h-56 max-w-5xl md:min-h-72"
+        className="grid max-w-5xl"
       >
-        <blockquote key={active} className="animate-fade-in">
-          <p className="font-serif text-h2 leading-tight font-bold text-balance text-white lg:text-display">
-            “{current.quote}”
-          </p>
-        </blockquote>
+        {/* All quotes share one grid cell, so the panel is always as tall as the longest one. */}
+        {shown.map((item, i) => (
+          <blockquote
+            key={item.name}
+            aria-hidden={i !== active}
+            className={cn(
+              'col-start-1 row-start-1',
+              i === active ? 'animate-fade-in' : 'invisible',
+            )}
+          >
+            <p className="font-serif text-h2 leading-tight font-bold text-balance text-white lg:text-display">
+              “{item.quote}”
+            </p>
+          </blockquote>
+        ))}
       </div>
 
       <div
