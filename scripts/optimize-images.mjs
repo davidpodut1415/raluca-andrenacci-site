@@ -22,6 +22,7 @@ const IMAGES = {
   'marble-table': 'photo-blog.webp',
   'certificate-emcc': 'PHOTO-2024-02-14-17-55-18-1.webp',
   'forbes-cover': 'forbes-cover-clean.jpg',
+  'forbes-life-cover': 'forbes-life-cover.jpg',
   'studio-stool': 'forbes-studio-fullbody.jpg',
   'pro-medium': 'pro-medium.jpg',
   'pro-closeup': 'pro-closeup.jpg',

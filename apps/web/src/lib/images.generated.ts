@@ -50,6 +50,11 @@ export const IMAGE_MANIFEST = {
     height: 2197,
     widths: [480, 800, 1200, 1600],
   },
+  'forbes-life-cover': {
+    width: 945,
+    height: 1319,
+    widths: [480, 800, 945],
+  },
   'studio-stool': {
     width: 1600,
     height: 2399,

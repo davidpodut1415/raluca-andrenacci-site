@@ -2,6 +2,7 @@ import type { ReactNode } from 'react';
 import { cn } from '../../lib/cn';
 import type { ImageName } from '../../lib/images.generated';
 import { Img } from '../ui/Img';
+import { LoopVideo } from '../ui/LoopVideo';
 import { Eyebrow } from '../ui/layout';
 import { ScrollFill } from '../ui/ScrollFill';
 
@@ -10,7 +11,9 @@ interface FeatureSplitProps {
   number?: string;
   eyebrow?: string;
   title: string;
-  image: ImageName;
+  image?: ImageName;
+  /** Looping clip name in /video, shown instead of the photo (portrait 9:16). */
+  video?: string;
   /** Put the photo on the left (default: right). */
   reverse?: boolean;
   children: ReactNode;
@@ -22,6 +25,7 @@ export function FeatureSplit({
   eyebrow,
   title,
   image,
+  video,
   reverse,
   children,
 }: FeatureSplitProps) {
@@ -40,14 +44,22 @@ export function FeatureSplit({
         <ScrollFill as="h2" text={title} className="font-extrabold" />
         {children}
       </div>
-      <div className="overflow-hidden rounded-2xl shadow-card">
-        <Img
-          name={image}
-          decorative
-          sizes="(min-width: 1024px) 45vw, 100vw"
-          className="aspect-4/3 w-full object-cover object-top lg:aspect-5/4"
-        />
-      </div>
+      {video ? (
+        <div className="mx-auto w-full max-w-sm overflow-hidden rounded-2xl shadow-card">
+          <LoopVideo name={video} className="aspect-9/16 w-full object-cover" />
+        </div>
+      ) : (
+        image && (
+          <div className="overflow-hidden rounded-2xl shadow-card">
+            <Img
+              name={image}
+              decorative
+              sizes="(min-width: 1024px) 45vw, 100vw"
+              className="aspect-4/3 w-full object-cover object-top lg:aspect-5/4"
+            />
+          </div>
+        )
+      )}
     </article>
   );
 }

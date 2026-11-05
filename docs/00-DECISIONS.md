@@ -73,3 +73,10 @@
 - **Excerpts** are the first ~190 characters of each post.
 - **Languages:** only the Romanian posts exist in the new site; EN/IT visitors see the RO articles with a notice. The old site has EN versions of the newest posts (and possibly IT) — to be imported/translated.
 - Comments ("0 Comments") and the old "Top posts" widget are not carried over. Phase 5 moves this content into the database/admin (`Post` + `PostTranslation`).
+
+## Press links (verified via web search, Nov 2026)
+
+- ForbesLife (May 2025, "Despre feminitate și leadership: Raluca Andrenacci"): https://www.forbes.ro/despre-feminitate-si-leadership-raluca-andrenacci-446410 — card uses the ForbesLife cover image.
+- Forbes CEE Forum 2024, day 3 live text (panel "RE INHERIT"): https://www.forbes.ro/forbes-cee-forum-2024-ziua-iii-live-text-409208
+- Forbes Power Breakfast interview (Sept 2024): https://www.forbes.ro/raluca-andrenacci-mentor-specializat-in-afacerile-de-familie-si-gestionarea-averii-la-power-breakfast-407661
+- **Not found online:** ZF Live appearance, SMARK.RO interview — cards still go to the blog; client must send the real URLs. The podcast ("B'art of Living") has no public link found either; its clip is used in the About story section.

@@ -28,7 +28,7 @@ export function AboutPage() {
       <AboutHero eyebrow={tp('about.eyebrow')} title={tp('home.about.title')} />
 
       <Section>
-        <FeatureSplit title={tp('about.storyTitle')} image="library-chairs" reverse>
+        <FeatureSplit title={tp('about.storyTitle')} video="podcast" reverse>
           <div className="flex max-w-prose flex-col gap-5 text-ink-700">
             {list('about.bio').map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>

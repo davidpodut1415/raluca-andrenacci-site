@@ -109,25 +109,28 @@
           "type": "press",
           "source": "ForbesLife",
           "title": "Raluca Andrenacci sulla copertina di ForbesLife",
-          "image": "forbes-cover"
+          "href": "https://www.forbes.ro/despre-feminitate-si-leadership-raluca-andrenacci-446410",
+          "image": "forbes-life-cover"
         },
         {
           "type": "event",
           "source": "Forbes CEE Forum",
           "title": "Speaker su imprenditoria e imprese familiari",
-          "video": "forbes-collage"
+          "video": "forbes-collage",
+          "href": "https://www.forbes.ro/forbes-cee-forum-2024-ziua-iii-live-text-409208"
         },
         {
           "type": "video",
           "source": "Forbes Power Breakfast",
           "title": "Una conversazione su leadership e successione",
-          "video": "podcast"
+          "href": "https://www.forbes.ro/raluca-andrenacci-mentor-specializat-in-afacerile-de-familie-si-gestionarea-averii-la-power-breakfast-407661",
+          "video": "studio-talk"
         },
         {
           "type": "video",
           "source": "ZF Live",
           "title": "Ospite a ZF Live",
-          "video": "studio-talk"
+          "video": "fashion-1"
         },
         {
           "type": "interview",

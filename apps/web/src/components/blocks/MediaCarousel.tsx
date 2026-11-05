@@ -12,6 +12,8 @@ interface MediaItem {
   image?: ImageName;
   /** Looping clip name in /video; shown instead of the still. */
   video?: string;
+  /** External article/video URL; without it the card links to the blog until the real URL is known. */
+  href?: string;
 }
 
 /**
@@ -57,13 +59,25 @@ export function MediaCarousel() {
               {t(`home.media.types.${item.type}`)}
             </p>
             <h3 className="mt-3 font-serif text-h3 leading-tight font-extrabold text-white uppercase">
-              <LocalizedLink
-                to={{ key: 'blog' }}
-                className="after:absolute after:inset-0"
-                aria-label={`${t('home.media.open')}: ${item.source} — ${item.title}`}
-              >
-                {item.source}
-              </LocalizedLink>
+              {item.href ? (
+                <a
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="after:absolute after:inset-0"
+                  aria-label={`${t('home.media.open')}: ${item.source} — ${item.title}`}
+                >
+                  {item.source}
+                </a>
+              ) : (
+                <LocalizedLink
+                  to={{ key: 'blog' }}
+                  className="after:absolute after:inset-0"
+                  aria-label={`${t('home.media.open')}: ${item.source} — ${item.title}`}
+                >
+                  {item.source}
+                </LocalizedLink>
+              )}
             </h3>
             <p className="mt-4 text-small text-white/90">{item.title}</p>
           </article>

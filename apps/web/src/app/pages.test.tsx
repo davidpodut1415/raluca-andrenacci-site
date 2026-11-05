@@ -105,7 +105,14 @@ describe('media carousel', () => {
     expect(within(carousel).getAllByRole('article')).toHaveLength(6);
     const links = within(carousel).getAllByRole('link', { name: /^Deschide:/ });
     expect(links).toHaveLength(6);
-    for (const link of links) expect(link).toHaveAttribute('href', '/blog');
+    // Verified press items open the real external article; the rest still go to the blog.
+    const external = links.filter((l) =>
+      l.getAttribute('href')?.startsWith('https://www.forbes.ro/'),
+    );
+    expect(external).toHaveLength(3);
+    for (const link of external) expect(link).toHaveAttribute('target', '_blank');
+    for (const link of links.filter((l) => !external.includes(l)))
+      expect(link).toHaveAttribute('href', '/blog');
     expect(within(carousel).getByRole('button', { name: 'Următorul' })).toBeInTheDocument();
     expect(within(carousel).getByRole('button', { name: 'Anterior' })).toBeInTheDocument();
     expect(
