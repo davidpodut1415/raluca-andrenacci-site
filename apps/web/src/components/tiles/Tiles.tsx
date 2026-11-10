@@ -76,7 +76,7 @@ export function Tile({
   ratio = 'portrait',
   className,
 }: TileProps) {
-  const linkClass = 'after:absolute after:inset-0';
+  const linkClass = 'after:absolute after:inset-0 after:z-10';
   return (
     <article className={cn('group relative flex flex-col', className)}>
       <div className="min-h-24 bg-black p-2 text-white">
