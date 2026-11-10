@@ -1,87 +1,33 @@
 import { useTranslation } from 'react-i18next';
-import { CAROUSEL_ITEM, CardCarousel } from '../components/blocks/CardCarousel';
 import { Seo } from '../components/Seo';
-import { ButtonLink } from '../components/ui/Button';
-import { Img } from '../components/ui/Img';
-import { CardArrow } from '../components/ui/CardArrow';
-import { FullBleedSection } from '../components/ui/layout';
+import { ProgramTilesGrid } from '../components/tiles/Sections';
+import { SectionLabel } from '../components/tiles/Tiles';
 import { LocalizedLink } from '../components/ui/LocalizedLink';
 import { PROGRAM_KEYS } from '../i18n/routes';
-import { PROGRAM_IMAGES } from '../lib/programImages';
-import { usePages } from '../lib/usePages';
 
-/**
- * Page not found, laid out like the reference: a full-width dark photo band with a centered two-line
- * message and one button, fading into black, then a carousel of programs to explore.
- */
+/** Page not found: a black message cell, a yellow way back, and the programs to explore. */
 export function NotFoundPage() {
   const { t } = useTranslation();
-  const { t: tp } = usePages();
 
   return (
     <>
       <Seo title={t('notFound.title')} noindex />
-
-      <section className="relative isolate flex min-h-[32rem] items-center justify-center overflow-hidden bg-black px-5 pt-16 pb-28 text-center sm:px-8 md:min-h-[min(40rem,75svh)] lg:px-10">
-        <Img
-          name="portrait-leaning"
-          priority
-          decorative
-          sizes="100vw"
-          className="absolute inset-0 -z-20 size-full object-cover object-[left_20%]"
-        />
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 -z-10 bg-black/50 bg-linear-to-b from-transparent via-black/30 to-black"
-        />
-        <div className="flex max-w-4xl flex-col items-center gap-8">
-          <h1 className="text-display font-bold text-balance text-white">
-            {t('notFound.headline')}
-          </h1>
-          <ButtonLink to={{ key: 'home' }} variant="light" size="lg">
-            {t('notFound.back')}
-          </ButtonLink>
+      <header className="grid gap-0.5 lg:grid-cols-3">
+        <div className="bg-black p-3 text-white md:p-4 lg:col-span-2">
+          <h1 className="text-display text-white">{t('notFound.headline')}</h1>
         </div>
-      </section>
-
-      <FullBleedSection>
-        <CardCarousel
-          label={t('notFound.explore')}
-          title={t('notFound.explore')}
-          prevLabel={tp('home.media.prev')}
-          nextLabel={tp('home.media.next')}
-          goToLabel={(n) => tp('home.media.goTo', { n })}
+        <LocalizedLink
+          to={{ key: 'home' }}
+          className="flex min-h-24 items-end justify-between bg-badge p-3 text-h3 font-extrabold text-black hover:brightness-95 md:p-4"
         >
-          {PROGRAM_KEYS.map((program) => (
-            <li key={program} className={CAROUSEL_ITEM}>
-              <article className="group relative isolate flex aspect-2/3 flex-col items-center justify-end overflow-hidden rounded-2xl bg-ink-900 px-6 pb-12 text-center text-white transition-transform duration-500 hover:scale-[1.03]">
-                <Img
-                  name={PROGRAM_IMAGES[program]}
-                  decorative
-                  sizes="(min-width: 1024px) 22vw, (min-width: 640px) 38vw, 72vw"
-                  className="absolute inset-0 -z-20 size-full object-cover object-top"
-                />
-                <div
-                  aria-hidden="true"
-                  className="absolute inset-0 -z-10 bg-black/30 bg-linear-to-t from-black/90 via-black/60 to-transparent"
-                />
-                <h3 className="font-serif text-h3 leading-tight font-extrabold text-white uppercase">
-                  <LocalizedLink
-                    to={{ key: 'program', program }}
-                    className="after:absolute after:inset-0"
-                  >
-                    {t(`programs.names.${program}`)}
-                  </LocalizedLink>
-                </h3>
-                <p className="mt-4 text-small text-white/90">
-                  {tp(`program.items.${program}.summary`)}
-                </p>
-                <CardArrow />
-              </article>
-            </li>
-          ))}
-        </CardCarousel>
-      </FullBleedSection>
+          {t('notFound.back')}
+          <span aria-hidden="true">→</span>
+        </LocalizedLink>
+      </header>
+      <section className="mt-16">
+        <SectionLabel title={t('notFound.explore')} />
+        <ProgramTilesGrid programs={PROGRAM_KEYS.slice(0, 3)} />
+      </section>
     </>
   );
 }

@@ -187,3 +187,23 @@ Dividers: no horizontal rules between rows or sections anywhere (lists, FAQ, foo
 - **Touch cues:** there is no hover on phones, so cards carry a round arrow (`CardArrow`, always visible on touch, shown on hover on desktop) and program rows always show their arrow.
 - **Featured in** on mobile: a balanced grid, three logos on the first row and two wider cells on the second.
 - The Programs page cards no longer have a black name bar; the name is a small label above the headline.
+
+## 20. Redesign after zerotrecinque.com (branch `redesign/zerotrecinque`)
+
+The client asked for the site to follow https://www.zerotrecinque.com/ (an Italian editorial magazine). This section **supersedes** the colour, type, shape and layout rules above for that branch; `main` keeps the earlier design.
+
+**Principles taken from the reference**
+
+- Pure black on white. Content sits in boxed cells and tiles with 2 px gaps between columns and larger row gaps (`gap-x-0.5 gap-y-6`). No shadows, no rounded corners (all radius tokens are `0`).
+- One grotesk for everything (Hanken Grotesk 500/700/800; the reference uses the commercial Acumin Concept). Almost one size: headlines 20–24 px bold, body 17–20 px medium; the display size is only for the page title.
+- A persistent left **sidebar** of black cells (name, Programe, Despre mine, Blog, Contact, free-session CTA, Language, Social). The Programs cell expands into the program list only inside the programs section. On mobile it becomes a black bar with a Menu cell that opens the same cells full screen.
+- Pages are **tile grids**: a tile is a black headline cell above a 4:5 photo (hover zoom, corner arrow cue on touch, optional yellow badge). Text-only black tiles carry quotes; outlined boxes carry lead text, numbers, forms and FAQ.
+- Inner pages open like the reference article: a column of cells (kind label, outlined title + lead, byline/CTA) beside a large photo, then labelled blocks (black label cell left, content right).
+
+**Colour tokens**: `black`, `white`, `ink-700/500` (text greys), `grey-100`, `tint-100` `#a9c4d6` (active/selected cell), `badge` `#ffe94a` (flagship badge and CTA cells), `success`, `error`. Burgundy, cream and the CTA-photo wall colour were removed.
+
+**Components** (`apps/web/src/components/tiles`): `Tile`, `TextTile`, `Box`, `Cell`, `SectionLabel` (an `h2`), `TileGrid`; `Sections.tsx` has `PageIntro` (page `h1`), `ArticleSection`, `NumberedRows`, `BoxGrid`, `ProgramTilesGrid`, `QuoteTiles`, `StatTiles`, `PressTiles`, `BlogTilesGrid`. Page chrome: `Sidebar`, `Footer` (legal cells), `PersistentCTA` (black text cell + yellow action cell).
+
+**Removed**: hero slideshow, carousels, section/container system, black footer columns, mobile accordion menu, language dropdown (languages are RO/EN/IT cells).
+
+**Open points for the client**: the reference loads a custom commercial font and has no hero; confirm the free Hanken Grotesk is acceptable. The "Featured in" logo strip keeps its slow endless scroll inside an outlined box.

@@ -82,5 +82,13 @@
     "back": "Back to home",
     "headline": "Sorry, we couldn’t find what you’re looking for",
     "explore": "Explore the programs"
+  },
+  "shell": {
+    "menu": "Menu",
+    "language": "Language",
+    "social": "Social",
+    "featured": "Flagship",
+    "seeAll": "See all",
+    "email": "Email"
   }
 }

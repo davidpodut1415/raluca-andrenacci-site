@@ -42,11 +42,11 @@ export function CredibilityBar() {
   const { t } = usePages();
 
   return (
-    <section aria-labelledby="featured-in" className="bg-grey-50 py-10 md:py-14">
-      <p id="featured-in" className="mb-8 text-center text-body text-ink-700">
+    <section aria-labelledby="featured-in">
+      <p id="featured-in" className="mb-0.5 bg-black px-2 py-1.5 text-small font-bold text-white">
         {t('home.credibility.label')}
       </p>
-      <div className="marquee overflow-hidden">
+      <div className="marquee overflow-hidden border border-black py-8">
         <div className="marquee-track flex w-max">
           <LogoRow />
           <LogoRow hidden />

@@ -1,18 +1,13 @@
 import { useTranslation } from 'react-i18next';
 import { Seo } from '../components/Seo';
-import { CardArrow } from '../components/ui/CardArrow';
-import { Img } from '../components/ui/Img';
-import { LocalizedLink } from '../components/ui/LocalizedLink';
-import { Container } from '../components/ui/layout';
+import { PageIntro, ProgramTilesGrid } from '../components/tiles/Sections';
+import { SectionLabel } from '../components/tiles/Tiles';
 import { PROGRAM_KEYS } from '../i18n/routes';
-import { PROGRAM_IMAGES } from '../lib/programImages';
 import { usePages } from '../lib/usePages';
 
-/**
- * Programs overview, laid out like the reference: a huge title on the left with a short paragraph on
- * the right, then large two-column photo cards. Each card: statement headline bottom-left, supporting
- * line under it, and a small dark label with the program name.
- */
+const FAMILY = PROGRAM_KEYS.filter((key) => key !== 'audit');
+
+/** Programs overview: the family-business programs first, the individual audit as its own block. */
 export function ProgramsPage() {
   const { t } = useTranslation();
   const { t: tp } = usePages();
@@ -20,54 +15,18 @@ export function ProgramsPage() {
   return (
     <>
       <Seo title={t('nav.programs')} description={tp('programsPage.seoDescription')} />
+      <PageIntro title={tp('programsPage.eyebrow')} lead={tp('programsPage.lead')} />
 
-      <header className="bg-grey-50 pt-12 pb-12 md:pt-16 md:pb-16 lg:pt-20 lg:pb-20">
-        <Container>
-          <div className="grid items-center gap-8 lg:grid-cols-12 lg:gap-16">
-            <h1 className="text-display font-extrabold lg:col-span-7">
-              {tp('programsPage.eyebrow')}
-            </h1>
-            <p className="max-w-xl text-ink-700 lg:col-span-5">{tp('programsPage.lead')}</p>
-          </div>
-        </Container>
-      </header>
-
-      <section className="bg-grey-50 px-3 pb-3 sm:px-4 sm:pb-4">
-        <ul className="grid gap-3 sm:gap-4 lg:grid-cols-2">
-          {PROGRAM_KEYS.map((program) => (
-            <li key={program}>
-              <article className="group relative isolate flex min-h-[30rem] flex-col justify-end overflow-hidden rounded-2xl bg-black p-6 pt-24 md:min-h-[40rem] md:p-10 lg:min-h-[42rem] transition-transform duration-500 hover:scale-[1.03]">
-                <Img
-                  name={PROGRAM_IMAGES[program]}
-                  decorative
-                  sizes="(min-width: 1024px) 50vw, 100vw"
-                  className="absolute inset-0 -z-20 size-full object-cover object-top"
-                />
-                <div
-                  aria-hidden="true"
-                  className="absolute inset-0 -z-10 bg-black/20 bg-linear-to-t from-black/90 via-black/45 to-transparent"
-                />
-                <p className="mb-3 text-eyebrow font-semibold tracking-widest text-white/80 uppercase">
-                  {t(`programs.names.${program}`)}
-                </p>
-                <h2 className="max-w-xl font-serif text-h2 leading-tight font-extrabold text-white lg:max-w-[60%] lg:text-h2">
-                  <LocalizedLink
-                    to={{ key: 'program', program }}
-                    className="after:absolute after:inset-0"
-                    aria-label={t(`programs.names.${program}`)}
-                  >
-                    {tp(`program.items.${program}.summary`)}
-                  </LocalizedLink>
-                </h2>
-                <p className="mt-4 max-w-xl pr-14 text-white/85 lg:max-w-[60%]">
-                  {tp(`program.items.${program}.tagline`)}
-                </p>
-                <CardArrow />
-              </article>
-            </li>
-          ))}
-        </ul>
-      </section>
+      <div className="flex flex-col gap-16">
+        <section>
+          <SectionLabel title={tp('programsPage.familyTitle')} />
+          <ProgramTilesGrid programs={FAMILY} />
+        </section>
+        <section>
+          <SectionLabel title={tp('programsPage.individualEyebrow')} />
+          <ProgramTilesGrid programs={['audit']} />
+        </section>
+      </div>
     </>
   );
 }

@@ -1,14 +1,14 @@
 import { useTranslation } from 'react-i18next';
-import { FeatureSplit } from '../components/blocks/FeatureSplit';
-import { NumberedList } from '../components/blocks/NumberedList';
-import { AboutHero } from '../components/blocks/AboutHero';
-import { QuoteBand } from '../components/blocks/QuoteBand';
-import { StatsStagger } from '../components/blocks/StatsStagger';
-import { MediaCarousel } from '../components/blocks/MediaCarousel';
 import { Seo } from '../components/Seo';
+import {
+  ArticleSection,
+  NumberedRows,
+  PressTiles,
+  QuoteTiles,
+  StatTiles,
+} from '../components/tiles/Sections';
+import { Box, Cell, SectionLabel } from '../components/tiles/Tiles';
 import { Img } from '../components/ui/Img';
-import { FullBleedSection, Section } from '../components/ui/layout';
-import { ScrollFill } from '../components/ui/ScrollFill';
 import { usePages } from '../lib/usePages';
 
 interface Stat {
@@ -16,57 +16,75 @@ interface Stat {
   label: string;
 }
 
-/** About: split opener → story → numbers → credentials + certificate → public presence → testimonials. */
+/** About: article-style opener (cells beside a large photo) → story → numbers → quote → credentials → press. */
 export function AboutPage() {
   const { t } = useTranslation();
   const { t: tp, list, items } = usePages();
-  const testimonial = items<{ quote: string; name: string; role: string }>('testimonials.items')[2];
 
   return (
     <>
       <Seo title={t('nav.about')} description={tp('about.seoDescription')} />
-      <AboutHero eyebrow={tp('about.eyebrow')} title={tp('home.about.title')} />
 
-      <Section>
-        <FeatureSplit title={tp('about.storyTitle')} image="library-chairs" reverse>
-          <div className="flex max-w-prose flex-col gap-5 text-ink-700">
+      <header className="grid gap-0.5 lg:grid-cols-3">
+        <div className="flex flex-col gap-0.5">
+          <Cell>{tp('about.eyebrow')}</Cell>
+          <Box className="flex-1">
+            <h1 className="text-display">{tp('home.about.title')}</h1>
+            <p className="mt-4">{tp('about.lead')}</p>
+          </Box>
+        </div>
+        <div className="aspect-4/5 overflow-hidden bg-black lg:col-span-2 lg:aspect-auto lg:min-h-[32rem]">
+          <Img
+            name="event-mic"
+            priority
+            sizes="(min-width: 1024px) 55vw, 100vw"
+            className="size-full object-cover object-center"
+          />
+        </div>
+      </header>
+
+      <ArticleSection title={tp('about.storyTitle')}>
+        <div className="flex flex-col gap-0.5">
+          <Box className="flex flex-col gap-4">
             {list('about.bio').map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
-          </div>
-        </FeatureSplit>
-      </Section>
-
-      <QuoteBand
-        image="pro-closeup"
-        quote={testimonial?.quote ?? ''}
-        name={testimonial?.name ?? ''}
-        role={testimonial?.role}
-      />
-
-      <StatsStagger stats={items<Stat>('about.stats')} />
-
-      <Section>
-        <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-16">
-          <div className="flex flex-col gap-8 lg:col-span-7">
-            <ScrollFill as="h2" text={tp('about.credentialsTitle')} className="font-extrabold" />
-            <NumberedList items={list('about.credentials')} />
-          </div>
-          <div className="lg:col-span-5">
-            <div className="mx-auto max-w-sm overflow-hidden rounded-2xl border border-line bg-white p-3 shadow-card">
-              <Img
-                name="certificate-emcc"
-                sizes="(min-width: 1024px) 24rem, 100vw"
-                className="w-full rounded-xl"
-              />
-            </div>
+          </Box>
+          <div className="aspect-3/2 overflow-hidden bg-black">
+            <Img
+              name="library-chairs"
+              sizes="(min-width: 1024px) 55vw, 100vw"
+              className="size-full object-cover object-top"
+            />
           </div>
         </div>
-      </Section>
+      </ArticleSection>
 
-      <FullBleedSection>
-        <MediaCarousel title={tp('about.pressTitle')} showAll={false} dots={false} />
-      </FullBleedSection>
+      <section className="mt-16">
+        <StatTiles stats={items<Stat>('about.stats')} />
+      </section>
+
+      <section className="mt-16">
+        <QuoteTiles indexes={[2]} />
+      </section>
+
+      <ArticleSection title={tp('about.credentialsTitle')}>
+        <div className="grid gap-0.5 xl:grid-cols-2">
+          <NumberedRows items={list('about.credentials')} />
+          <Box className="self-start">
+            <Img
+              name="certificate-emcc"
+              sizes="(min-width: 1280px) 25vw, 100vw"
+              className="w-full"
+            />
+          </Box>
+        </div>
+      </ArticleSection>
+
+      <section className="mt-16">
+        <SectionLabel title={tp('about.pressTitle')} />
+        <PressTiles />
+      </section>
     </>
   );
 }

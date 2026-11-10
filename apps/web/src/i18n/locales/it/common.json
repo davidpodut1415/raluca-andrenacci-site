@@ -82,5 +82,13 @@
     "back": "Torna alla home",
     "headline": "Spiacenti, non abbiamo trovato ciò che cercavi",
     "explore": "Esplora i programmi"
+  },
+  "shell": {
+    "menu": "Menu",
+    "language": "Lingua",
+    "social": "Social",
+    "featured": "Principale",
+    "seeAll": "Vedi tutto",
+    "email": "Email"
   }
 }

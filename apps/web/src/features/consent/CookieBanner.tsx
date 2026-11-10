@@ -23,10 +23,7 @@ export function CookieBanner() {
       </h2>
       <p className="mt-2 text-small text-ink-700">
         {t('bannerText')}{' '}
-        <LocalizedLink
-          to={{ key: 'cookies' }}
-          className="text-burgundy-700 underline underline-offset-4"
-        >
+        <LocalizedLink to={{ key: 'cookies' }} className="text-black underline underline-offset-4">
           {t('learnMore')}
         </LocalizedLink>
       </p>

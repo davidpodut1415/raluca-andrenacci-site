@@ -1,15 +1,17 @@
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 import { useLocale } from '../app/LocaleContext';
-import { NumberedList } from '../components/blocks/NumberedList';
-import { PageBanner } from '../components/blocks/PageBanner';
-import { ProgramTiles } from '../components/blocks/ProgramTiles';
-import { StepCards } from '../components/blocks/StepCards';
-import { Testimonials } from '../components/blocks/Testimonials';
 import { Seo } from '../components/Seo';
-import { ButtonLink } from '../components/ui/Button';
-import { Eyebrow, Section, SectionHeading } from '../components/ui/layout';
-import { ScrollFill } from '../components/ui/ScrollFill';
+import {
+  ArticleSection,
+  BoxGrid,
+  NumberedRows,
+  ProgramTilesGrid,
+  QuoteTiles,
+} from '../components/tiles/Sections';
+import { Box, Cell, SectionLabel, TextTile } from '../components/tiles/Tiles';
+import { Img } from '../components/ui/Img';
+import { LocalizedLink } from '../components/ui/LocalizedLink';
 import { PROGRAM_KEYS, programKeyFromSlug, type ProgramKey } from '../i18n/routes';
 import { PROGRAM_IMAGES } from '../lib/programImages';
 import { usePages } from '../lib/usePages';
@@ -29,7 +31,10 @@ export function ProgramDetailPage() {
   return <ProgramDetail program={program} />;
 }
 
-/** Program page: photo banner → numbered directions → outcome on black → how we work → (Audit: perks, testimonials) → other programs. */
+/**
+ * Program page laid out like the reference's article page: a column of cells (kind, outlined title
+ * and tagline, action) beside a large photo, then labelled blocks for directions, outcome, perks and format.
+ */
 function ProgramDetail({ program }: { program: ProgramKey }) {
   const { t } = useTranslation();
   const { t: tp, list, items } = usePages();
@@ -42,60 +47,67 @@ function ProgramDetail({ program }: { program: ProgramKey }) {
   return (
     <>
       <Seo title={name} description={tp(`${base}.tagline`)} />
-      <PageBanner
-        image={PROGRAM_IMAGES[program]}
-        eyebrow={isAudit ? tp('programsPage.individualEyebrow') : tp('programsPage.familyTitle')}
-        title={name}
-        lead={tp(`${base}.tagline`)}
-      >
-        <ButtonLink to={{ key: 'contact' }} search="?type=free-session" variant="light" size="lg">
-          {t('cta.freeSession')}
-        </ButtonLink>
-      </PageBanner>
 
-      <Section>
-        <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
-          <div className="flex flex-col gap-5 lg:col-span-4">
-            <ScrollFill as="h2" text={tp(`${base}.directionsTitle`)} className="font-extrabold" />
-            {isAudit && <p className="text-ink-700">{tp(`${base}.intro`)}</p>}
-          </div>
-          <div className="lg:col-span-8">
-            <NumberedList items={list(`${base}.directions`)} />
-          </div>
+      <header className="grid gap-0.5 lg:grid-cols-3">
+        <div className="flex flex-col gap-0.5">
+          <Cell>
+            {isAudit ? tp('programsPage.individualEyebrow') : tp('programsPage.familyTitle')}
+          </Cell>
+          <Box className="flex-1">
+            <h1 className="text-display">{name}</h1>
+            <p className="mt-4">{tp(`${base}.tagline`)}</p>
+            {isAudit && <p className="mt-4 text-ink-700">{tp(`${base}.intro`)}</p>}
+          </Box>
+          <LocalizedLink
+            to={{ key: 'contact' }}
+            search="?type=free-session"
+            className="flex min-h-14 items-center justify-between bg-badge px-2 py-3 text-h4 font-extrabold text-black hover:brightness-95"
+          >
+            {t('cta.freeSession')}
+            <span aria-hidden="true">→</span>
+          </LocalizedLink>
         </div>
-      </Section>
+        <div className="aspect-4/5 overflow-hidden bg-black lg:col-span-2 lg:aspect-auto lg:min-h-[32rem]">
+          <Img
+            name={PROGRAM_IMAGES[program]}
+            decorative
+            priority
+            sizes="(min-width: 1024px) 55vw, 100vw"
+            className="size-full object-cover object-top"
+          />
+        </div>
+      </header>
 
-      <Section tone="black">
-        <Eyebrow className="mb-8 text-white/70">{tp('program.outcomeLabel')}</Eyebrow>
-        <p className="max-w-5xl font-serif text-h2 leading-tight font-bold text-white lg:text-display">
-          {tp(`${base}.outcome`)}
-        </p>
-      </Section>
+      <ArticleSection title={tp(`${base}.directionsTitle`)}>
+        <NumberedRows items={list(`${base}.directions`)} />
+      </ArticleSection>
+
+      <ArticleSection title={tp('program.outcomeLabel')}>
+        <TextTile>
+          <p className="text-h2 font-bold">{tp(`${base}.outcome`)}</p>
+        </TextTile>
+      </ArticleSection>
 
       {perks.length > 0 && (
-        <Section>
-          <SectionHeading title={tp(`${base}.perksTitle`)} />
-          <StepCards steps={perks} columns={3} />
-        </Section>
+        <ArticleSection title={tp(`${base}.perksTitle`)}>
+          <BoxGrid items={perks} columns={3} />
+        </ArticleSection>
       )}
 
-      <Section>
-        <SectionHeading title={tp('program.formatTitle')} />
-        <StepCards steps={list('program.formatItems').map((title) => ({ title }))} />
-      </Section>
+      <ArticleSection title={tp('program.formatTitle')}>
+        <BoxGrid items={list('program.formatItems').map((title) => ({ title }))} />
+      </ArticleSection>
 
       {isAudit && (
-        <Section tone="black">
-          <Eyebrow className="mb-8 text-white/70">{tp('home.testimonials.eyebrow')}</Eyebrow>
-          <h2 className="sr-only">{tp('home.testimonials.title')}</h2>
-          <Testimonials indexes={[2, 1, 3]} />
-        </Section>
+        <ArticleSection title={tp('home.testimonials.eyebrow')}>
+          <QuoteTiles indexes={[2, 1, 3]} />
+        </ArticleSection>
       )}
 
-      <Section>
-        <SectionHeading title={tp('program.othersTitle')} />
-        <ProgramTiles programs={others} />
-      </Section>
+      <section className="mt-16">
+        <SectionLabel title={tp('program.othersTitle')} />
+        <ProgramTilesGrid programs={others.slice(0, 3)} />
+      </section>
     </>
   );
 }

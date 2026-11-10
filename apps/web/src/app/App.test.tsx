@@ -69,7 +69,7 @@ describe('routing and i18n', () => {
   });
 });
 
-describe('header', () => {
+describe('sidebar', () => {
   it('marks the current section in the main navigation', async () => {
     renderApp('/en/programs');
     await screen.findByRole('heading', { level: 1, name: /mentoring programs/i });
@@ -80,45 +80,22 @@ describe('header', () => {
     );
   });
 
-  it('switches language from a dropdown that links to the equivalent page', async () => {
+  it('switches language from the sidebar to the equivalent page', async () => {
     renderApp('/en/programs');
     await screen.findByRole('heading', { level: 1, name: /mentoring programs/i });
 
-    const toggle = screen.getAllByRole('button', { name: 'Language: English' })[0]!;
-    expect(toggle).toHaveAttribute('aria-expanded', 'false');
-    expect(screen.queryByRole('link', { name: 'Română' })).not.toBeInTheDocument();
-
-    await userEvent.click(toggle);
-    expect(toggle).toHaveAttribute('aria-expanded', 'true');
-    const menu = screen.getByRole('navigation', { name: 'Language' });
-    expect(within(menu).getByRole('link', { name: 'Română' })).toHaveAttribute('href', '/programe');
-    expect(within(menu).getByRole('link', { name: 'Italiano' })).toHaveAttribute(
+    const group = screen.getByRole('group', { name: 'Language' });
+    expect(within(group).getByRole('link', { name: 'RO' })).toHaveAttribute('href', '/programe');
+    expect(within(group).getByRole('link', { name: 'IT' })).toHaveAttribute(
       'href',
       '/it/programmi',
     );
-    expect(within(menu).getByRole('link', { name: 'English' })).toHaveAttribute(
-      'aria-current',
-      'true',
-    );
+    expect(within(group).getByRole('link', { name: 'EN' })).toHaveAttribute('aria-current', 'page');
 
-    await userEvent.click(within(menu).getByRole('link', { name: 'Italiano' }));
+    await userEvent.click(within(group).getByRole('link', { name: 'IT' }));
     expect(
       await screen.findByRole('heading', { level: 1, name: /programmi di mentoring/i }),
     ).toBeInTheDocument();
-    expect(screen.queryByRole('navigation', { name: 'Lingua' })).not.toBeInTheDocument();
-  });
-
-  it('closes the language dropdown with Escape and returns focus to the button', async () => {
-    renderApp('/');
-    await screen.findByRole('heading', { level: 1 });
-    const toggle = screen.getAllByRole('button', { name: /Limba: Română/ })[0]!;
-    await userEvent.click(toggle);
-    expect(toggle).toHaveAttribute('aria-expanded', 'true');
-    await userEvent.keyboard('{ArrowDown}');
-    expect(screen.getByRole('link', { name: 'Română' })).toHaveFocus();
-    await userEvent.keyboard('{Escape}');
-    expect(toggle).toHaveAttribute('aria-expanded', 'false');
-    expect(toggle).toHaveFocus();
   });
 
   it('navigates between pages and keeps the free-session CTA pointing at contact', async () => {
@@ -136,14 +113,12 @@ describe('header', () => {
   it('opens and closes the mobile menu', async () => {
     renderApp('/');
     await screen.findByRole('heading', { level: 1 });
-    const toggle = screen.getByRole('button', { name: 'Deschide meniul' });
+    const toggle = screen.getByRole('button', { name: /^Meniu/ });
     expect(toggle).toHaveAttribute('aria-expanded', 'false');
+    expect(document.getElementById('mobile-menu')).toBeNull();
 
     await userEvent.click(toggle);
-    expect(screen.getByRole('button', { name: 'Închide meniul' })).toHaveAttribute(
-      'aria-expanded',
-      'true',
-    );
+    expect(toggle).toHaveAttribute('aria-expanded', 'true');
     expect(document.getElementById('mobile-menu')).not.toBeNull();
 
     await userEvent.keyboard('{Escape}');

@@ -23,7 +23,7 @@ function Toggle({ id, title, text, checked, disabled, onChange }: ToggleProps) {
         disabled={disabled}
         onChange={(e) => onChange?.(e.target.checked)}
         aria-describedby={`${id}-text`}
-        className="mt-1 size-5 shrink-0 accent-burgundy-700"
+        className="mt-1 size-5 shrink-0 accent-black"
       />
       <div>
         <label htmlFor={id} className="font-semibold text-ink-900">

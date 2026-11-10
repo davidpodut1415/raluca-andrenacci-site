@@ -21,34 +21,28 @@ describe('home', () => {
     ).toBeInTheDocument();
 
     const main = screen.getByRole('main');
-    for (const name of [
-      'Co-Leadership: Fondator & NextGen',
-      'Mentorat pentru Succesorii NextGen',
-      'Integrarea Succesorului în Business',
-      'Entrepreneur-in-Residence',
-      'Advisory de Guvernanță & Board Family-Office',
+    const hrefs = within(main)
+      .getAllByRole('link')
+      .map((l) => l.getAttribute('href'));
+    for (const slug of [
+      'co-leadership-fondator-nextgen',
+      'mentorat-succesori-nextgen',
+      'integrarea-succesorului',
+      'entrepreneur-in-residence',
+      'guvernanta-family-office-board',
     ]) {
-      expect(
-        within(main).getByRole('link', {
-          name: new RegExp(`^${name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`),
-        }),
-      ).toBeInTheDocument();
+      expect(hrefs).toContain(`/programe/${slug}`);
     }
     // The individual Audit program is not promoted on the landing page (it lives on the Programs page).
-    expect(
-      within(main).queryByRole('heading', { name: 'Auditul Prezentului Tău' }),
-    ).not.toBeInTheDocument();
+    expect(hrefs.some((h) => h?.includes('auditul-prezentului-tau'))).toBe(false);
   });
 
-  it('uses a decorative photo slideshow in the hero (no video, no pause control)', async () => {
+  it('has no video or slideshow: the page is a grid of tiles', async () => {
     renderApp('/');
     await screen.findByRole('heading', { level: 1 });
-    const hero = document.querySelector('section')!;
-    const slides = hero.querySelectorAll('img.hero-slide');
-    expect(slides).toHaveLength(3);
-    slides.forEach((img) => expect(img).toHaveAttribute('alt', ''));
-    expect(hero.querySelector('video')).toBeNull();
-    expect(screen.queryByRole('button', { name: /pauz|pause/i })).not.toBeInTheDocument();
+    expect(document.querySelector('video')).toBeNull();
+    expect(document.querySelector('.hero-slide')).toBeNull();
+    expect(within(screen.getByRole('main')).getAllByRole('article').length).toBeGreaterThan(8);
   });
 
   it('shows the key figures on the landing page, with the first one oversized', async () => {
@@ -78,46 +72,28 @@ describe('home', () => {
     expect(bar.querySelector('.marquee-track')).not.toBeNull();
   });
 
-  it('shows one large testimonial at a time with a selectable attribution row', async () => {
+  it('shows the testimonials as black quote tiles', async () => {
     renderApp('/');
     await screen.findByRole('heading', { level: 1 });
-    const tabs = screen.getAllByRole('tab');
-    expect(tabs).toHaveLength(3);
-    expect(tabs[0]).toHaveAttribute('aria-selected', 'true');
-    expect(screen.getByRole('tabpanel')).toHaveTextContent(/ca succesor/);
-
-    await userEvent.click(tabs[1]!);
-    expect(tabs[1]).toHaveAttribute('aria-selected', 'true');
-    expect(screen.getByRole('tabpanel')).toHaveTextContent(/momentul meu de reset/);
-
-    tabs[1]!.focus();
-    await userEvent.keyboard('{ArrowRight}');
-    expect(tabs[2]).toHaveAttribute('aria-selected', 'true');
-    expect(tabs[2]).toHaveFocus();
+    const quotes = screen.getAllByRole('blockquote');
+    expect(quotes).toHaveLength(3);
+    expect(quotes[0]).toHaveTextContent(/ca succesor/);
   });
 });
 
-describe('media carousel', () => {
-  it('lists the media features as links and has working controls', async () => {
+describe('press tiles', () => {
+  it('open verified press items externally; the rest go to the blog', async () => {
     renderApp('/');
     await screen.findByRole('heading', { level: 1 });
-    const carousel = screen.getByRole('region', { name: 'Apariții în media' });
-    expect(within(carousel).getAllByRole('article')).toHaveLength(6);
-    const links = within(carousel).getAllByRole('link', { name: /^Deschide:/ });
-    expect(links).toHaveLength(6);
-    // Verified press items open the real external article; the rest still go to the blog.
-    const external = links.filter((l) =>
-      l.getAttribute('href')?.startsWith('https://www.forbes.ro/'),
-    );
+    const main = screen.getByRole('main');
+    const external = within(main)
+      .getAllByRole('link')
+      .filter((l) => l.getAttribute('href')?.startsWith('https://www.forbes.ro/'));
     expect(external).toHaveLength(3);
-    for (const link of external) expect(link).toHaveAttribute('target', '_blank');
-    for (const link of links.filter((l) => !external.includes(l)))
-      expect(link).toHaveAttribute('href', '/blog');
-    expect(within(carousel).getByRole('button', { name: 'Următorul' })).toBeInTheDocument();
-    expect(within(carousel).getByRole('button', { name: 'Anterior' })).toBeInTheDocument();
-    expect(
-      within(carousel).getAllByRole('button', { name: /Mergi la grupul/ }).length,
-    ).toBeGreaterThan(0);
+    for (const link of external) {
+      expect(link).toHaveAttribute('target', '_blank');
+      expect(link).toHaveAttribute('rel', 'noopener noreferrer');
+    }
   });
 });
 
@@ -129,10 +105,10 @@ describe('programs', () => {
     expect(screen.getAllByRole('article')).toHaveLength(6);
     // each card links to its program page
     expect(
-      within(screen.getByRole('main')).getByRole('link', {
-        name: 'Co-Leadership: Fondator & NextGen',
-      }),
-    ).toHaveAttribute('href', '/programe/co-leadership-fondator-nextgen');
+      within(screen.getByRole('main'))
+        .getAllByRole('link')
+        .map((l) => l.getAttribute('href')),
+    ).toContain('/programe/co-leadership-fondator-nextgen');
   });
 
   it.each(PROGRAM_KEYS)('renders the %s detail page in every language', async (program) => {
@@ -163,7 +139,7 @@ describe('programs', () => {
     renderApp('/programe/auditul-prezentului-tau');
     await screen.findByRole('heading', { level: 1, name: 'Auditul Prezentului Tău' });
     expect(screen.getByText('MiniAudit gratuit inclus')).toBeInTheDocument();
-    expect(screen.getAllByRole('tab')).toHaveLength(3);
+    expect(screen.getAllByRole('blockquote')).toHaveLength(3);
   });
 });
 
@@ -210,21 +186,22 @@ describe('about, contact and legal', () => {
   });
 });
 
-describe('footer', () => {
-  it('has program links, site links, legal links, social links and a language menu', async () => {
+describe('footer and sidebar', () => {
+  it('footer has legal links and cookie settings; the sidebar has social links and languages', async () => {
     renderApp('/en');
     await screen.findByRole('heading', { level: 1 });
     const footer = screen.getByRole('contentinfo');
-    expect(within(footer).getAllByRole('link', { name: /Co-Leadership/ })).toHaveLength(1);
     expect(within(footer).getByRole('link', { name: 'Privacy policy' })).toHaveAttribute(
       'href',
       '/en/privacy',
     );
-    expect(
-      within(footer).getByRole('link', { name: 'Raluca Andrenacci on LinkedIn' }),
-    ).toHaveAttribute('rel', 'noopener noreferrer');
-    expect(within(footer).getByRole('button', { name: 'Language: English' })).toBeInTheDocument();
     expect(within(footer).getByRole('button', { name: 'Cookie settings' })).toBeInTheDocument();
+    const nav = screen.getByRole('navigation', { name: 'Main navigation' });
+    expect(within(nav).getByRole('link', { name: 'LinkedIn' })).toHaveAttribute(
+      'rel',
+      'noopener noreferrer',
+    );
+    expect(within(nav).getByRole('group', { name: 'Language' })).toBeInTheDocument();
   });
 });
 
@@ -273,12 +250,7 @@ describe('persistent chrome and templates', () => {
     expect(screen.getAllByRole('listitem').some((li) => li.textContent?.startsWith('01'))).toBe(
       true,
     );
-    expect(
-      screen.getByRole('heading', {
-        level: 3,
-        name: /Plan personalizat pentru următoarele 90 de zile/,
-      }),
-    ).toBeInTheDocument();
+    expect(screen.getByText(/Plan personalizat pentru următoarele 90 de zile/)).toBeInTheDocument();
   });
 
   it('blog index lists the imported articles that link to post pages', async () => {

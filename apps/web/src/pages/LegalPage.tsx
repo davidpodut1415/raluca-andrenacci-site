@@ -1,9 +1,9 @@
 import { useTranslation } from 'react-i18next';
 import { useLocale } from '../app/LocaleContext';
 import { LegalContent, type LegalBlock } from '../components/blocks/LegalContent';
-import { PageHeader } from '../components/blocks/PageHeader';
 import { Seo } from '../components/Seo';
-import { Section } from '../components/ui/layout';
+import { PageIntro } from '../components/tiles/Sections';
+import { Box } from '../components/tiles/Tiles';
 import cookies from '../content/legal/ro/cookies.json';
 import privacy from '../content/legal/ro/privacy.json';
 import { usePages } from '../lib/usePages';
@@ -24,13 +24,10 @@ export function LegalPage({ document }: { document: keyof typeof DOCUMENTS }) {
   return (
     <>
       <Seo title={title} noindex />
-      <PageHeader
-        title={title}
-        lead={locale !== 'ro' ? tp('legal.translationNotice') : undefined}
-      />
-      <Section className="pt-0 md:pt-0 lg:pt-0">
+      <PageIntro title={title} lead={locale !== 'ro' ? tp('legal.translationNotice') : undefined} />
+      <Box className="max-w-4xl">
         <LegalContent blocks={content.blocks as LegalBlock[]} />
-      </Section>
+      </Box>
     </>
   );
 }

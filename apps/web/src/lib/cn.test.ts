@@ -7,6 +7,6 @@ describe('cn', () => {
   });
 
   it('still lets a later color override an earlier one', () => {
-    expect(cn('text-white', 'text-burgundy-700')).toBe('text-burgundy-700');
+    expect(cn('text-white', 'text-black')).toBe('text-black');
   });
 });

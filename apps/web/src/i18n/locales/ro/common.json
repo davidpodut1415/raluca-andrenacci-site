@@ -82,5 +82,13 @@
     "back": "Înapoi acasă",
     "headline": "Ne pare rău, nu am găsit ce căutai",
     "explore": "Explorează programele"
+  },
+  "shell": {
+    "menu": "Meniu",
+    "language": "Limbă",
+    "social": "Social",
+    "featured": "Principal",
+    "seeAll": "Vezi tot",
+    "email": "Email"
   }
 }

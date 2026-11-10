@@ -8,12 +8,12 @@ export const buttonStyles = cva(
   {
     variants: {
       variant: {
-        primary: 'bg-burgundy-700 text-white hover:bg-burgundy-800',
-        secondary: 'border border-burgundy-700 text-burgundy-700 hover:bg-burgundy-100',
-        ghost: 'text-burgundy-700 hover:bg-grey-100',
+        primary: 'bg-black text-white hover:bg-ink-700',
+        secondary: 'border border-black bg-white text-black hover:bg-tint-100',
+        ghost: 'text-black hover:bg-grey-100',
         /** For dark / image backgrounds. */
         /** On a brown / dark background. */
-        light: 'bg-white text-burgundy-700 hover:bg-grey-100',
+        light: 'bg-badge text-black hover:brightness-95',
         inverted: 'border border-white text-white hover:bg-white/15',
       },
       size: {

@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Outlet, useLocation } from 'react-router-dom';
 import { PersistentCTA } from '../components/blocks/PersistentCTA';
 import { Footer } from '../components/layout/Footer';
-import { Header } from '../components/layout/Header';
+import { Sidebar } from '../components/layout/Sidebar';
 import { CookieBanner } from '../features/consent/CookieBanner';
 import { PreferencesDialog } from '../features/consent/PreferencesDialog';
 import { localeFromPath } from '../i18n/routes';
@@ -37,18 +37,22 @@ export function LocaleLayout({ locale: localeProp }: { locale?: Locale }) {
     <LocaleContext.Provider value={locale}>
       <a
         href="#main"
-        className="sr-only rounded-md bg-white px-4 py-2 font-semibold text-burgundy-700 focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50"
+        className="sr-only bg-white px-4 py-2 font-bold text-black focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50"
       >
         {t('skipToContent')}
       </a>
-      <Header />
-      <main id="main" ref={mainRef} tabIndex={-1} className="outline-none">
-        <Suspense fallback={<div className="min-h-[60vh]" aria-busy="true" />}>
-          <Outlet />
-        </Suspense>
-      </main>
-      <PersistentCTA />
-      <Footer />
+      <div className="lg:grid lg:grid-cols-[17.5rem_minmax(0,1fr)]">
+        <Sidebar />
+        <div className="min-w-0 px-1.5 pt-1.5 pb-1.5 lg:pl-0">
+          <main id="main" ref={mainRef} tabIndex={-1} className="outline-none">
+            <Suspense fallback={<div className="min-h-[60vh]" aria-busy="true" />}>
+              <Outlet />
+            </Suspense>
+          </main>
+          <PersistentCTA />
+          <Footer />
+        </div>
+      </div>
       <CookieBanner />
       <PreferencesDialog />
     </LocaleContext.Provider>

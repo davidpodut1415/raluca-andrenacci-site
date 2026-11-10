@@ -31,7 +31,7 @@ export function LegalContent({ blocks }: { blocks: LegalBlock[] }) {
         }
         if (block.type === 'list') {
           return (
-            <ul key={i} className="list-disc space-y-2 pl-6 marker:text-burgundy-700">
+            <ul key={i} className="list-disc space-y-2 pl-6 marker:text-black">
               {block.items.map((item) => (
                 <li key={item}>{item}</li>
               ))}

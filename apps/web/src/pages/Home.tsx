@@ -1,49 +1,87 @@
-import { BlogShowcase } from '../components/blocks/BlogShowcase';
+import { useTranslation } from 'react-i18next';
 import { CredibilityBar } from '../components/blocks/CredibilityBar';
-import { HomeHero } from '../components/blocks/HomeHero';
-import { MediaCarousel } from '../components/blocks/MediaCarousel';
-import { StatsStagger } from '../components/blocks/StatsStagger';
-import { ProgramShowcase } from '../components/blocks/ProgramShowcase';
-import { Testimonials } from '../components/blocks/Testimonials';
 import { Seo } from '../components/Seo';
-import { Container, Eyebrow, FullBleedSection, Section } from '../components/ui/layout';
+import {
+  BlogTilesGrid,
+  PageIntro,
+  PressTiles,
+  ProgramTilesGrid,
+  QuoteTiles,
+  SeeAll,
+  StatTiles,
+} from '../components/tiles/Sections';
+import { SectionLabel } from '../components/tiles/Tiles';
+import { LocalizedLink } from '../components/ui/LocalizedLink';
+import { PROGRAM_KEYS } from '../i18n/routes';
 import { usePages } from '../lib/usePages';
 
-/** Landing page: hero → partner logos → programs → testimonials → Despre mine → blog → closing CTA (the CTA lives in the layout). */
+/** Landing page: intro → partner logos → programs → testimonials → numbers → press → blog. All tiles. */
 export function Home() {
-  const { t: tp, items } = usePages();
+  const { t } = useTranslation();
+  const { t: tp, list, items } = usePages();
 
   return (
     <>
       <Seo description={tp('home.seoDescription')} />
-      <HomeHero />
+      <PageIntro
+        eyebrow={tp('home.hero.eyebrow')}
+        title={tp('home.hero.title')}
+        lead={tp('home.hero.lead')}
+      >
+        <ul className="flex flex-col gap-1 text-small">
+          {list('home.hero.trust').map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+      </PageIntro>
+
       <CredibilityBar />
 
-      {/* Exactly one screen tall on desktop (below the sticky header): nothing to scroll inside it. */}
-      <section className="bg-grey-50 py-12 md:py-16 lg:flex lg:h-[calc(100svh-4rem)] lg:min-h-[32rem] lg:items-center lg:py-0">
-        <Container className="w-full">
-          <ProgramShowcase />
-        </Container>
-      </section>
+      <div className="mt-16 flex flex-col gap-16">
+        <section>
+          <SectionLabel
+            title={tp('home.programs.title')}
+            action={<SeeAll to="programs" label={t('shell.seeAll')} />}
+          />
+          <ProgramTilesGrid
+            programs={PROGRAM_KEYS.filter((key) => key !== 'audit')}
+            extra={
+              <LocalizedLink
+                to={{ key: 'programs' }}
+                className="flex h-full min-h-48 items-end justify-between bg-black p-3 text-h3 font-extrabold text-white hover:bg-ink-700 md:p-4"
+              >
+                {t('nav.allPrograms')}
+                <span aria-hidden="true">→</span>
+              </LocalizedLink>
+            }
+          />
+        </section>
 
-      <Section tone="black" className="relative isolate overflow-hidden">
-        <Eyebrow className="mb-8 text-white/70">{tp('home.testimonials.eyebrow')}</Eyebrow>
-        <h2 className="sr-only">{tp('home.testimonials.title')}</h2>
-        <Testimonials
-          indexes={[0, 1, 2]}
-          backgrounds={['event-stage', 'event-mic', 'library-chairs']}
-        />
-      </Section>
+        <section>
+          <SectionLabel title={tp('home.testimonials.eyebrow')} />
+          <QuoteTiles />
+        </section>
 
-      <StatsStagger stats={items<{ value: string; label: string }>('about.stats')} />
+        <section>
+          <StatTiles stats={items<{ value: string; label: string }>('about.stats')} />
+        </section>
 
-      <FullBleedSection>
-        <MediaCarousel />
-      </FullBleedSection>
+        <section>
+          <SectionLabel
+            title={tp('home.media.title')}
+            action={<SeeAll to="about" label={tp('home.media.all')} />}
+          />
+          <PressTiles />
+        </section>
 
-      <Section>
-        <BlogShowcase />
-      </Section>
+        <section>
+          <SectionLabel
+            title={tp('home.blog.title')}
+            action={<SeeAll to="blog" label={tp('home.blog.all')} />}
+          />
+          <BlogTilesGrid />
+        </section>
+      </div>
     </>
   );
 }

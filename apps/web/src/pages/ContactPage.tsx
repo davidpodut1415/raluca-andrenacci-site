@@ -1,12 +1,12 @@
 import { useId } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Faq } from '../components/blocks/Faq';
-import { PageHeader } from '../components/blocks/PageHeader';
 import { Seo } from '../components/Seo';
+import { PageIntro, ArticleSection } from '../components/tiles/Sections';
+import { Box, Cell } from '../components/tiles/Tiles';
 import { Button } from '../components/ui/Button';
 import { Checkbox, FormField, Input, Textarea } from '../components/ui/form';
 import { LocalizedLink } from '../components/ui/LocalizedLink';
-import { Section, SectionHeading } from '../components/ui/layout';
 import { site } from '../lib/site';
 import { usePages } from '../lib/usePages';
 
@@ -27,16 +27,24 @@ export function ContactPage() {
   return (
     <>
       <Seo title={t('nav.contact')} description={tp('contact.seoDescription')} />
-      <PageHeader
+      <PageIntro
         eyebrow={tp('contact.eyebrow')}
         title={tp('contact.title')}
         lead={tp('contact.lead')}
-      />
+      >
+        <a
+          href={`mailto:${site.email}`}
+          className="font-extrabold break-all underline underline-offset-4"
+        >
+          {site.email}
+        </a>
+      </PageIntro>
 
-      <Section className="pt-0 md:pt-0 lg:pt-0">
-        <div className="max-w-xl">
+      <div className="grid items-start gap-0.5 lg:grid-cols-3">
+        <Cell className="text-h4">{tp('contact.form.submit')}</Cell>
+        <Box className="lg:col-span-2">
           <form
-            className="flex flex-col gap-6"
+            className="flex max-w-xl flex-col gap-6"
             aria-describedby={pendingId}
             onSubmit={(e) => e.preventDefault()}
           >
@@ -53,12 +61,12 @@ export function ContactPage() {
               <Checkbox name="consent" required label={tp('contact.form.consent')} />
               <LocalizedLink
                 to={{ key: 'privacy' }}
-                className="ml-8 inline-flex min-h-11 items-center text-small text-burgundy-700 underline underline-offset-4"
+                className="ml-8 inline-flex min-h-11 items-center text-small underline underline-offset-4"
               >
                 {t('footer.privacy')}
               </LocalizedLink>
             </div>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-3">
               <div>
                 <Button type="submit" size="lg" disabled>
                   {tp('contact.form.submit')}
@@ -69,23 +77,12 @@ export function ContactPage() {
               </p>
             </div>
           </form>
+        </Box>
+      </div>
 
-          <p className="mt-12">
-            <span className="text-ink-500">{tp('contact.direct.title')}: </span>
-            <a
-              href={`mailto:${site.email}`}
-              className="text-burgundy-700 underline underline-offset-4"
-            >
-              {site.email}
-            </a>
-          </p>
-        </div>
-      </Section>
-
-      <Section>
-        <SectionHeading title={tp('programsPage.faq.title')} />
+      <ArticleSection title={tp('programsPage.faq.title')}>
         <Faq items={items<FaqItem>('programsPage.faq.items')} />
-      </Section>
+      </ArticleSection>
     </>
   );
 }

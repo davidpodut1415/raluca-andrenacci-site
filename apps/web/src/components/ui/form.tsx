@@ -1,9 +1,9 @@
 import { useId, type ComponentProps, type ReactNode } from 'react';
 import { cn } from '../../lib/cn';
 
-/** Form control borders use ink-500 (6:1 on white) so controls meet the 3:1 non-text contrast rule. */
+/** Form control borders are black (21:1 on white). */
 const controlStyles =
-  'w-full rounded-md border border-ink-500 bg-white px-4 py-3 text-body text-ink-700 placeholder:text-ink-500 aria-[invalid=true]:border-error disabled:opacity-60';
+  'w-full rounded-md border border-black bg-white px-4 py-3 text-body text-ink-700 placeholder:text-ink-500 aria-[invalid=true]:border-error disabled:opacity-60';
 
 export function Input({ className, ...rest }: ComponentProps<'input'>) {
   return <input className={cn(controlStyles, className)} {...rest} />;
@@ -34,10 +34,7 @@ export function Checkbox({
       <input
         id={id}
         type="checkbox"
-        className={cn(
-          'mt-1 size-5 shrink-0 rounded-md border-ink-500 accent-burgundy-700',
-          className,
-        )}
+        className={cn('mt-1 size-5 shrink-0 rounded-md border-ink-500 accent-black', className)}
         {...rest}
       />
       <label htmlFor={id} className="text-small text-ink-700">
@@ -75,7 +72,7 @@ export function FormField({ label, hint, error, required, className, children }:
       <label htmlFor={id} className="text-small font-medium text-ink-900">
         {label}
         {required && (
-          <span aria-hidden="true" className="text-burgundy-700">
+          <span aria-hidden="true" className="text-black">
             {' '}
             *
           </span>

@@ -4,7 +4,7 @@ import { BlogImg } from '../ui/BlogImg';
 /** Renders imported post blocks. Inline HTML is limited to strong/em/a/br by the import script. */
 export function PostBody({ blocks }: { blocks: PostBlock[] }) {
   return (
-    <div className="flex flex-col gap-6 text-ink-700 [&_a]:text-burgundy-700 [&_a]:underline [&_a]:underline-offset-4">
+    <div className="flex flex-col gap-5 [&_a]:text-black [&_a]:underline [&_a]:underline-offset-4">
       {blocks.map((block, i) => {
         switch (block.type) {
           case 'paragraph':
@@ -29,7 +29,7 @@ export function PostBody({ blocks }: { blocks: PostBlock[] }) {
             return (
               <Tag
                 key={i}
-                className={`${block.type === 'list' ? 'list-disc' : 'list-decimal'} space-y-2 pl-6 marker:text-burgundy-700`}
+                className={`${block.type === 'list' ? 'list-disc' : 'list-decimal'} space-y-2 pl-6 marker:text-black`}
               >
                 {block.items.map((item, j) => (
                   <li key={j} dangerouslySetInnerHTML={{ __html: item }} />
@@ -41,13 +41,13 @@ export function PostBody({ blocks }: { blocks: PostBlock[] }) {
             return (
               <blockquote
                 key={i}
-                className="border-l-4 border-burgundy-700 pl-6 font-serif text-h4 leading-snug font-semibold text-ink-900"
+                className="border-l-4 border-black pl-4 text-h4 leading-snug font-extrabold"
                 dangerouslySetInnerHTML={{ __html: block.html }}
               />
             );
           case 'image':
             return (
-              <div key={i} className="overflow-hidden rounded-2xl">
+              <div key={i} className="overflow-hidden">
                 <BlogImg
                   image={block.id}
                   alt={block.alt}
